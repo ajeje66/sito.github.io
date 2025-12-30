@@ -279,15 +279,15 @@
             height: 140px;
         }
     }
-  body, html {
-  	overflow-x: hidden;
+	body, html {
+  overflow-x: hidden;
 }
   </style>
 </head>
 <body>
   <header>
     <h1>Museo della Civiltà Contadina</h1>
-    <button id="toggleNight">Modalità Notte</button>
+    <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
 
   <nav>
@@ -295,6 +295,7 @@
     <a href="#info">Info</a>
 	<a href="#foto">Foto-gallery</a>
 	<a href="proverbi.html">Saggezza popolare</a>
+	<a href="cultura.html">La nostra cultura</a>
   </nav>
 
   <div id="home" class="hero" style="background-image: url('img/ingresso1.png');">
@@ -303,9 +304,9 @@
 
   <section id="info">
 	<h2>Informazioni</h2>
-	<p>Orari di apertura:<br> <strong>Lun–Dom, 9:00-13:00 &nbsp&nbsp&nbsp 14:00–19:00</strong><br>
+	<p>⏰ Orari di apertura:<br> <strong>Lun–Dom, 9:00-13:00 &nbsp&nbsp&nbsp 14:00–19:00</strong><br>
 	</p>
-	<p>Ci troviamo in:<br><strong>Piazza Umberto I n° 3, Castel San Lorenzo (SA)</strong> </p>
+	<p>📍 Ci troviamo in:<br><strong>Piazza Umberto I n° 3, Castel San Lorenzo (SA)</strong> </p>
 	<br><br>
 	<h2>Descrizione</h2>
 		Il museo della civiltà contadina di Castel San Lorenzo, si trova nel vecchio Municipio, sito in Piazza Umberto I,
@@ -314,7 +315,7 @@
   </section>
   
 	<section id="foto">
-		<h2>Foto-gallery</h2>
+		<h2>📷 Foto-gallery</h2>
 		<div class="gallery-container">
 				<div class="gallery-track">
 				<!-- Doppia sequenza per effetto infinito -->
@@ -323,15 +324,13 @@
 				<img src="img/3.png" alt="Foto 3" class="gallery-img">
 				<img src="img/4.png" alt="Foto 4" class="gallery-img"> 
 				<img src="img/5.png" alt="Foto 5" class="gallery-img">
-				<img src="img/6.png" alt="Foto 6" class="gallery-img">
-					
+		
 				<!-- Ripetizione per loop continuo -->
 				<img src="img/1.png" alt="Foto 1" class="gallery-img">
 				<img src="img/2.png" alt="Foto 2" class="gallery-img">
 				<img src="img/3.png" alt="Foto 3" class="gallery-img">
 				<img src="img/4.png" alt="Foto 4" class="gallery-img">
 				<img src="img/5.png" alt="Foto 5" class="gallery-img">
-				<img src="img/6.png" alt="Foto 6" class="gallery-img">
 			</div>
 	</div>
 	</section>
@@ -373,7 +372,7 @@
     const toggleNight = document.getElementById('toggleNight');
     toggleNight.addEventListener('click', () => {
       document.body.classList.toggle('night');
-      toggleNight.textContent = document.body.classList.contains('night') ? 'Modalità Giorno' : 'Modalità Notte';
+      toggleNight.textContent = document.body.classList.contains('night') ? '☀️ Modalità Giorno' : '🌙 Modalità Notte';
     });
 	  const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modalImage");
@@ -398,6 +397,3 @@
   </script>
 </body>
 </html>
-
-
-
