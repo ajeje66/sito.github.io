@@ -502,7 +502,7 @@ body.mobile .point circle {
 	</g>
 	<g class="point" data-title="Piazza Madonnina" 
 	data-description=""
-	transform="translate(548 264)">
+	transform="translate(551 462)">
 	<circle r="4" fill="red"/>
 	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">18</text>
 	</g>
@@ -782,7 +782,7 @@ function mostraFumetto(point){
   // Posiziona fumetto sopra il punto
   const m = point.transform.baseVal[0].matrix;
   const cx = m.e, cy = m.f;
-  const x = cx - 90; 
+  const x = cx - 20; 
   const y = cy - 60;
 
   const box = document.getElementById('fumetto-box');
@@ -913,3 +913,4 @@ togglePointsBtn.addEventListener('click', () => {
   </body>
 
 </html>
+
