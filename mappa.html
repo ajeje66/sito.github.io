@@ -71,7 +71,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      overflow: hidden; 
       animation: fadeIn 1.5s ease;
     }
 
@@ -586,7 +586,9 @@ body.mobile .point circle {
 </g>
 </svg>
 </div>
-
+<section id="info">
+Descrizioni a cura <a href=""><img src="img/ass.png" width="90" height="90"></a>
+</section>
   <footer>
     © 2025 Museo della Civiltà Contadina
   </footer>	
@@ -696,7 +698,7 @@ function enablePinchZoom() {
 }
 
 // Zoom e pan
-svg.addEventListener('wheel', zoom);
+
 
 svg.addEventListener('pointerdown', startPan);
 svg.addEventListener('pointermove', pan);
@@ -704,6 +706,18 @@ svg.addEventListener('pointerup', endPan);
 svg.addEventListener('pointercancel', endPan);
 svg.addEventListener('pointerleave', endPan);
 
+let lastWheelTime = 0;
+const wheelDelay = 50; // in ms
+
+function zoomThrottled(e) {
+  const now = Date.now();
+  if (now - lastWheelTime < wheelDelay) return; // ignora eventi troppo ravvicinati
+  lastWheelTime = now;
+  zoom(e); // chiama la tua funzione di zoom originale
+}
+
+svg.addEventListener('wheel', zoomThrottled);
+	  
 document.getElementById('zoomIn').onclick = ()=>zoomAtCenter(1/zoomFactor);
 document.getElementById('zoomOut').onclick = ()=>zoomAtCenter(zoomFactor);
 document.getElementById('reset').onclick = resetView;
@@ -897,4 +911,5 @@ togglePointsBtn.addEventListener('click', () => {
 });
   </script>
   </body>
+
 </html>
