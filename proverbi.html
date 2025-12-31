@@ -270,6 +270,40 @@
 	body, html {
 		overflow-x: hidden;
 	}
+	@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* elementi impilati verticalmente */
+    padding: 15px;
+    gap: 8px;
+  }
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+
+
   </style>
 	</head>
 	<body>
@@ -284,6 +318,7 @@
 		<a href="index.html#foto">Foto-gallery</a>
 		<a href="proverbi.html">Saggezza popolare</a>
 		<a href="cultura.html">La nostra cultura</a>
+		<a href="mappa.html">Percorso urbano</a>
 	</nav>
 	<div>
 		<h2>Benvenuti nella pagina "Saggezza Popolare", dove troverete dei proverbi della tradizione castellese, che racchiudono alcuni aspetti 
@@ -375,7 +410,7 @@
 	<footer>
 		© 2025 Museo della Civiltà Contadina
 	</footer>
-	  <script>
+	<script>
     // Effetto di comparsa sezione allo scroll
     const sections = document.querySelectorAll('section');
     const onScroll = () => {
@@ -393,12 +428,22 @@
     const hero = document.querySelector('.hero');
 
     // Modalità notturna
-    const toggleNight = document.getElementById('toggleNight');
-    toggleNight.addEventListener('click', () => {
-      document.body.classList.toggle('night');
-      toggleNight.textContent = document.body.classList.contains('night') ? '☀️ Modalità Giorno' : '🌙 Modalità Notte';
-    });
+const toggleNight = document.getElementById('toggleNight');
 
-  </script>
+if (localStorage.getItem('theme') === 'night') {
+  document.body.classList.add('night');
+  toggleNight.textContent = '☀️ Modalità Giorno';
+}
+toggleNight.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+  if (document.body.classList.contains('night')) {
+    localStorage.setItem('theme', 'night');
+    toggleNight.textContent = '☀️ Modalità Giorno';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleNight.textContent = '🌙 Modalità Notte';
+  }
+});
+	</script>
 </body>
 </html>

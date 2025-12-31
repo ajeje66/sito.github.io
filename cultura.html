@@ -13,6 +13,11 @@
       overflow-x: hidden;
       transition: background-color 0.6s, color 0.6s;
     }
+	body.dark {
+		background-color: #121212;
+		color: #ffffff;
+	}
+
 
     header {
       background-color: #d8cbb3;
@@ -196,42 +201,12 @@
       header h1 { font-size: 2em; }
       .hero h2 { font-size: 1.4em; }
     }
-	
+		
+	.img-responsive {
+	max-width: 100%;
+	height: auto;
+	}
 
-
-    .gallery-container {
-        overflow: visible; /* Nasconde le immagini fuori dal contenitore */
-        white-space: nowrap;
-        width: 100%;
-    }
-
-    .gallery-track {
-        display: inline-flex;
-        animation: scroll 25s linear infinite; /* Velocità e loop */
-		animation-play-state: running;
-    }
-	
-	.gallery-container:hover .gallery-track{
-		animation-play-state: paused;
-		}
-
-    .gallery-track img {
-		overflow: hidden;
-		position: relative;
-		z-index: 1;
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-        margin-right: 10px;
-        border-radius: 8px;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-	
-	.gallery-track img:hover {
-		transform: scale(1.15); /* ingrandisce leggermente */
-		box-shadow: 0 10px 20px rgba(0,0,0,0.35);
-		z-index: 10;
-	}	
 
     /* Animazione di scorrimento */
     @keyframes scroll {
@@ -282,6 +257,39 @@
 	body, html {
   overflow-x: hidden;
 }
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* elementi impilati verticalmente */
+    padding: 15px;
+    gap: 8px;
+  }
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -296,6 +304,7 @@
 	<a href="#foto">Foto-gallery</a>
 	<a href="proverbi.html">Saggezza popolare</a>
 	<a href="cultura.html">La nostra cultura</a>
+	<a href="mappa.html">Percorso urbano</a>
   </nav>
 	
   <section id="info">
@@ -364,7 +373,7 @@
 		Di varie dimensioni e forme, queste creazioni erano indispensabili per la vita quotidiana sia delle famiglie,
 		sia degli agricoltori, i quali se ne servivano per abbeverarsi durante le lunghe giornate lavorative nei campi.
 	<h3>Calzolaio</h3>
-	<p><img src="img/7.jpeg" style="padding: 8px;float:right;width:600px;height:300px;">
+	<p><img src="img/8.jpeg" style="padding: 8px;float:right;width:600px;height:300px;" class="img-responsive">
 		Realizzava con cura e attenzione al dettaglio scarpe di varie misura.
 		Dalle scarpe per bambini a quelle degli operai e agricoltori, 
 		il mestiere del ciabattino assicurava un vero e proprio servizio alla comunità. 
@@ -387,12 +396,12 @@
 	</div>
 	
   <script>
-    // Effetto di comparsa sezione allo scroll
-    const sections = document.querySelectorAll('section');
-    const onScroll = () => {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
+// Effetto di comparsa sezione allo scroll
+const sections = document.querySelectorAll('section');
+const onScroll = () => {
+  sections.forEach(sec => {
+	const rect = sec.getBoundingClientRect();
+	if (rect.top < window.innerHeight - 100) {
           sec.classList.add('visible');
         }
       });
@@ -401,7 +410,7 @@
     onScroll();
 
     // Effetto luce dinamica (spotlight)
-    const hero = document.querySelector('.hero');
+const hero = document.querySelector('.hero');
     /*hero.addEventListener('mousemove', (e) => {
       const rect = hero.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -411,31 +420,23 @@
     });*/
 
     // Modalità notturna
-    const toggleNight = document.getElementById('toggleNight');
-    toggleNight.addEventListener('click', () => {
+const toggleNight = document.getElementById('toggleNight');
+
+if (localStorage.getItem('theme') === 'night') {
+  document.body.classList.add('night');
+  toggleNight.textContent = '☀️ Modalità Giorno';
+}
+toggleNight.addEventListener('click', () => {
       document.body.classList.toggle('night');
-      toggleNight.textContent = document.body.classList.contains('night') ? '☀️ Modalità Giorno' : '🌙 Modalità Notte';
-    });
-	  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.getElementById("closeModal");
+  if (document.body.classList.contains('night')) {
+    localStorage.setItem('theme', 'night');
+    toggleNight.textContent = '☀️ Modalità Giorno';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleNight.textContent = '🌙 Modalità Notte';
+  }
+});
 
-  document.querySelectorAll(".gallery-img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-    });
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
   </script>
 </body>
 </html>

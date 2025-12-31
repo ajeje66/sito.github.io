@@ -13,7 +13,7 @@
       overflow-x: hidden;
       transition: background-color 0.6s, color 0.6s;
     }
-
+	
     header {
       background-color: #d8cbb3;
       text-align: center;
@@ -197,10 +197,8 @@
       .hero h2 { font-size: 1.4em; }
     }
 	
-
-
     .gallery-container {
-        overflow: visible; /* Nasconde le immagini fuori dal contenitore */
+        overflow: hidden; /* Nasconde le immagini fuori dal contenitore */
         white-space: nowrap;
         width: 100%;
     }
@@ -272,16 +270,40 @@
         border-radius: 50%;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .gallery-track img {
-            width: 200px;
-            height: 140px;
-        }
-    }
-	body, html {
-  overflow-x: hidden;
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* elementi impilati verticalmente */
+    padding: 15px;
+    gap: 8px;
+  }
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
 }
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -296,6 +318,7 @@
 	<a href="#foto">Foto-gallery</a>
 	<a href="proverbi.html">Saggezza popolare</a>
 	<a href="cultura.html">La nostra cultura</a>
+	<a href="mappa.html">Percorso urbano</a>
   </nav>
 
   <div id="home" class="hero" style="background-image: url('img/ingresso1.png');">
@@ -345,9 +368,10 @@
 	</div>
 	
   <script>
-    // Effetto di comparsa sezione allo scroll
-    const sections = document.querySelectorAll('section');
-    const onScroll = () => {
+
+// Effetto di comparsa sezione allo scroll
+const sections = document.querySelectorAll('section');
+const onScroll = () => {
       sections.forEach(sec => {
         const rect = sec.getBoundingClientRect();
         if (rect.top < window.innerHeight - 100) {
@@ -359,7 +383,7 @@
     onScroll();
 
     // Effetto luce dinamica (spotlight)
-    const hero = document.querySelector('.hero');
+const hero = document.querySelector('.hero');
     /*hero.addEventListener('mousemove', (e) => {
       const rect = hero.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -369,14 +393,26 @@
     });*/
 
     // Modalità notturna
-    const toggleNight = document.getElementById('toggleNight');
-    toggleNight.addEventListener('click', () => {
+const toggleNight = document.getElementById('toggleNight');
+
+if (localStorage.getItem('theme') === 'night') {
+  document.body.classList.add('night');
+  toggleNight.textContent = '☀️ Modalità Giorno';
+}
+toggleNight.addEventListener('click', () => {
       document.body.classList.toggle('night');
-      toggleNight.textContent = document.body.classList.contains('night') ? '☀️ Modalità Giorno' : '🌙 Modalità Notte';
-    });
-	  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.getElementById("closeModal");
+  if (document.body.classList.contains('night')) {
+    localStorage.setItem('theme', 'night');
+    toggleNight.textContent = '☀️ Modalità Giorno';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleNight.textContent = '🌙 Modalità Notte';
+  }
+});
+	
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.getElementById("closeModal");
 
   document.querySelectorAll(".gallery-img").forEach(img => {
     img.addEventListener("click", () => {

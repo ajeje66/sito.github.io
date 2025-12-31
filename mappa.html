@@ -1,0 +1,900 @@
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo della Civiltà Contadina</title>
+    <style>
+		body.dark {
+		background-color: #121212;
+		color: #ffffff;
+	}
+	header {
+      background-color: #d8cbb3;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      animation: fadeDown 1s ease;
+      position: relative;
+    }
+	header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      color: #3a2c1a;
+    }
+	/* Pulsante modalità notte */
+    #toggleNight {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #3a2c1a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+
+    #toggleNight:hover {
+      background: #55422a;
+    }
+	nav {
+      background-color: #bfae94;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.6s;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #3a2c1a;
+      transform: scale(1.1);
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1576765608614-b5c0bdb62e9b') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.2), rgba(0,0,0,0.6) 60%);
+      mix-blend-mode: overlay;
+      transition: background 0.1s;
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 6px;
+      z-index: 1;
+      animation: slideUp 1.2s ease;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+	footer {
+      background-color: #bfae94;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.6s, color 0.6s;
+    }
+	/* ----- MODALITÀ NOTTURNA ----- */
+    body.night {
+      background-color: #1c1c1c;
+      color: #f0f0f0;
+    }
+
+    body.night header {
+      background-color: #2a2a2a;
+	  
+    }
+	body.night header h1 {
+	color: #f5e6c8;
+	}
+
+    body.night nav {
+      background-color: #333;
+	  
+    }
+
+    body.night nav a:hover {
+      color: #ffcc66;
+    }
+
+    body.night footer {
+      background-color: #2a2a2a;
+      color: #ddd;
+    }
+
+    /* ----- ANIMAZIONI KEYFRAMES ----- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .hero h2 { font-size: 1.4em; }
+    }
+		
+	.img-responsive {
+	max-width: 100%;
+	height: auto;
+	}
+	@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* elementi impilati verticalmente */
+    padding: 15px;
+    gap: 8px;
+  }
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+	
+	body { margin:0; background:#eee; font-family:sans-serif; }
+.controls {
+	pointer-events:auto;
+	position:absolute; top:10px; left:10px; z-index:10;
+	background:white; border-radius:6px;
+	box-shadow:0 2px 6px rgba(0,0,0,.3); overflow:visible;
+	}
+svg{pointer-events:auto;}
+.controls button { display:block; width:36px; height:36px; border:none; background:white; font-size:18px; cursor:pointer;   user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */}
+.controls button:hover { background:#f0f0f0; }
+.controls input[type=range] { width:100px; margin:5px; }
+.controls ul { display:none; margin:5px; padding:0; list-style:none; max-height:150px; overflow-y:auto; }
+.point { cursor:pointer; }
+.point circle { opacity:0.6; }
+.point text {font-size: 6px;  user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */}
+.point:hover circle { opacity:0.8; }
+#fumetto {opacity:0; transform:scale(0.9); transform-origin:top center; transition:0.25s; display:none; }
+#fumetto.show { opacity:1; transform:scale(1); }
+#fumetto-link-text{ fill:#0066cc; font-size:14px; text-decoration:underline; cursor:pointer; }
+#fumettoHTML {
+  width: 300px; 
+}
+#fumettoHTML.expanded {
+  width: 400px;
+  max-height: 300px; /* Altezza massima del fumetto */
+  overflow: hidden;
+  display: block;
+}
+
+#cornice {
+  position:relative;
+  margin:0 auto;
+  margin-top: 50px;
+  width: 100%;
+  height: 80vh;
+  max-width: 1000px;
+  border: 2px solid #333;
+  background: white;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+} 
+
+body.mobile .point circle {
+  r: 6;
+}
+.points-hidden .point {
+  display: none;
+}
+.btn-tooltip {
+  position: relative;
+}
+
+.btn-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.btn-tooltip:hover::after {
+  opacity: 1;
+}
+  </style>
+  </head>
+  <body>
+  <header>
+    <h1>Museo della Civiltà Contadina</h1>
+    <button id="toggleNight">🌙 Modalità Notte</button>
+  </header>
+    <nav>
+    <a href="#home">Home</a>
+    <a href="#info">Info</a>
+	<a href="#foto">Foto-gallery</a>
+	<a href="proverbi.html">Saggezza popolare</a>
+	<a href="cultura.html">La nostra cultura</a>
+	<a href="mappa.html">Percorso urbano</a>
+  </nav>
+  <section id="info">
+  <h2>Descrizione: <br>
+  Durata 1-12 ~ 1.30 h </h2>
+  </section>
+	<div id="cornice">
+<div class="controls">
+  <button class="btn-tooltip" data-tooltip="Zoom avanti" id="zoomIn">+</button>
+  <button class="btn-tooltip" data-tooltip="Zoom indietro" id="zoomOut">−</button>
+  <button class="btn-tooltip" data-tooltip="Reset" id="reset">⟳</button>
+  <button class="btn-tooltip" data-tooltip="Mostra/nascondi slider" id="showZoomSlider">🔍</button>
+  <button class="btn-tooltip" data-tooltip="Mostra/nascondi lista" id="showFumettiList">≡</button>
+  <button class="btn-tooltip" data-tooltip="Mostra/nascondi punti" id="togglePoints">👁</button>
+  <input type="range" id="zoomSlider" min="1" max="4" step="0.01" style="display:none;">
+  <ul id="fumettiList"></ul>
+</div>
+<svg id="svg" viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g id="viewport">
+  <image x="0" y="0" width="800" height="600" xlink:href="1.png"/>
+
+  <g class="point" data-title="Museo della Civiltà Contadina" data-description="Piazza Umberto I è il cuore storico e simbolico di Castel San Lorenzo. 
+	Intitolata al Re, conserva intatto il fascino delle antiche piazze medievali, 
+	con i suoi elementi più rappresentativi: il Castello, il Municipio e la Croce, 
+	segni di storia, fede e identità. Fino agli anni ottanta, 
+	la piazza è stata il centro della vita del paese, 
+	luogo d’incontro e fulcro delle attività quotidiane. 
+	Con il tempo, lo sviluppo urbano si è esteso verso via Roma e le aree più basse del borgo, 
+	dando al paese la suggestiva forma di una “stella cometa”. 
+	L’antico edificio comunale ospita oggi il Museo della Civiltà Contadina, 
+	testimonianza preziosa della vita rurale di un tempo. 
+	Ristrutturato nel 1917, l’edificio era originariamente dotato di una scenografica scala semicircolare che conduceva a un ballatoio esterno, 
+	successivamente rimossa per ampliare la piazza. Il museo accoglie il visitatore in un viaggio nel passato, tra oggetti, strumenti e attrezzi appartenuti ai nostri nonni e bisnonni, 
+	raccontando con autenticità gli antichi mestieri e la cultura contadina 
+	che hanno segnato la storia del territorio." 
+	transform="translate(505 249)">
+  <circle r="4" fill="red"/>
+  <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">1</text>
+</g>
+<g class="point" data-title="Castello Carafa" data-description="Il Castello Carafa affonda le sue origini nell’epoca dell’Imperatore Federico II, 
+	che ne volle la costruzione sulla sommità della collina per controllare e difendere la suggestiva Valle del Calore. 
+	In seguito, sotto il dominio degli Angiò, il complesso fu arricchito da tre torri di avvistamento, presidiate da una guarnigione di soldati.
+	Attorno al castello sorsero le prime abitazioni, costruite da abitanti provenienti dal vicino Casale di Santa Maria de Strictu e dai territori circostanti: da qui ebbe origine il primo nucleo del paese. 
+	Intorno al 1500, il feudo passò alla nobile famiglia Carafa, dalla quale il castello prende il nome attuale.
+	Dell’antica struttura medievale restano oggi l’imponente involucro esterno e una torre panoramica, dalla quale si può godere di una spettacolare vista sulla Valle del Calore. 
+	Il castello è attualmente di proprietà privata." 
+	transform="translate(515 233)">
+  <circle r="4" fill="red"/>
+  <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">2</text>
+</g>
+	<g class="point" data-title="Murales 1" data-description="Questo murales mostra, in primo piano la Vigna adiacente al 'Palazzo Vigna della Corte', 
+			entrambi appartenenti ai Principi Carafa.
+		Il Palazzo Vigna della Corte era la dimora estiva dei principi che amavano circondarsi di artisti, scrittori, pittori, 
+		dando vita ad una delle Pinacoteche più importanti della Provincia di Salerno. 
+		In basso invece, è possibile osservare il personaggio 'Ù Munaciello'. 
+		La leggenda narra che nel Castello vagasse il fantasma di un monaco, il quale aveva il compito di custodire il tesoro dei Principi. 
+		Solo chi fosse riuscito nell’intento di togliergli il famoso cappuccio rosso sarebbe stato accompagnato nella stanza del tesoro." 
+	transform="translate(522 243)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3.1</text>
+	</g>
+	<g class="point" data-title="Murales 2" data-description="Questo murales raffigura una delle leggende più popolari di Castel San Lorenzo, 
+	cioè quella dei 'pumpanari'. Essi erano uomini, nati nella notte di Natale, che si trasformavano nel mese di gennaio, 
+	dopo la mezzanotte, in 'pumpanari', ovvero la versione popolare dei lupi mannari, e si aggiravano tra le vie del paese spaventando gli altri abitanti. 
+	Sullo sfondo è possibile ammirare il simbolo del nostro paese, un castello con le tre torri e il mulino del principe." 
+	transform="translate(530 247)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3.2</text>
+	</g>
+	<g class="point" data-title="Murales 3" data-description="In questo murales è raffigurata la leggenda secondo la quale, sul punto più alto del paese, denominato 'Tempa' si accampò un drago,
+	il quale predominava su tutti gli abitanti. Ciò fino a quando, un cavaliere coraggioso, decise di affrontare il drago, riuscendo a ferirlo mortalmente.
+	Il drago ferito, abbandonò la località 'Tempa', dirigendosi presso le sponde del fiume Calore, e lasciando una scia di sangue dietro di sé. Da questa leggenda, 
+	un tratto del centro storico, prese il nome di 'Via Dragonata'." 
+	transform="translate(538 241)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3.3</text>
+	</g>
+	<g class="point" data-title="Murales 4" data-description="" 
+	transform="translate(541 232)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3.4</text>
+	</g>
+	<g class="point" data-title="Murales 5" data-description="In questo murales, sulle pendici della collina su cui si erige la Chiesa di Santa Maria, 
+	è raffigurata una scrofa che allatta i suoi piccoli. Quest'immagine rimanda alla leggenda del porcellino d’oro, 
+	che si narra fosse in una delle 300 stanze del Castello." 
+	transform="translate(547 234)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3.5</text>
+	</g>
+	<g class="point" data-title="Vecchio Campanile" 
+	data-description="ll campanile che ancora oggi si può ammirare apparteneva all’antica chiesa parrocchiale di San Giovanni Battista, 
+	situata lungo l’attuale via SS. Rosario. La chiesa, di dimensioni modeste ma articolata in tre navate, fu elevata a parrocchia con la progressiva crescita del nuovo centro abitato.
+	Nel corso dell’Ottocento, intorno al 1800, l’edificio perse la funzione parrocchiale e venne trasformato in Oratorio della Congregazione del SS. Rosario. 
+	Abbandonata e priva di adeguata manutenzione, la chiesa crollò definitivamente nel 1860, lasciando come unica testimonianza il campanile.
+	In origine la torre campanaria era più slanciata e alta rispetto a oggi; un fulmine, colpendo la sommità, ne compromise la struttura, 
+	conferendole l’aspetto più tozzo che caratterizza il campanile attuale." 
+	transform="translate(550 240)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">4</text>
+	</g>
+	<g class="point" data-title="Chiesa Madre" 
+	data-description="Con l’espansione del paese e il progressivo degrado della vecchia chiesa parrocchiale, nel 1760 si decise di costruire una nuova e più ampia Chiesa Parrocchiale di San Giovanni Battista, 
+	su un terreno donato dalla famiglia Carafa, poco distante dall’edificio originario. La sua edificazione trasformò l’assetto urbano, aprendo una nuova via di accesso e interrompendo un antico passaggio sotterraneo che,
+	secondo la tradizione, collegava le proprietà dei Carafa ed era usato come via di fuga.	La chiesa attuale, completata intorno al 1800 e già benedetta nel 1796, presenta un’unica navata luminosa a croce latina,
+	impreziosita da colonne con capitelli corinzi e basamenti in granito. Fu realizzata grazie al contributo dell’intera comunità, che partecipò attivamente alla costruzione e, secoli dopo, anche al restauro successivo al terremoto del 1980.
+	All’interno si conservano numerosi altari laterali e importanti opere d’arte, tra cui la grande tela di Andrea Vaccaro, San Pietro in Vinculis, proveniente dalla “Pinacoteca Carafa”, e il monumentale dipinto di Carmine Natale,
+	San Giovanni Battista che predica le turbe (1782), collocato sull’altare maggiore. Di grande interesse anche il Battesimo di Gesù nel Giordano, di autore ignoto.
+	Sotto l’altare maggiore si trova una cripta, mai utilizzata per le sepolture dei sacerdoti." 
+	transform="translate(540 220)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">5</text>
+	</g>
+	<g class="point" data-title="Statua della Madonna" 
+	data-description="Fu voluta dalla popolazione come segno di devozione alla stessa." 
+	transform="translate(512 214)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">6</text>
+	</g>
+	<g class="point" data-title="Monumento ai Caduti" 
+	data-description="Realizzato negli anni 60, riporta i nomi dei caduti castellesi nelle 2 Guerre Mondiali."
+	transform="translate(501 206)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">7</text>
+	</g>
+	<g class="point" data-title="Belvedere Capozzolo" 
+	data-description="Il Belvedere Cosmo Capozzolo è uno dei punti panoramici più suggestivi di Castel San Lorenzo, nel cuore del Cilento. 
+	Intitolato nel 2021 a Cosmo Capozzolo, già consigliere comunale ed amato portalettere del paese, questo luogo unisce la bellezza del paesaggio a un forte valore simbolico.
+	Cosmo Capozzolo era una figura profondamente stimata dalla comunità: grazie al suo lavoro di postino conosceva da vicino le esigenze dei cittadini e le faceva giungere all’amministrazione comunale. 
+	Per questo impegno civico fu definito dal sindaco Michele Lavecchia la “Sentinella del Comune”. Scomparso prematuramente nel 2006, pochi mesi dopo la sua elezione, è ricordato per la sua umanità, 
+	il suo idealismo e la passione per la politica locale. Presso il belvedere è stata installata una cassetta postale simbolica, ispirata alle antiche borse dei postini: qui cittadini e visitatori possono lasciare idee, 
+	proposte e messaggi, che la famiglia Capozzolo consegna poi all’amministrazione comunale. Il Belvedere Cosmo Capozzolo è oggi un luogo di memoria, partecipazione e democrazia, 
+	simbolo del dialogo tra cittadini e istituzioni e testimonianza del valore più autentico della politica al servizio della comunità."
+	transform="translate(501 225)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">8</text>
+	</g>
+	<g class="point" data-title="Comune" 
+	data-description=""
+	transform="translate(527 222)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">9</text>
+	</g>
+	<g class="point" data-title="Biblioteca" 
+	data-description=""
+	transform="translate(484 276)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">10</text>
+	</g>
+	<g class="point" data-title="Chiesa Santa Maria del Monte" 
+	data-description="La Chiesa di Santa Maria del Monte, terminata nel 1713 e un tempo chiamata Santa Maria extra moenia perché situata fuori dall’abitato, custodisce una statua della Madonna simile a quella del Santuario di Novi Velia.
+	La chiesa presenta una navata unica, è in stile Barocco ed una volta presentava un soffitto in legno a cassettoni (perduto a causa dell’umidità). Fu ampliata nel 1753 dal parroco Don Agnello Milone.
+	All’interno si trovano sette altari, tra cui l’altare maggiore con il celebre quadro Il Padre Eterno di Ciriaco Croce, e altre opere del Croce e di Carmine Natale, che raffigurano santi, 
+	la Madonna Addolorata e scene della vita cristiana. Tra queste spicca la Madonna delle Grazie, detta “del Latte”, simbolo delle grazie concesse ai fedeli.
+	La chiesa custodisce anche monumenti funebri di importanti famiglie locali, come i Carafa e i Milone, e il vescovo D. Gaetano Ivone di Felitto, ospite del Principe Carafa. 
+	Fino al 1840 fu luogo di sepoltura dei defunti del paese.
+	La chiesa rappresenta non solo un importante luogo di culto, ma anche un tesoro di arte e storia locale, testimone della fede e delle tradizioni di Castel San Lorenzo."
+	transform="translate(426 399)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">11</text>
+	</g>
+	<g class="point" data-title="Belvedere Sabetta" 
+	data-description=""
+	transform="translate(412 400)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">12</text>
+	</g>
+	<g class="point" data-title="Pietre dei Santi" 
+	data-description="E' un luogo simbolico della devozione del popolo castellese verso i 5 Santi. Difatti, i 5 Santi venivano portati sulla parte alta del paese
+	(località Tempa), per chiedere le Grazie in occasione di eventi avversi."
+	transform="translate(66 110)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">13</text>
+	</g>
+	<g class="point" data-title="Palazzo Carafa" 
+	data-description="Il Palazzo Vigna della Corte ha origini presumibilmente all’inizio del Settecento ed è situato nella località Santa Sofia, ai piedi del centro storico di Castel San Lorenzo.
+	Inizialmente concepito come casa rurale, il palazzo era circondato da giardini, orti, uliveti e vigneti, da cui deriva il nome della zona e dell’edificio.
+	La struttura, tipica delle costruzioni cilentane del XVIII secolo, presenta una pianta quadrata con quattro torri angolari, tre livelli (un seminterrato e due fuori terra) e un lungo viale d’ingresso che conduce al portale centrale. 
+	Il piano terra e il primo piano ospitavano sale e camere disposte in enfilade, con pavimenti originali in cotto o ceramica di Vietri e soffitti lignei. Al piano terra si trovavano anche cucine e depositi agricoli, mentre il seminterrato ospitava frantoio,
+	cantina e magazzini.Il palazzo conserva elementi decorativi tipici del periodo, come stucchi barocchi, bugnati sulle torri e maschere ornamentali, 
+	mentre la facciata principale si distingue per la simmetria e le otto lesene decorate che incorniciano finestre e balconi. Dal retro del primo piano si accede a un’ampia terrazza panoramica con vista sulla Valle del Calore, 
+	mentre le torri angolari offrono scorci suggestivi sull’intero paesaggio circostante.
+	Un elemento affascinante della struttura è il tunnel sotterraneo, utilizzato in passato dai principi Carafa per spostarsi tra i due palazzi in caso di pericolo. Il Palazzo Vigna della Corte rappresenta oggi un perfetto esempio di architettura signorile cilentana settecentesca,
+	unendo storia, arte e panorami mozzafiato in un’unica visita."
+	transform="translate(493 166)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">14</text>
+	</g>
+	<g class="point" data-title="Statua dell'Amore Universale" 
+	data-description="La statua “Amore Universale” prende il nome dal simbolo che rappresenta: l’abbraccio eterno tra due innamorati e, metaforicamente,
+	l’unione tra due popoli segnati dalla guerra, l’Italia e l’Ucraina. Tutto ebbe inizio nel 1943, durante la Seconda Guerra Mondiale, 
+	quando il giovane Luigi Peduto, cavaliere maresciallo della Guardia di Finanza originario di Castel San Lorenzo, 
+	fu deportato nel campo di concentramento di Krems, in Austria. Lì incontrò Mokryna Yurz (chiamata Maria da Luigi), 
+	anche lei ventenne e costretta ai lavori forzati. Nonostante la barriera linguistica e le difficili condizioni,
+	i due si innamorarono profondamente. Alla liberazione del campo nel 1945, furono separati: Mokryna tornò in Ucraina e Luigi in Italia,
+	impediti dalle autorità sovietiche di riunirsi. Entrambi formarono famiglie, ma il ricordo del loro amore rimase vivo. Solo nel 2004, grazie al programma televisivo ucraino Aspettami, 
+	Luigi riuscì finalmente a ritrovare Mokryna e a riabbracciarla dopo sessant’anni. La loro storia è stata celebrata nel 2013 con una scultura in bronzo a Kiev, 
+	vicino al Ponte degli Innamorati, raffigurante i due anziani stretti in un abbraccio eterno. Una copia della scultura è stata inaugurata a Castel San Lorenzo il 30 aprile 2017, 
+	diventando simbolo di amore eterno e memoria storica, oltre a essere una tappa suggestiva per visitatori e coppie"
+	transform="translate(460 138)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">15</text>
+	</g>
+	<g class="point" data-title="Fontana dei 'Ciucci' sopra" 
+	data-description="Una sorgente a cui storicamente ci si recava per abbeverare gli asini"
+	transform="translate(518 287)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">16</text>
+	</g>
+	<g class="point" data-title="Fontana dei 'Ciucci' sotto" 
+	data-description="Una sorgente a cui storicamente ci si recava per abbeverare gli asini"
+	transform="translate(533 288)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">17</text>
+	</g>
+	<g class="point" data-title="Piazza Madonnina" 
+	data-description=""
+	transform="translate(548 264)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">18</text>
+	</g>
+	<g class="point" data-title="Chiesa dei Santi" 
+	data-description="Il Santuario dei Santi Cosma e Damiano, costruito nella prima metà del Settecento, si trova nell’omonimo borgo lungo la strada provinciale ed è una delle mete di pellegrinaggio più importanti di Castel San Lorenzo. 
+	La chiesa presenta una sola navata e quattro altari laterali, con l’altare maggiore realizzato in marmo nel 1902 grazie alla devozione dei cittadini castellesi residenti a New York.
+	Originariamente affrescata da Carmine Natale e Gabriele Croce con scene sulla vita dei Martiri, la volta fu ricoperta di stucchi nel 1848 a seguito di un crollo.
+	Sull’altare maggiore si trovano tre nicchie: due dedicate ai Santi Cosma e Damiano e quella centrale al patrono San Giovanni Battista, la cui statua, 
+	realizzata dal celebre scultore napoletano Colombo agli inizi del Settecento, fu trasferita qui dalla chiesa parrocchiale. 
+	Le statue dei Santi e quelle di San Francesco Borgia e San Luigi risalgono al XVIII secolo.
+	All’interno si conservano numerose opere di Carmine Natale, tra cui due grandi tele: il Gruppo della Vergine e Gesù morto (1779) e i Santi innamorati della SS. Eucarestia, 
+	oltre a due pitture lignee sotto la cantoria dell’organo raffiguranti la Fede e la Carità.
+	Elevata a Santuario nel 2009, la chiesa è famosa per le devozioni legate ai Santi Cosma e Damiano, Medici e Martiri, 
+	ai quali vengono attribuiti numerosi miracoli. Pellegrini provenienti da diversi paesi raggiungevano il Santuario a piedi, 
+	anche scalzi, offrendo voti in segno di ringraziamento: oggetti preziosi, in oro, argento o bronzo, spesso raffiguranti la parte del corpo per la quale si chiedeva l’intercessione.
+	Oggi il Santuario dei Santi Cosma e Damiano continua a essere un simbolo di fede, devozione e tradizione, attrazione culturale e religiosa del territorio,
+	ammirato anche per le sue opere artistiche e la storia che custodisce."
+	transform="translate(379 108)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">19</text>
+	</g>
+	<g class="point" data-title="Parcheggio Don Bosco" 
+	data-description=""
+	transform="translate(360 113)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">20</text>
+	</g>
+	<g class="point" data-title="Parcheggio Scuola" 
+	data-description=""
+	transform="translate(343 86)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">21</text>
+	</g>
+	<g class="point" data-title="Parcheggio Ex Campetto" 
+	data-description=""
+	transform="translate(366 157)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">22</text>
+	</g>
+	<g class="point" data-title="Parcheggio Noele" 
+	data-description=""
+	transform="translate(420 200)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">23</text>
+	</g>
+	<g class="point" data-title="Parcheggio Santa Maria" 
+	data-description=""
+	transform="translate(454 371)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">24</text>
+	</g>
+	<g class="point" data-title="Bagni Pubblici" 
+	data-description=""
+	transform="translate(497 257)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">25</text>
+	</g>
+	<g class="point" data-title="Parcheggio Vigna della Corte Sopra" 
+	data-description=""
+	transform="translate(479 164)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">26</text>
+	</g>
+	<g class="point" data-title="Parcheggio Vigna della Corte Sotto" 
+	data-description=""
+	transform="translate(557 126)">
+	<circle r="4" fill="red"/>
+	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">27</text>
+	</g>
+	
+
+<g id="fumetto">
+  <rect id="fumetto-box" rx="8" ry="8" width="230" height="100" fill="white" stroke="black"/>
+  <text id="fumetto-title" x="10" y="20" font-size="13" font-weight="bold" style="user-select:none;"></text>
+  <text id="fumetto-link-text" fill="#0066cc" font-size="10" text-decoration="underline" cursor="pointer" style="user-select:none;">Dettagli</text>
+  <foreignObject id="fumetto-desc-container" x="10" y="35" width="210" height="0" style="overflow:auto; display:none;">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:15px; line-height:1.2em; user-select:none;"></div>
+  </foreignObject>
+</g>
+
+</g>
+</svg>
+</div>
+
+  <footer>
+    © 2025 Museo della Civiltà Contadina
+  </footer>	
+  <script>
+// Effetto di comparsa sezione allo scroll
+const sections = document.querySelectorAll('section');
+const onScroll = () => {
+  sections.forEach(sec => {
+	const rect = sec.getBoundingClientRect();
+	if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // Effetto luce dinamica (spotlight)
+const hero = document.querySelector('.hero');
+    /*hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty('--x', `${x}%`);
+      hero.style.setProperty('--y', `${y}%`);
+    });*/
+
+    // Modalità notturna
+const toggleNight = document.getElementById('toggleNight');
+
+if (localStorage.getItem('theme') === 'night') {
+  document.body.classList.add('night');
+  toggleNight.textContent = '☀️ Modalità Giorno';
+}
+toggleNight.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+  if (document.body.classList.contains('night')) {
+    localStorage.setItem('theme', 'night');
+    toggleNight.textContent = '☀️ Modalità Giorno';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleNight.textContent = '🌙 Modalità Notte';
+  }
+});
+
+
+
+const svg = document.getElementById('svg');
+const bounds = {x:0,y:0,w:800,h:600};
+let viewBox = {...bounds};
+
+const minZoom = 1, maxZoom = 4;
+let zoomFactor=1.2;
+let isPanning=false, start={x:0,y:0};
+const zoomSlider = document.getElementById('zoomSlider');
+const fumettiList = document.getElementById('fumettiList');
+const fumetto = document.getElementById('fumetto');
+const box = document.getElementById('fumetto-box');
+const img = document.getElementById('fumetto-img');
+const link = document.getElementById('fumetto-link');
+const linkText = document.getElementById('fumetto-link-text');
+let activePoint = null;
+zoomSlider.value = minZoom;
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoits > 0
+const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+const isMobile = isTouchDevice && isSmallScreen;
+
+if (isMobile) {
+  // Disabilita rotellina mouse
+  svg.removeEventListener('wheel', zoom);
+  // Slider nascosto
+  zoomSlider.style.display = 'none';
+  // Zoom più morbido
+  zoomFactor = 1.1;
+  // Attiva pinch
+  enablePinchZoom();
+} else {
+  // Desktop
+  svg.addEventListener('wheel', zoom);
+}
+document.body.classList.add(isMobile ? 'mobile' : 'desktop');
+// ===== PINCH TO ZOOM (mobile) =====
+let lastPinchDist = null;
+
+function enablePinchZoom() {
+  svg.addEventListener('touchmove', e => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.hypot(dx, dy);
+
+      if (lastPinchDist) {
+        const scale = lastPinchDist / dist;
+        zoomAtCenter(scale);
+      }
+
+      lastPinchDist = dist;
+    }
+  }, { passive: false });
+
+  svg.addEventListener('touchend', () => {
+    lastPinchDist = null;
+  });
+}
+
+// Zoom e pan
+svg.addEventListener('wheel', zoom);
+
+svg.addEventListener('pointerdown', startPan);
+svg.addEventListener('pointermove', pan);
+svg.addEventListener('pointerup', endPan);
+svg.addEventListener('pointercancel', endPan);
+svg.addEventListener('pointerleave', endPan);
+
+document.getElementById('zoomIn').onclick = ()=>zoomAtCenter(1/zoomFactor);
+document.getElementById('zoomOut').onclick = ()=>zoomAtCenter(zoomFactor);
+document.getElementById('reset').onclick = resetView;
+document.getElementById('showZoomSlider').onclick = ()=>{zoomSlider.style.display = zoomSlider.style.display==='none'?'block':'none';};
+zoomSlider.addEventListener('input',(e)=>{
+  const targetZoom = parseFloat(e.target.value);
+  const factor = (bounds.w/viewBox.w)/targetZoom;
+  zoomAtCenter(factor);
+});
+
+function zoom(e){
+  e.preventDefault();
+  const rect = svg.getBoundingClientRect();
+  const mx = (e.clientX - rect.left)/rect.width*viewBox.w + viewBox.x;
+  const my = (e.clientY - rect.top)/rect.height*viewBox.h + viewBox.y;
+  const scale = e.deltaY<0?1/zoomFactor:zoomFactor;
+  applyZoom(scale,mx,my);
+}
+function zoomAtCenter(scale){applyZoom(scale,viewBox.x+viewBox.w/2,viewBox.y+viewBox.h/2);}
+function applyZoom(scale,cx,cy){
+  const newW=viewBox.w*scale, newH=viewBox.h*scale;
+  const zoomLevel=bounds.w/newW;
+  if(zoomLevel<minZoom||zoomLevel>maxZoom) return;
+  viewBox.w=newW; viewBox.h=newH;
+  viewBox.x=cx-(cx-viewBox.x)*scale;
+  viewBox.y=cy-(cy-viewBox.y)*scale;
+  clampViewBox(); updateViewBox();
+}
+function startPan(e){isPanning=true; start.x=e.clientX; start.y=e.clientY;}
+function pan(e){if(!isPanning) return; const dx=(e.clientX-start.x)*(viewBox.w/svg.clientWidth); const dy=(e.clientY-start.y)*(viewBox.h/svg.clientHeight); viewBox.x-=dx; viewBox.y-=dy; start.x=e.clientX; start.y=e.clientY; clampViewBox(); updateViewBox();}
+function endPan(){isPanning=false;}
+function clampViewBox(){viewBox.x=Math.max(bounds.x,Math.min(viewBox.x,bounds.x+bounds.w-viewBox.w)); viewBox.y=Math.max(bounds.y,Math.min(viewBox.y,bounds.y+bounds.h-viewBox.h));}
+function updateViewBox(){svg.setAttribute('viewBox',`${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`); zoomSlider.value=(bounds.w/viewBox.w).toFixed(2);updateFumettoPosition();}
+function resetView(){viewBox={...bounds}; updateViewBox(); zoomSlider.value=(bounds.w/viewBox.w).toFixed(2);}
+
+// Click sui punti
+document.querySelectorAll('.point').forEach(p=>{
+  p.addEventListener('click',e=>{
+    e.stopPropagation();
+    if(activePoint===p){chiudiFumetto();} else {activePoint=p; mostraFumetto(p);}
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.point') && !e.target.closest('#fumetto')) {
+    chiudiFumetto();
+  }
+});
+// Mostra fumetto
+function mostraFumetto(point){
+  const titleEl = document.getElementById('fumetto-title');
+  const linkText = document.getElementById('fumetto-link-text');
+  const descContainer = document.getElementById('fumetto-desc-container');
+  const descDiv = descContainer.querySelector('div');
+
+  // Imposta titolo e descrizione
+  titleEl.textContent = point.dataset.title || `Punto ${point.querySelector('text').textContent}`;
+  descDiv.textContent = point.dataset.description || 'Descrizione non disponibile';
+  descContainer.style.display = 'none';
+  descContainer.setAttribute('height', 0);
+  document.getElementById('fumetto-box').setAttribute('height', 40);
+
+  // Posiziona fumetto sopra il punto
+  const m = point.transform.baseVal[0].matrix;
+  const cx = m.e, cy = m.f;
+  const x = cx - 90; 
+  const y = cy - 60;
+
+  const box = document.getElementById('fumetto-box');
+  box.setAttribute('x', x);
+  box.setAttribute('y', y);
+  titleEl.setAttribute('x', x + 10);
+  titleEl.setAttribute('y', y + 15);
+  linkText.setAttribute('x', x + 10);
+  linkText.setAttribute('y', y + 30);
+  descContainer.setAttribute('x', x + 10);
+  descContainer.setAttribute('y', y + 35);
+
+  fumetto.style.display = 'block';
+  requestAnimationFrame(()=>fumetto.classList.add('show'));
+
+  // Gestione click sul link per espandere/contrarre
+  linkText.onclick = (e) => {
+    e.stopPropagation();
+    if(descContainer.style.display === 'none'){
+      descContainer.style.display = 'block';
+      descContainer.setAttribute('height', 80);
+      box.setAttribute('height', 120); // espande il rettangolo
+	  descContainer.scrollTop = 0;
+    } else {
+      descContainer.style.display = 'none';
+      descContainer.setAttribute('height', 0);
+      box.setAttribute('height', 40); // riduce il rettangolo
+    }
+  };
+}
+
+function chiudiFumetto(){fumetto.classList.remove('show'); setTimeout(()=>fumetto.style.display='none',250); activePoint=null;}
+
+// Lista fumetti
+document.getElementById('showFumettiList').onclick = () => {
+  if(fumettiList.style.display==='none'){
+    fumettiList.innerHTML=''; // svuota la lista
+    document.querySelectorAll('.point').forEach((point,idx)=>{
+      const li = document.createElement('li');
+      li.style.cursor='pointer';
+      li.style.padding='5px';
+      li.style.borderBottom='1px solid #ddd';
+      li.style.fontSize = '14px';
+
+      // Usa il titolo della descrizione come testo
+      const title = point.dataset.title || `Punto ${idx+1}`;
+      li.textContent = `${idx+1}. ${title}`;
+
+      // Click mostra fumetto
+      li.addEventListener('click', e=>{
+        e.stopPropagation();
+        mostraFumetto(point);
+        fumettiList.style.display='none';
+      });
+
+      fumettiList.appendChild(li);
+    });
+    fumettiList.style.display='block';
+  } else {
+    fumettiList.style.display='none';
+  }
+};
+// Seleziona il div della descrizione dentro il foreignObject
+const descDiv = document.querySelector('#fumetto-desc-container div');
+
+descDiv.addEventListener('wheel', (e) => {
+  e.stopPropagation(); // impedisce allo zoom della mappa di attivarsi
+  // Lascia scorrere normalmente
+});
+function updateFumettoPosition() {
+  if (!activePoint) return;
+
+  const m = activePoint.transform.baseVal[0].matrix;
+  const cx = m.e;
+  const cy = m.f;
+
+  // Trasforma le coordinate in base al viewBox
+  const svgWidth = svg.clientWidth;
+  const svgHeight = svg.clientHeight;
+  const scaleX = svgWidth / viewBox.w;
+  const scaleY = svgHeight / viewBox.h;
+
+  const x = cx - 90;
+  const y = cy - 60;
+
+  const box = document.getElementById('fumetto-box');
+  const titleEl = document.getElementById('fumetto-title');
+  const linkText = document.getElementById('fumetto-link-text');
+  const descContainer = document.getElementById('fumetto-desc-container');
+
+  box.setAttribute('x', x);
+  box.setAttribute('y', y);
+  titleEl.setAttribute('x', x + 10);
+  titleEl.setAttribute('y', y + 15);
+  linkText.setAttribute('x', x + 10);
+  linkText.setAttribute('y', y + 30);
+  descContainer.setAttribute('x', x + 10);
+  descContainer.setAttribute('y', y + 35);
+}
+
+let isDragging = false;
+svg.addEventListener('mousedown', e=>{
+  isPanning = true;
+  isDragging = false;
+  start.x = e.clientX; start.y = e.clientY;
+});
+window.addEventListener('mousemove', e=>{
+  if(!isPanning) return;
+  const dx = (e.clientX - start.x) * (viewBox.w / svg.clientWidth);
+  const dy = (e.clientY - start.y) * (viewBox.h / svg.clientHeight);
+  if(Math.abs(dx) > 1 || Math.abs(dy) > 1) isDragging = true;
+  viewBox.x -= dx; viewBox.y -= dy;
+  start.x = e.clientX; start.y = e.clientY;
+  clampViewBox(); updateViewBox();
+});
+window.addEventListener('mouseup', ()=> isPanning=false);
+
+window.addEventListener('click', e=>{
+  if(activePoint && !fumetto.contains(e.target) && !isDragging) chiudiFumetto();
+});
+
+const togglePointsBtn = document.getElementById('togglePoints');
+
+togglePointsBtn.addEventListener('click', () => {
+  document.body.classList.toggle('points-hidden');
+});
+  </script>
+  </body>
+</html>
