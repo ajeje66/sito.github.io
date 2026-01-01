@@ -272,6 +272,17 @@ body.mobile .point circle {
 .btn-tooltip:hover::after {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  #cornice {
+    margin-top: 10px;
+    height: 55vh;       /* ⬅️ qui la riduci */
+    max-width: 100%;
+    border-width: 1px;
+  }
+  body{margin: 0;}
+}
+
+
   </style>
   </head>
   <body>
@@ -659,7 +670,7 @@ const isMobile = isTouchDevice && isSmallScreen;
 
 if (isMobile) {
   // Disabilita rotellina mouse
-  svg.removeEventListener('wheel', zoom);
+  svg.removeEventListener('wheel', onWheel);
   // Slider nascosto
   zoomSlider.style.display = 'none';
   // Zoom più morbido
@@ -668,7 +679,8 @@ if (isMobile) {
   enablePinchZoom();
 } else {
   // Desktop
-  svg.addEventListener('wheel', zoom);
+ // svg.addEventListener('wheel', zoom);
+ svg.addEventListener('wheel', onWheel);
 }
 document.body.classList.add(isMobile ? 'mobile' : 'desktop');
 // ===== PINCH TO ZOOM (mobile) =====
@@ -716,7 +728,7 @@ function zoomThrottled(e) {
   zoom(e); // chiama la tua funzione di zoom originale
 }
 
-svg.addEventListener('wheel', zoomThrottled);
+//svg.addEventListener('wheel', zoomThrottled);
 	  
 document.getElementById('zoomIn').onclick = ()=>zoomAtCenter(1/zoomFactor);
 document.getElementById('zoomOut').onclick = ()=>zoomAtCenter(zoomFactor);
@@ -727,15 +739,36 @@ zoomSlider.addEventListener('input',(e)=>{
   const factor = (bounds.w/viewBox.w)/targetZoom;
   zoomAtCenter(factor);
 });
+let wheelDelta = 0;
+let zoomRAF = null;
 
-function zoom(e){
+function onWheel(e) {
+  e.preventDefault();
+
+  wheelDelta += e.deltaY;
+
+  if (!zoomRAF) {
+    zoomRAF = requestAnimationFrame(() => {
+      const scale = wheelDelta < 0 ? 1 / zoomFactor : zoomFactor;
+      zoomAtCenter(scale);
+
+      wheelDelta = 0;
+      zoomRAF = null;
+    });
+  }
+}
+
+svg.addEventListener('wheel', onWheel, { passive: false });
+
+/*function zoom(e){
   e.preventDefault();
   const rect = svg.getBoundingClientRect();
   const mx = (e.clientX - rect.left)/rect.width*viewBox.w + viewBox.x;
   const my = (e.clientY - rect.top)/rect.height*viewBox.h + viewBox.y;
   const scale = e.deltaY<0?1/zoomFactor:zoomFactor;
   applyZoom(scale,mx,my);
-}
+}*/
+
 function zoomAtCenter(scale){applyZoom(scale,viewBox.x+viewBox.w/2,viewBox.y+viewBox.h/2);}
 function applyZoom(scale,cx,cy){
   const newW=viewBox.w*scale, newH=viewBox.h*scale;
@@ -909,6 +942,23 @@ const togglePointsBtn = document.getElementById('togglePoints');
 togglePointsBtn.addEventListener('click', () => {
   document.body.classList.toggle('points-hidden');
 });
+
+function warmUpZoom() {
+  const original = { ...viewBox };
+
+  // zoom finto
+  applyZoom(1 / 1.01, viewBox.x + viewBox.w / 2, viewBox.y + viewBox.h / 2);
+  applyZoom(1.01, viewBox.x + viewBox.w / 2, viewBox.y + viewBox.h / 2);
+
+  // ripristina
+  viewBox = original;
+  updateViewBox();
+}
+
+window.addEventListener('load', () => {
+  requestAnimationFrame(warmUpZoom);
+});
+
   </script>
   </body>
 
