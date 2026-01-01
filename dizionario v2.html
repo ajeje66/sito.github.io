@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!-- python -m http.server 8000 --bind 0.0.0.0-->
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Dizionario Moderno con Fonemi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Corpo pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f7;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* Titolo */
+h1 { text-align: center; margin-bottom: 10px; }
+
+/* Menu lettere */
+#alfabeto { text-align: center; margin-bottom: 15px; }
+
+.lettera {
+    margin: 4px 3px;
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.lettera:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.lettera.active {
+    background-color: #0d47a1;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Input ricerca */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Card voci */
+.voce {
+    background: #fff;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.voce:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.parola { font-weight: bold; font-size: 18px; }
+.fonemi { font-style: italic; color: #888; margin-left: 10px; }
+.definizione { margin-left: 10px; color: #555; }
+
+mark { background-color: yellow; }
+
+#dizionario { max-width: 600px; margin: auto; }
+
+.etimologia-btn {
+    margin-top: 6px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+.etimologia-btn:hover {
+    background-color: #fb8c00;
+    transform: translateY(-1px);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    input { font-size: 14px; }
+    .parola { font-size: 16px; }
+    .definizione { font-size: 14px; }
+    .fonemi { font-size: 14px; }
+    .lettera { padding: 6px 10px; margin: 2px; font-size: 12px; }
+}
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 42px 12px 14px;
+    font-size: 16px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-container input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+}
+
+#clear-search {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-90%);
+    border: none;
+    background: #e0e0e0;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    display: none;
+    transition: background 0.2s;
+}
+
+#clear-search:hover {
+    background: #bdbdbd;
+}
+#clear-search {
+        background: #333;
+        color: #eee;
+    }
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+/* Rimuove la X in Firefox */
+input[type="search"]::-moz-search-clear {
+    display: none;
+}
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f5f5f7;
+    padding: 10px 0;
+}
+
+/* Dark mode */
+
+#dizionario {
+    max-width: 600px;
+    margin: 20px auto;
+}
+.sticky-bar {
+    box-shadow: 0 2px 0 rgba(0,0,0,0);
+    transition: box-shadow 0.2s ease;
+}
+
+.sticky-bar.stuck {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.alfabeto-orizzontale {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 8px 6px;
+    white-space: nowrap;
+}
+
+/* Desktop → mostra scrollbar */
+@media (min-width: 769px) {
+    .alfabeto-orizzontale {
+        scrollbar-width: auto; /* Firefox */
+    }
+
+    .alfabeto-orizzontale::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .alfabeto-orizzontale::-webkit-scrollbar-thumb {
+        background-color: #bdbdbd;
+        border-radius: 4px;
+    }
+
+    .alfabeto-orizzontale::-webkit-scrollbar-track {
+        background-color: #eee;
+    }
+	    .alfabeto-orizzontale::-webkit-scrollbar-thumb:hover {
+        background-color: #9e9e9e;
+    }
+
+}
+
+/* Mobile → nasconde scrollbar */
+@media (max-width: 768px) {
+    .alfabeto-orizzontale {
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .alfabeto-orizzontale::-webkit-scrollbar {
+        display: none;
+    }
+}
+.pronuncia-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.pronuncia-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-1px);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h1>📖 Dizionario Moderno</h1>
+
+<div class="alfabeto-orizzontale" id="alfabeto"></div>
+<div class="sticky-bar">
+    <div id="alfabeto"></div>
+
+    <div class="search-container">
+        <input
+            type="text"
+            id="search"
+            placeholder="Cerca parola, fonemi o definizione..."
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false">
+        <button id="clear-search" aria-label="Cancella ricerca">✕</button>
+    </div>
+</div>
+<div id="dizionario">Caricamento...</div>
+
+<script>
+const contenitore = document.getElementById("dizionario");
+const searchInput = document.getElementById("search");
+const alfabetoContainer = document.getElementById("alfabeto");
+
+let dizionario = [];
+let risultatiFiltrati = [];
+const itemsPerBatch = 5; // numero di voci mostrate ad ogni scroll
+let lastIndex = 0;
+let letteraFiltro = null;
+
+// Evidenzia testo cercato
+function evidenziaTesto(testo, filtro) {
+    if (!filtro) return testo;
+    const regex = new RegExp(`(${filtro})`, "gi");
+    return testo.replace(regex, "<mark>$1</mark>");
+}
+
+// Mostra batch di voci
+function mostraBatch() {
+    const batch = risultatiFiltrati.slice(lastIndex, lastIndex + itemsPerBatch);
+    const filtro = searchInput.value.toLowerCase();
+
+    batch.forEach(voce => {
+        // 👇 div DEVE essere dichiarato QUI
+        const div = document.createElement("div");
+        div.className = "voce";
+
+        div.innerHTML = `
+            <div class="parola">${evidenziaTesto(voce.parola, filtro)}</div>
+            <div class="fonemi">${voce.fonemi || ""}</div>
+            <div class="definizione">${evidenziaTesto(voce.definizione, filtro)}</div>
+
+            <div class="azioni">
+                <button class="pronuncia-btn">🔊 Pronuncia</button>
+                <button class="etimologia-btn">Mostra etimologia</button>
+            </div>
+
+            <div class="etimologia" style="display:none;">
+                ${voce.etimologia && voce.etimologia.trim() !== ""
+                    ? voce.etimologia
+                    : "Non disponibile"}
+            </div>
+        `;
+
+        // 👇 append DOPO innerHTML
+        contenitore.appendChild(div);
+
+        // 🔊 Pronuncia
+        const pronunciaBtn = div.querySelector(".pronuncia-btn");
+        pronunciaBtn.addEventListener("click", () => {
+            pronunciaParola(voce.parola);
+        });
+
+        // 📜 Etimologia
+        const etimBtn = div.querySelector(".etimologia-btn");
+        const etimDiv = div.querySelector(".etimologia");
+
+        etimBtn.addEventListener("click", () => {
+            const aperto = etimDiv.style.display === "block";
+            etimDiv.style.display = aperto ? "none" : "block";
+            etimBtn.textContent = aperto
+                ? "Mostra etimologia"
+                : "Nascondi etimologia";
+        });
+    });
+
+    lastIndex += itemsPerBatch;
+}
+
+
+// Filtra dizionario per lettera o ricerca
+function filtraDizionario() {
+    const filtroTesto = searchInput.value.toLowerCase();
+    risultatiFiltrati = dizionario.filter(voce => {
+        const inLettera = letteraFiltro ? voce.parola.toUpperCase().startsWith(letteraFiltro) : true;
+        const inTesto = voce.parola.toLowerCase().includes(filtroTesto) ||
+                         (voce.fonemi && voce.fonemi.toLowerCase().includes(filtroTesto)) ||
+                         voce.definizione.toLowerCase().includes(filtroTesto);
+        return inLettera && inTesto;
+    });
+    contenitore.innerHTML = "";
+    lastIndex = 0;
+    mostraBatch();
+}
+const clearBtn = document.getElementById("clear-search");
+
+// Mostra o nasconde la X
+searchInput.addEventListener("input", () => {
+    clearBtn.style.display = searchInput.value ? "block" : "none";
+
+    letteraFiltro = null;
+    document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+    document.querySelector(".lettera").classList.add("active"); // "Tutte"
+    filtraDizionario();
+});
+
+// Cancella ricerca
+clearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    clearBtn.style.display = "none";
+
+    letteraFiltro = null;
+    document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+    document.querySelector(".lettera").classList.add("active"); // "Tutte"
+    filtraDizionario();
+
+    searchInput.focus();
+});
+
+
+// Genera menu alfabetico + tasto Tutte
+function generaAlfabeto() {
+    const allBtn = document.createElement("span");
+    allBtn.className = "lettera active";
+    allBtn.textContent = "Tutte";
+    allBtn.addEventListener("click", () => {
+        letteraFiltro = null;
+        searchInput.value = "";
+        document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+        allBtn.classList.add("active");
+        filtraDizionario();
+    });
+    alfabetoContainer.appendChild(allBtn);
+
+    const lettere = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    lettere.forEach(l => {
+        const span = document.createElement("span");
+        span.className = "lettera";
+        span.textContent = l;
+        span.addEventListener("click", () => {
+            document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+            span.classList.add("active");
+            letteraFiltro = l;
+            searchInput.value = "";
+            filtraDizionario();
+        });
+        alfabetoContainer.appendChild(span);
+    });
+}
+
+// Carica JSON
+fetch('dizionario.json')
+    .then(res => res.json())
+    .then(data => {
+        dizionario = data.sort((a,b) => a.parola.localeCompare(b.parola));
+        generaAlfabeto();
+        filtraDizionario();
+    })
+    .catch(err => {
+        contenitore.innerHTML = "Errore nel caricamento del dizionario.";
+        console.error(err);
+    });
+
+// Ricerca live
+searchInput.addEventListener("input", () => {
+    letteraFiltro = null;
+    document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+    document.querySelector(".lettera").classList.add("active"); // attiva "Tutte"
+    filtraDizionario();
+});
+
+// Infinite scroll
+window.addEventListener("scroll", () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+        mostraBatch();
+    }
+	
+});
+const stickyBar = document.querySelector(".sticky-bar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        stickyBar.classList.add("stuck");
+    } else {
+        stickyBar.classList.remove("stuck");
+    }
+});
+
+function pronunciaParola(testo) {
+    if (!("speechSynthesis" in window)) {
+        alert("Sintesi vocale non supportata dal browser");
+        return;
+    }
+
+    // Ferma eventuali voci in corso
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(testo);
+    utterance.lang = "it-IT";      // lingua italiana
+    utterance.rate = 0.7;          // velocità (0.1–10)
+    utterance.pitch = 1;           // tono
+    utterance.volume = 1;
+
+    window.speechSynthesis.speak(utterance);
+}
+
+
+</script>
+</body>
+</html>
