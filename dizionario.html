@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Dizionario Moderno con Fonemi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Corpo pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f7;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* Titolo */
+h1 { text-align: center; margin-bottom: 10px; }
+
+/* Menu lettere */
+#alfabeto { text-align: center; margin-bottom: 15px; }
+
+.lettera {
+    margin: 4px 3px;
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.lettera:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.lettera.active {
+    background-color: #0d47a1;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Input ricerca */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Card voci */
+.voce {
+    background: #fff;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.voce:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.parola { font-weight: bold; font-size: 18px; }
+.fonemi { font-style: italic; color: #888; margin-left: 10px; }
+.definizione { margin-left: 10px; color: #555; }
+
+mark { background-color: yellow; }
+
+#dizionario { max-width: 600px; margin: auto; }
+
+/* Mobile */
+@media (max-width: 600px) {
+    input { font-size: 14px; }
+    .parola { font-size: 16px; }
+    .definizione { font-size: 14px; }
+    .fonemi { font-size: 14px; }
+    .lettera { padding: 6px 10px; margin: 2px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<h1>📖 Dizionario Moderno</h1>
+
+<div id="alfabeto"></div>
+<input type="text" id="search" placeholder="Cerca parola, fonemi o definizione...">
+<div id="dizionario">Caricamento...</div>
+
+<script>
+const contenitore = document.getElementById("dizionario");
+const searchInput = document.getElementById("search");
+const alfabetoContainer = document.getElementById("alfabeto");
+
+let dizionario = [];
+let risultatiFiltrati = [];
+const itemsPerBatch = 5; // numero di voci mostrate ad ogni scroll
+let lastIndex = 0;
+let letteraFiltro = null;
+
+// Evidenzia testo cercato
+function evidenziaTesto(testo, filtro) {
+    if (!filtro) return testo;
+    const regex = new RegExp(`(${filtro})`, "gi");
+    return testo.replace(regex, "<mark>$1</mark>");
+}
+
+// Mostra batch di voci
+function mostraBatch() {
+    const batch = risultatiFiltrati.slice(lastIndex, lastIndex + itemsPerBatch);
+    const filtro = searchInput.value.toLowerCase();
+    batch.forEach(voce => {
+        const div = document.createElement("div");
+        div.className = "voce";
+        div.innerHTML = `
+            <div class="parola">${evidenziaTesto(voce.parola, filtro)}</div>
+            <div class="fonemi">${voce.fonemi || ''}</div>
+            <div class="definizione">${evidenziaTesto(voce.definizione, filtro)}</div>
+        `;
+        contenitore.appendChild(div);
+    });
+    lastIndex += itemsPerBatch;
+}
+
+// Filtra dizionario per lettera o ricerca
+function filtraDizionario() {
+    const filtroTesto = searchInput.value.toLowerCase();
+    risultatiFiltrati = dizionario.filter(voce => {
+        const inLettera = letteraFiltro ? voce.parola.toUpperCase().startsWith(letteraFiltro) : true;
+        const inTesto = voce.parola.toLowerCase().includes(filtroTesto) ||
+                         (voce.fonemi && voce.fonemi.toLowerCase().includes(filtroTesto)) ||
+                         voce.definizione.toLowerCase().includes(filtroTesto);
+        return inLettera && inTesto;
+    });
+    contenitore.innerHTML = "";
+    lastIndex = 0;
+    mostraBatch();
+}
+
+// Genera menu alfabetico + tasto Tutte
+function generaAlfabeto() {
+    const allBtn = document.createElement("span");
+    allBtn.className = "lettera active";
+    allBtn.textContent = "Tutte";
+    allBtn.addEventListener("click", () => {
+        letteraFiltro = null;
+        searchInput.value = "";
+        document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+        allBtn.classList.add("active");
+        filtraDizionario();
+    });
+    alfabetoContainer.appendChild(allBtn);
+
+    const lettere = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    lettere.forEach(l => {
+        const span = document.createElement("span");
+        span.className = "lettera";
+        span.textContent = l;
+        span.addEventListener("click", () => {
+            document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+            span.classList.add("active");
+            letteraFiltro = l;
+            searchInput.value = "";
+            filtraDizionario();
+        });
+        alfabetoContainer.appendChild(span);
+    });
+}
+
+// Carica JSON
+fetch('dizionario.json')
+    .then(res => res.json())
+    .then(data => {
+        dizionario = data.sort((a,b) => a.parola.localeCompare(b.parola));
+        generaAlfabeto();
+        filtraDizionario();
+    })
+    .catch(err => {
+        contenitore.innerHTML = "Errore nel caricamento del dizionario.";
+        console.error(err);
+    });
+
+// Ricerca live
+searchInput.addEventListener("input", () => {
+    letteraFiltro = null;
+    document.querySelectorAll(".lettera").forEach(el => el.classList.remove("active"));
+    document.querySelector(".lettera").classList.add("active"); // attiva "Tutte"
+    filtraDizionario();
+});
+
+// Infinite scroll
+window.addEventListener("scroll", () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+        mostraBatch();
+    }
+});
+</script>
+
+</body>
+</html>
