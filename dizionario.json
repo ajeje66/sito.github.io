@@ -1,5 +1,15 @@
 [
-    { "parola": "1", "fonemi": "/ˈ/", "definizione": "." },
-    { "parola": "2", "fonemi": "/ˈ/", "definizione": "."},
+    { "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+    { "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	{ "parola": "1", "fonemi": "/'AA/", "definizione": "." , "etimologia":".."},
+	
+	{ "parola": "2", "fonemi": "/BB/", "definizione": ".", "etimologia":""}
 
 ]
