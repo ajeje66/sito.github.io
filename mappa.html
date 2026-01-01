@@ -719,7 +719,7 @@ svg.addEventListener('pointercancel', endPan);
 svg.addEventListener('pointerleave', endPan);
 
 let lastWheelTime = 0;
-const wheelDelay = 50; // in ms
+const wheelDelay = 100; // in ms
 
 function zoomThrottled(e) {
   const now = Date.now();
@@ -963,6 +963,7 @@ window.addEventListener('load', () => {
   </body>
 
 </html>
+
 
 
 
