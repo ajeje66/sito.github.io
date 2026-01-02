@@ -15,7 +15,6 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-
 /* Titolo */
 h1 { text-align: center; margin-bottom: 10px; }
 
@@ -80,23 +79,6 @@ input {
 mark { background-color: yellow; }
 
 #dizionario { max-width: 600px; margin: auto; }
-
-.etimologia-btn {
-    margin-top: 6px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ff9800;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-}
-.etimologia-btn:hover {
-    background-color: #fb8c00;
-    transform: translateY(-1px);
-}
-
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -228,22 +210,21 @@ input[type="search"]::-moz-search-clear {
         display: none;
     }
 }
-.pronuncia-btn {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
+
+.riga{
+    display: flex;
+    align-items: center; /* centra verticalmente img e testo */
+    gap: 8px; /* spazio tra img e testo */
 }
 
-.pronuncia-btn:hover {
-    background-color: #43a047;
-    transform: translateY(-1px);
+.flag {
+	display: block;
+	vertical-align:middle;
+    width: 22px;
+    height: auto; /* mantiene proporzioni */
+	object-fit:cover;
+    flex-shrink: 0; /* non ridimensiona */
 }
-
 
 
 </style>
@@ -299,42 +280,26 @@ function mostraBatch() {
         div.className = "voce";
 
         div.innerHTML = `
-            <div class="parola">${evidenziaTesto(voce.parola, filtro)}</div>
+            <div class="riga" style="font-weight: bold; font-size:20px;">
+				<img class="flag" src="bandiera.png">
+				<span>${evidenziaTesto(voce.parola, filtro)}</span>
+			</div>
             <div class="fonemi">${voce.fonemi || ""}</div>
-            <div class="definizione">${evidenziaTesto(voce.definizione, filtro)}</div>
+            <div class="riga">
+				<img class="flag" src="it.svg">
+				<span>${evidenziaTesto(voce.definizione, filtro)}</span>
+			</div>
 
-            <div class="azioni">
-                <button class="pronuncia-btn">🔊 Pronuncia</button>
-                <button class="etimologia-btn">Mostra etimologia</button>
-            </div>
-
-            <div class="etimologia" style="display:none;">
-                ${voce.etimologia && voce.etimologia.trim() !== ""
-                    ? voce.etimologia
-                    : "Non disponibile"}
+            <div class="riga">
+              <img class="flag" src="uk.svg">
+			   <span>${voce.traduzione_en !== ""
+                    ? voce.traduzione_en
+                    : "Non disponibile"}</span>
             </div>
         `;
-
         // 👇 append DOPO innerHTML
         contenitore.appendChild(div);
 
-        // 🔊 Pronuncia
-        const pronunciaBtn = div.querySelector(".pronuncia-btn");
-        pronunciaBtn.addEventListener("click", () => {
-            pronunciaParola(voce.parola);
-        });
-
-        // 📜 Etimologia
-        const etimBtn = div.querySelector(".etimologia-btn");
-        const etimDiv = div.querySelector(".etimologia");
-
-        etimBtn.addEventListener("click", () => {
-            const aperto = etimDiv.style.display === "block";
-            etimDiv.style.display = aperto ? "none" : "block";
-            etimBtn.textContent = aperto
-                ? "Mostra etimologia"
-                : "Nascondi etimologia";
-        });
     });
 
     lastIndex += itemsPerBatch;
@@ -448,25 +413,6 @@ window.addEventListener("scroll", () => {
         stickyBar.classList.remove("stuck");
     }
 });
-
-function pronunciaParola(testo) {
-    if (!("speechSynthesis" in window)) {
-        alert("Sintesi vocale non supportata dal browser");
-        return;
-    }
-
-    // Ferma eventuali voci in corso
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(testo);
-    utterance.lang = "it-IT";      // lingua italiana
-    utterance.rate = 0.7;          // velocità (0.1–10)
-    utterance.pitch = 1;           // tono
-    utterance.volume = 1;
-
-    window.speechSynthesis.speak(utterance);
-}
-
 
 </script>
 </body>
