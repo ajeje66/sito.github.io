@@ -281,8 +281,138 @@ body.mobile .point circle {
   }
   body{margin: 0;}
 }
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+#info {
+    text-align: center; /* centra il testo orizzontalmente */
+    margin: 20px 0;
+}
+
+.info-content {
+    display: inline-flex;       /* rende testo+immagine un blocco flex */
+    align-items: center;        /* centra verticalmente */
+    gap: 10px;                  /* spazio tra testo e immagine */
+}
+/*---SUBMENU--*/
+nav {
+  position: relative;
+  z-index:10;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu > li {
+  position: relative; /* necessario per il sottomenu */
+}
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover desktop */
+.menu li:hover > .submenu {
+  display: block;
+}
+
+/* Sottomenu nascosto di default */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #bfae94;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+}
+.submenu li a {
+  padding: 10px;
+  color: white;
+}
+
+/* Hover sottomenu */
+.submenu li a:hover {
+  background-color: #555;
+}
+
+/* Mobile: mostra il sottomenu al tap */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .submenu {
+    position: static;
+  }
+  /* usa checkbox hack per tap */
+  .dropdown > a::after {
+    content: " ▼";
+    float: right;
+  }
+}
 
 
+body.night .submenu {
+  background-color: #333; /* sfondo scuro */
+}
+
+body.night .submenu li a {
+  color: #f0f0f0; /* colore testo chiaro */
+}
+
+body.night .submenu li a:hover {
+  background-color: #555; /* colore hover leggermente diverso */
+}
+
+#scrollTopBtn {
+  display: none; /* nascosto di default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50; /* sopra tutto */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+.body.night #scrollTopBtn {
+  background-color: #bfae94;
+}
+
+.body.night #scrollTopBtn:hover {
+  background-color: #444;
+}
+
+body.night #scrollTopBtn {
+  background-color: #d8cbb3; /* sfondo più scuro */
+  color: #000;         /* colore della freccia */
+}
+
+body.night #scrollTopBtn:hover {
+  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
+}
   </style>
   </head>
   <body>
@@ -291,14 +421,20 @@ body.mobile .point circle {
     <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
     <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#info">Info</a>
-	<a href="index.html#foto">Foto-gallery</a>
-	<a href="proverbi.html">Saggezza popolare</a>
-	<a href="cultura.html">La nostra cultura</a>
-	<a href="mappa.html">Percorso urbano</a>
-	<a href="dizionario.html">Dizionario</a>
-  </nav>
+  <ul class="menu">
+    <li class="dropdown">
+      <a href="#home">Home</a>
+      <ul class="submenu">
+        <li><a href="index.html#info">Info</a></li>
+        <li><a href="index.html#foto">Foto-gallery</a></li>
+      </ul>
+    </li>
+    <li><a href="proverbi.html">Saggezza popolare</a></li>
+    <li><a href="cultura.html">La nostra cultura</a></li>
+    <li><a href="mappa.html">Percorso urbano</a></li>
+    <li><a href="dizionario.html">Dizionario</a></li>
+  </ul>
+</nav>
   <section id="info">
   <h2>Descrizione:... <br>
   Durata punti: 1-12 ~ 1.30 h </h2>
@@ -317,7 +453,7 @@ body.mobile .point circle {
 <svg id="svg" viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <g id="viewport">
-  <image x="0" y="0" width="800" height="600" xlink:href="1.png"/>
+  <image x="0" y="0" width="800" height="600" image-rendering="optimized"  xlink:href="1.png"/>
 
   <g class="point" data-title="Museo della Civiltà Contadina" data-description="Piazza Umberto I è il cuore storico e simbolico di Castel San Lorenzo. 
 	Intitolata al Re, conserva intatto il fascino delle antiche piazze medievali, 
@@ -582,11 +718,17 @@ body.mobile .point circle {
 </svg>
 </div>
 <section id="info">
-Descrizioni a cura <a href=""><img src="img/ass.png" width="90" height="127"></a>
+	<div class="info-content">
+		Descrizioni a cura 
+		<a href="https://www.instagram.com/associazioneraccontare/" target="_blank" rel="noopener noreferrer" rel="noopener"
+		aria-label="Apre in una nuova scheda"><img src="img/ass.png" width="90" height="100">
+		</a>
+	</div>
 </section>
   <footer>
     © 2025 Museo della Civiltà Contadina
   </footer>	
+  <button id="scrollTopBtn" title="Torna su">↑</button>
   <script>
 // Effetto di comparsa sezione allo scroll
 const sections = document.querySelectorAll('section');
@@ -943,8 +1085,21 @@ function warmUpZoomOnce(){
     });
   });
 }
-
+const scrollBtn = document.getElementById("scrollTopBtn");
 window.addEventListener('load', warmUpZoomOnce);
+  // Mostra il pulsante dopo 100px di scroll
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll fluido verso l'alto al click
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   </script>
   </body>
 

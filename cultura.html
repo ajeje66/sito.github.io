@@ -333,8 +333,117 @@
   }
 }
 
+/*---SUBMENU--*/
+nav {
+  position: relative;
+  z-index:10;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu > li {
+  position: relative; /* necessario per il sottomenu */
+}
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover desktop */
+.menu li:hover > .submenu {
+  display: block;
+}
+
+/* Sottomenu nascosto di default */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #bfae94;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+}
+.submenu li a {
+  padding: 10px;
+  color: white;
+}
+
+/* Hover sottomenu */
+.submenu li a:hover {
+  background-color: #555;
+}
+
+/* Mobile: mostra il sottomenu al tap */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .submenu {
+    position: static;
+  }
+  /* usa checkbox hack per tap */
+  .dropdown > a::after {
+    content: " ▼";
+    float: right;
+  }
+}
 
 
+body.night .submenu {
+  background-color: #333; /* sfondo scuro */
+}
+
+body.night .submenu li a {
+  color: #f0f0f0; /* colore testo chiaro */
+}
+
+body.night .submenu li a:hover {
+  background-color: #555; /* colore hover leggermente diverso */
+}
+
+#scrollTopBtn {
+  display: none; /* nascosto di default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50; /* sopra tutto */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+.body.night #scrollTopBtn {
+  background-color: #bfae94;
+}
+
+.body.night #scrollTopBtn:hover {
+  background-color: #444;
+}
+
+body.night #scrollTopBtn {
+  background-color: #d8cbb3; /* sfondo più scuro */
+  color: #000;         /* colore della freccia */
+}
+
+body.night #scrollTopBtn:hover {
+  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
+}
   </style>
 </head>
 <body>
@@ -343,15 +452,21 @@
     <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#info">Info</a>
-	<a href="index.html#foto">Foto-gallery</a>
-	<a href="proverbi.html">Saggezza popolare</a>
-	<a href="cultura.html">La nostra cultura</a>
-	<a href="mappa.html">Percorso urbano</a>
-	<a href="dizionario.html">Dizionario</a>
-  </nav>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      <a href="#home">Home</a>
+      <ul class="submenu">
+        <li><a href="index.html#info">Info</a></li>
+        <li><a href="index.html#foto">Foto-gallery</a></li>
+      </ul>
+    </li>
+    <li><a href="proverbi.html">Saggezza popolare</a></li>
+    <li><a href="cultura.html">La nostra cultura</a></li>
+    <li><a href="mappa.html">Percorso urbano</a></li>
+    <li><a href="dizionario.html">Dizionario</a></li>
+  </ul>
+</nav>
 	
   <section id="info">
 	<h2>Nella pagina "La nostra cultura" sono racchiuse le principali attività di artigianato e agricoltura tipiche della nostra civiltà contadina
@@ -481,7 +596,7 @@
 		<button id="closeModal" class="modal-close">&times;</button>
 		<img id="modalImage" src="" alt="Immagine ingrandita">
 	</div>
-	
+	<button id="scrollTopBtn" title="Torna su">↑</button>
   <script>
 // Effetto di comparsa sezione allo scroll
 const sections = document.querySelectorAll('section');
@@ -523,6 +638,21 @@ toggleNight.addEventListener('click', () => {
     toggleNight.textContent = '🌙 Modalità Notte';
   }
 });
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+  // Mostra il pulsante dopo 100px di scroll
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll fluido verso l'alto al click
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   </script>
 </body>
