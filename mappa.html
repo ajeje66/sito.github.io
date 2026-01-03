@@ -297,6 +297,7 @@ body.mobile .point circle {
 	<a href="proverbi.html">Saggezza popolare</a>
 	<a href="cultura.html">La nostra cultura</a>
 	<a href="mappa.html">Percorso urbano</a>
+	<a href="dizionario.html">Dizionario</a>
   </nav>
   <section id="info">
   <h2>Descrizione:... <br>
@@ -926,30 +927,25 @@ togglePointsBtn.addEventListener('click', () => {
   document.body.classList.toggle('points-hidden');
 });
 
-function warmUpZoom() {
-  const original = { ...viewBox };
+let warmedUp = false;
 
-  // zoom finto
-  applyZoom(1 / 1.01, viewBox.x + viewBox.w / 2, viewBox.y + viewBox.h / 2);
-  applyZoom(1.01, viewBox.x + viewBox.w / 2, viewBox.y + viewBox.h / 2);
+function warmUpZoomOnce(){
+  if (warmedUp) return;
+  warmedUp = true;
 
-  // ripristina
-  viewBox = original;
-  updateViewBox();
+  const cx = viewBox.x + viewBox.w / 2;
+  const cy = viewBox.y + viewBox.h / 2;
+
+  requestAnimationFrame(() => {
+    applyZoom(0.98, cx, cy);
+    requestAnimationFrame(() => {
+      applyZoom(1 / 0.98, cx, cy);
+    });
+  });
 }
 
-window.addEventListener('load', () => {
-  requestAnimationFrame(warmUpZoom);
-});
-
+window.addEventListener('load', warmUpZoomOnce);
   </script>
   </body>
 
 </html>
-
-
-
-
-
-
-

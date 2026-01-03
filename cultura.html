@@ -289,6 +289,51 @@
     margin-top: 5px;
   }
 }
+.entry {
+  margin-bottom: 40px;
+}
+
+.lang {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+.lang img {
+  width: 22px;
+  margin-top: 4px;
+}
+
+.lang p {
+  margin: 0;
+}
+.art-image {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  display: block;
+}
+
+/* Desktop: immagine affiancata */
+@media (min-width: 768px) {
+  .art-image {
+    float: right;
+    width: 50%;
+    margin: 0 0 15px 20px;
+  }
+}
+
+/* Mobile: immagine sopra il testo */
+@media (max-width: 767px) {
+  .art-image {
+    float: none;
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+
 
   </style>
 </head>
@@ -297,7 +342,7 @@
     <h1>Museo della Civiltà Contadina</h1>
     <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
-	<!--TGVnZ2VuLSBub24gdGkgbXVvdmVyZS0gREFSSU8=-->
+
   <nav>
     <a href="index.html">Home</a>
     <a href="index.html#info">Info</a>
@@ -305,6 +350,7 @@
 	<a href="proverbi.html">Saggezza popolare</a>
 	<a href="cultura.html">La nostra cultura</a>
 	<a href="mappa.html">Percorso urbano</a>
+	<a href="dizionario.html">Dizionario</a>
   </nav>
 	
   <section id="info">
@@ -368,21 +414,62 @@
 				acqua per facilitarne la lavorazione.
 			</li>
 		</ul>
-	<h3>Terracotta</h3>
-		Dalla lavorazione della Terracotta nascevano recipienti e pignatte, utilizzate soprattutto in cucina.
-		Di varie dimensioni e forme, queste creazioni erano indispensabili per la vita quotidiana sia delle famiglie,
-		sia degli agricoltori, i quali se ne servivano per abbeverarsi durante le lunghe giornate lavorative nei campi.
-	<h3>Calzolaio</h3>
-	<p><img src="img/8.jpeg" style="padding: 8px;float:right;width:600px;height:300px;" class="img-responsive">
-		Realizzava con cura e attenzione al dettaglio scarpe di varie misura.
-		Dalle scarpe per bambini a quelle degli operai e agricoltori, 
-		il mestiere del ciabattino assicurava un vero e proprio servizio alla comunità. 
-		</p>
-	<h3>Lavorazione del ferro</h3>
-		Utensili per la cucina, attrezzi per l'agricoltura, e i cosiddetti "maschi" per chiudere porte e portoni:
-		Queste erano alcune delle opere d'arte realizzate dai fabbri. 
-		Si trattava di un lavoro faticoso, ma era essenziale per la vita di tutti i giorni. 
-  
+	<div class="entry">
+		<h3>Terracotta</h3>
+		<div class="lang it">
+			<img src="img/it.svg" style="width: 22px;height: auto;">
+			<p>
+				Dalla lavorazione della Terracotta nascevano recipienti e pignatte, utilizzate soprattutto in cucina.
+				Di varie dimensioni e forme, queste creazioni erano indispensabili per la vita quotidiana sia delle famiglie,
+				sia degli agricoltori, i quali se ne servivano per abbeverarsi durante le lunghe giornate lavorative nei campi.
+			</p>
+		</div>
+		<div class="lang en">	
+			<img src="img/uk.svg" style="width: 22px;height: auto;">
+			<p>	
+				Terracotta was used to make pots and pans, mainly used in the kitchen.
+				These creations, of various sizes and shapes, were essential for the daily life of both families and farmers, 
+				who used them to drink from during long working days in the fields.
+			</p>
+		</div>
+	</div>
+	<div class="entry">
+		<h3>Calzolaio/Shoemaker</h3>
+		<img src="img/8.jpeg" class="img-responsive art-image">
+		<div class="lang it">
+			<img src="img/it.svg" style="width: 22px;height: auto;"> 
+			<p>
+				Realizzava con cura e attenzione al dettaglio scarpe di varie misura.
+				Dalle scarpe per bambini a quelle degli operai e agricoltori, 
+				il mestiere del ciabattino assicurava un vero e proprio servizio alla comunità.
+			</p>	
+		</div>
+		<div class="lang en">
+			<img src="img/uk.svg" style="width: 22px;height: auto;"> 
+			<p>
+				He made shoes of various sizes with care and attention to detail .
+				From children's shoes to those for workers and farmers, the shoemaker's craft provided a real service to the community.
+			</p>
+		</div>
+	</div>
+	<div class="entry">
+		<h3>Lavorazione del ferro/Ironworking</h3>
+		<div class="lang it">
+			<img src="img/it.svg" style="width: 22px;height: auto;"> 
+			<p>
+				Utensili per la cucina, attrezzi per l'agricoltura, e i cosiddetti "maschi" per chiudere porte e portoni:
+				Queste erano alcune delle opere d'arte realizzate dai fabbri. 
+				Si trattava di un lavoro faticoso, ma era essenziale per la vita di tutti i giorni. 
+			</p>
+		</div>
+		<div class="lang en">
+			<img src="img/uk.svg" style="width: 22px;height: auto;"> 
+			<p>
+				Kitchen utensils, agricultural tools and so-called “maschi” for closing doors and gates:
+				These were some of the masterpieces created by blacksmiths. It was hard work, but it was essential for everyday life.
+			</p>
+		</div>
+	</div>
   </section>
 	
 	
@@ -439,6 +526,4 @@ toggleNight.addEventListener('click', () => {
 
   </script>
 </body>
-
 </html>
-

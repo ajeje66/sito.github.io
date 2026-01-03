@@ -15,7 +15,6 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-
 /* Titolo */
 h1 { text-align: center; margin-bottom: 10px; }
 
@@ -80,23 +79,6 @@ input {
 mark { background-color: yellow; }
 
 #dizionario { max-width: 600px; margin: auto; }
-
-.etimologia-btn {
-    margin-top: 6px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ff9800;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-}
-.etimologia-btn:hover {
-    background-color: #fb8c00;
-    transform: translateY(-1px);
-}
-
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -229,17 +211,205 @@ input[type="search"]::-moz-search-clear {
     }
 }
 
+.riga{
+    display: flex;
+    align-items: center; /* centra verticalmente img e testo */
+    gap: 8px; /* spazio tra img e testo */
+}
+
+.flag {
+	display: block;
+	vertical-align:middle;
+    width: 22px;
+    height: auto; /* mantiene proporzioni */
+	object-fit:cover;
+    flex-shrink: 0; /* non ridimensiona */
+}
+    header {
+      background-color: #d8cbb3;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      animation: fadeDown 1s ease;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      color: #3a2c1a;
+    }
+
+    /* Pulsante modalità notte */
+    #toggleNight {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #3a2c1a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+
+    #toggleNight:hover {
+      background: #55422a;
+    }
+
+    nav {
+      background-color: #bfae94;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.6s;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #3a2c1a;
+      transform: scale(1.1);
+    }
+footer {
+      background-color: #bfae94;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.6s, color 0.6s;
+    }
+
+    /* ----- MODALITÀ NOTTURNA ----- */
+    body.night {
+      background-color: #1c1c1c;
+      color: #f0f0f0;
+    }
+
+    body.night header {
+      background-color: #2a2a2a;
+    }
+
+    body.night nav {
+      background-color: #333;
+    }
+
+    body.night nav a:hover {
+      color: #ffcc66;
+    }
+
+    body.night footer {
+      background-color: #2a2a2a;
+      color: #ddd;
+    }
+	body.night header h1 {
+		color: #f5e6c8;
+	}
+	body.night .voce {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+body.night .definizione {
+    color: #cccccc;
+}
+
+body.night .fonemi {
+    color: #aaaaaa;
+}
+body.night .search-container  {
+    background-color: #00000;
+    color: #ffffff;
+    
+}
+body.night .sticky-bar {
+    background-color: #1e1e1e; /* colore sfondo area */
+}
+
+    /* ----- ANIMAZIONI KEYFRAMES ----- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .hero h2 { font-size: 1.4em; }
+    }
+		@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* elementi impilati verticalmente */
+    padding: 15px;
+    gap: 8px;
+  }
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
 
 </style>
 </head>
 <body>
-
+<header>
+	<h1>Museo della Civiltà Contadina</h1>
+	<button id="toggleNight">🌙 Modalità Notte</button>
+</header>
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="index.html#info">Info</a>
+		<a href="index.html#foto">Foto-gallery</a>
+		<a href="proverbi.html">Saggezza popolare</a>
+		<a href="cultura.html">La nostra cultura</a>
+		<a href="mappa.html">Percorso urbano</a>
+		<a href="dizionario.html">Dizionario</a>
+	</nav>
 <h1>📖 Dizionario</h1>
 
-<div class="alfabeto-orizzontale" id="alfabeto"></div>
 <div class="sticky-bar">
-    <div id="alfabeto"></div>
-
+<div class="alfabeto-orizzontale" id="alfabeto"></div>
     <div class="search-container">
         <input
             type="text"
@@ -253,6 +423,9 @@ input[type="search"]::-moz-search-clear {
     </div>
 </div>
 <div id="dizionario">Caricamento...</div>
+<footer>
+	© 2025 Museo della Civiltà Contadina
+</footer>
 
 <script>
 const contenitore = document.getElementById("dizionario");
@@ -276,33 +449,38 @@ function evidenziaTesto(testo, filtro) {
 function mostraBatch() {
     const batch = risultatiFiltrati.slice(lastIndex, lastIndex + itemsPerBatch);
     const filtro = searchInput.value.toLowerCase();
+
     batch.forEach(voce => {
+        // 👇 div DEVE essere dichiarato QUI
         const div = document.createElement("div");
         div.className = "voce";
+
         div.innerHTML = `
-            <div class="parola">${evidenziaTesto(voce.parola, filtro)}</div>
-            <div class="fonemi">${voce.fonemi || ''}</div>
-            <div class="definizione">${evidenziaTesto(voce.definizione, filtro)}</div>
-			<button class="etimologia-btn">Mostra etimologia</button>
-			<div class="etimologia" style="display:none; margin-top:5px; font-style:italic; color:#555;">
-				${voce.etimologia || "Etimologia non disponibile"}
+            <div class="riga" style="font-weight: bold; font-size:20px;">
+				<img class="flag" src="bandiera.png">
+				<span>${evidenziaTesto(voce.parola, filtro)}</span>
 			</div>
+            <div class="fonemi">${voce.fonemi || ""}</div>
+            <div class="riga">
+				<img class="flag" src="it.svg">
+				<span>${evidenziaTesto(voce.definizione, filtro)}</span>
+			</div>
+
+            <div class="riga">
+              <img class="flag" src="uk.svg">
+			   <span>${voce.traduzione_en !== ""
+                    ? voce.traduzione_en
+                    : "Non disponibile"}</span>
+            </div>
         `;
+        // 👇 append DOPO innerHTML
         contenitore.appendChild(div);
-		const btn = div.querySelector(".etimologia-btn");
-		const etimDiv = div.querySelector(".etimologia");
-		btn.addEventListener("click", () => {
-		if (etimDiv.style.display === "none") {
-			etimDiv.style.display = "block";
-			btn.textContent = "Nascondi etimologia";
-		} else {
-			etimDiv.style.display = "none";
-			btn.textContent = "Mostra etimologia";
-		}
-		});
+
     });
+
     lastIndex += itemsPerBatch;
 }
+
 
 // Filtra dizionario per lettera o ricerca
 function filtraDizionario() {
@@ -410,6 +588,23 @@ window.addEventListener("scroll", () => {
     } else {
         stickyBar.classList.remove("stuck");
     }
+});
+   // Modalità notturna
+const toggleNight = document.getElementById('toggleNight');
+
+if (localStorage.getItem('theme') === 'night') {
+  document.body.classList.add('night');
+  toggleNight.textContent = '☀️ Modalità Giorno';
+}
+toggleNight.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+  if (document.body.classList.contains('night')) {
+    localStorage.setItem('theme', 'night');
+    toggleNight.textContent = '☀️ Modalità Giorno';
+  } else {
+    localStorage.setItem('theme', 'light');
+    toggleNight.textContent = '🌙 Modalità Notte';
+  }
 });
 
 </script>
