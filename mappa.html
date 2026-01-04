@@ -474,7 +474,13 @@ body.mobile .point circle {
     align-items: center;        /* centra verticalmente */
     gap: 10px;                  /* spazio tra testo e immagine */
 }
-
+.ass {
+	padding:10px;
+    display: flex;
+    justify-content: center; /* centro orizzontale */
+    align-items: center;     /* allinea testo e immagine */
+    text-align: center;
+}
 
   </style>
   </head>
@@ -783,11 +789,14 @@ body.mobile .point circle {
 </svg>
 </div>
 
-	<div class="info-content" align="center">
-		Descrizioni a cura 
-		<a href="https://www.instagram.com/associazioneraccontare/" target="_blank" rel="noopener noreferrer" rel="noopener"
-		aria-label="Apre in una nuova scheda"><img src="img/ass.png" width="90" height="100">
-		</a>
+	<div class="ass">
+    Descrizioni a cura 
+    <a href="https://www.instagram.com/associazioneraccontare/" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Apre in una nuova scheda">
+        <img src="img/ass.png" width="90" height="100">
+    </a>
 	</div>
 
   <footer>
@@ -1170,5 +1179,6 @@ window.addEventListener('load', warmUpZoomOnce);
   });
   </script>
   </body>
+
 
 </html>
