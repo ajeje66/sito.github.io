@@ -4,10 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Museo della Civiltà Contadina</title>
     <style>
-		body.dark {
-		background-color: #121212;
-		color: #ffffff;
+	body {
+		font-family: 'Georgia', serif;
+		background-color: #f9f7f2;
+		color: #333;
+		margin: 0;
+		overflow-x: hidden;
+	transition: background-color 0.6s, color 0.6s;
 	}
+/*=============HEAD==========*/
 	header {
       background-color: #d8cbb3;
       text-align: center;
@@ -22,6 +27,7 @@
       letter-spacing: 1px;
       color: #3a2c1a;
     }
+	
 	/* Pulsante modalità notte */
     #toggleNight {
       position: absolute;
@@ -40,15 +46,14 @@
     #toggleNight:hover {
       background: #55422a;
     }
+	/*==========NAV========*/
 	nav {
-      background-color: #bfae94;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: background-color 0.6s;
-    }
+		background-color: #bfae94;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		transition: background-color 0.6s;
+		z-index: 10;
+		gap:25px;
+	}
 
     nav a {
       color: #fff;
@@ -61,19 +66,99 @@
       color: #3a2c1a;
       transform: scale(1.1);
     }
+	.menu {
+		list-style: none;
+		margin: 0;
+		padding: 12px;
+		display: flex;
+		justify-content: center;
+		gap: 25px;
+	}
 
+	.menu > li {
+		position: relative;
+	}
+
+	.menu a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 10px 15px;
+		display: block;
+	}
+
+	.menu a:hover {
+		color: #3a2c1a;
+	}
+	.menu li:hover > .submenu {
+		display: block;
+	}
+	
+	/*===========SUBMENU========*/
+	.submenu {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		min-width: 150px;
+		background-color: #bfae94;
+	}
+
+	.submenu li a {
+		padding: 10px;
+		color: white;
+	}
+	.submenu li a:hover {
+		background-color: #555;
+	}
+	/* DESKTOP */
+	@media (min-width: 769px) {
+		.submenu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+
+		.dropdown:hover > .submenu {
+			display: block;
+		}
+	}
+
+	/* MOBILE */
+	@media (max-width: 768px) {
+		.menu {
+			flex-direction: column;
+			gap: 10px;
+		}
+		
+		.submenu {
+			position: static;
+			margin-left: 15px;
+		}
+		
+		.submenu.open {
+			display: block;
+		}
+		
+		.dropdown > a::after {
+			content: " ▾";
+			float: right;
+			font-size: 0.8em;
+		}
+	}
+	
+/*=========HERO========*/	
+	
     .hero {
-      position: relative;
-      height: 70vh;
-      background: url('https://images.unsplash.com/photo-1576765608614-b5c0bdb62e9b') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden; 
-      animation: fadeIn 1.5s ease;
-    }
+		height: 70vh;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		animation: fadeIn 1.5s ease;
+	}
 
     .hero::before {
       content: "";
@@ -84,17 +169,14 @@
       transition: background 0.1s;
     }
 
-    .hero h2 {
-      position: relative;
-      font-size: 2em;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: inline-block;
-      padding: 10px 25px;
-      border-radius: 6px;
-      z-index: 1;
-      animation: slideUp 1.2s ease;
-    }
+	.hero h2 {
+		background: rgba(0,0,0,0.5);
+		padding: 10px 25px;
+		border-radius: 6px;
+		font-size: 2em;
+	}
 
+/*=======SECTION========*/
     section {
       padding: 60px 20px;
       max-width: 900px;
@@ -108,6 +190,8 @@
       opacity: 1;
       transform: translateY(0);
     }
+	
+/*=========FOOTER========*/
 	footer {
       background-color: #bfae94;
       color: #fff;
@@ -117,7 +201,47 @@
       box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
       transition: background-color 0.6s, color 0.6s;
     }
-	/* ----- MODALITÀ NOTTURNA ----- */
+	.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  height: 28px;      /* logo piccolo */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+	
+	
+/* =========================
+   SCROLL TOP
+========================= */
+
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+
+/*=========NIGHT MODE==========*/
     body.night {
       background-color: #1c1c1c;
       color: #f0f0f0;
@@ -144,8 +268,56 @@
       background-color: #2a2a2a;
       color: #ddd;
     }
+	body.night .submenu {
+		background-color: #333;
+	}
 
-    /* ----- ANIMAZIONI KEYFRAMES ----- */
+	body.night .submenu li a {
+		color: #f0f0f0;
+	}
+	body.night #scrollTopBtn {
+		background-color: #d8cbb3; /* sfondo più scuro */
+		color: #000;         /* colore della freccia */
+	}
+
+	body.night #scrollTopBtn:hover {
+		background-color: #ffe6b3; /* sfondo al passaggio del mouse */	
+	}	
+	/*========RESPONSIVE=========*/
+	@media (max-width: 600px) {
+		header h1 {
+			font-size: 1.6em;
+		}
+		
+		.hero h2 {
+			font-size: 1.4em;
+		}
+	
+	nav {
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px;
+	}
+	
+	nav a {
+		font-size: 0.9em;
+	}
+	#toggleNight {
+		position: static;
+		margin-top: 5px;
+	}
+}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 26px;
+  }
+}
+	/* ========ANIMAZIONI========) */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -172,11 +344,11 @@
 	height: auto;
 	}
 	@media (max-width: 600px) {
-  header {
-    flex-direction: column; /* elementi impilati verticalmente */
-    padding: 15px;
-    gap: 8px;
-  }
+	header {
+		flex-direction: column; /* elementi impilati verticalmente */
+		padding: 15px;
+		gap: 8px;
+	}
 
   header .logo-header {
     height: 40px; /* ridotto per mobile */
@@ -193,7 +365,7 @@
   }
 }
 	
-	body { margin:0; background:#eee; font-family:sans-serif; }
+
 .controls {
 	pointer-events:auto;
 	position:absolute; top:10px; left:10px; z-index:10;
@@ -302,117 +474,8 @@ body.mobile .point circle {
     align-items: center;        /* centra verticalmente */
     gap: 10px;                  /* spazio tra testo e immagine */
 }
-/*---SUBMENU--*/
-nav {
-  position: relative;
-  z-index:10;
-}
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.menu > li {
-  position: relative; /* necessario per il sottomenu */
-}
-.menu a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Hover desktop */
-.menu li:hover > .submenu {
-  display: block;
-}
-
-/* Sottomenu nascosto di default */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #bfae94;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-}
-.submenu li a {
-  padding: 10px;
-  color: white;
-}
-
-/* Hover sottomenu */
-.submenu li a:hover {
-  background-color: #555;
-}
-
-/* Mobile: mostra il sottomenu al tap */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
-  .submenu {
-    position: static;
-  }
-  /* usa checkbox hack per tap */
-  .dropdown > a::after {
-    content: " ▼";
-    float: right;
-  }
-}
 
 
-body.night .submenu {
-  background-color: #333; /* sfondo scuro */
-}
-
-body.night .submenu li a {
-  color: #f0f0f0; /* colore testo chiaro */
-}
-
-body.night .submenu li a:hover {
-  background-color: #555; /* colore hover leggermente diverso */
-}
-
-#scrollTopBtn {
-  display: none; /* nascosto di default */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 50; /* sopra tutto */
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-#scrollTopBtn:hover {
-  background-color: #555;
-}
-.body.night #scrollTopBtn {
-  background-color: #bfae94;
-}
-
-.body.night #scrollTopBtn:hover {
-  background-color: #444;
-}
-
-body.night #scrollTopBtn {
-  background-color: #d8cbb3; /* sfondo più scuro */
-  color: #000;         /* colore della freccia */
-}
-
-body.night #scrollTopBtn:hover {
-  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
-}
   </style>
   </head>
   <body>
@@ -420,11 +483,12 @@ body.night #scrollTopBtn:hover {
     <h1>Museo della Civiltà Contadina</h1>
     <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
-    <nav>
+<nav>
   <ul class="menu">
     <li class="dropdown">
-      <a href="#home">Home</a>
+      <a style="user-select:none;">Home</a>
       <ul class="submenu">
+		<li><a href="index.html">Pagina iniziale</a></li>
         <li><a href="index.html#info">Info</a></li>
         <li><a href="index.html#foto">Foto-gallery</a></li>
       </ul>
@@ -435,21 +499,22 @@ body.night #scrollTopBtn:hover {
     <li><a href="dizionario.html">Dizionario</a></li>
   </ul>
 </nav>
-  <section id="info">
+	
+  <div style="padding:30px;">
   <h2>Descrizione:... <br>
   Durata punti: 1-12 ~ 1.30 h </h2>
-  </section>
+  </div>
 	<div id="cornice">
-<div class="controls">
-  <button class="btn-tooltip" data-tooltip="Zoom avanti" id="zoomIn">+</button>
-  <button class="btn-tooltip" data-tooltip="Zoom indietro" id="zoomOut">−</button>
-  <button class="btn-tooltip" data-tooltip="Reset" id="reset">⟳</button>
-  <button class="btn-tooltip" data-tooltip="Mostra/nascondi slider" id="showZoomSlider">🔍</button>
-  <button class="btn-tooltip" data-tooltip="Mostra/nascondi lista" id="showFumettiList">≡</button>
-  <button class="btn-tooltip" data-tooltip="Mostra/nascondi punti" id="togglePoints">👁</button>
-  <input type="range" id="zoomSlider" min="1" max="4" step="0.01" style="display:none;">
-  <ul id="fumettiList"></ul>
-</div>
+		<div class="controls">
+		<button class="btn-tooltip" data-tooltip="Zoom avanti" id="zoomIn">+</button>
+		<button class="btn-tooltip" data-tooltip="Zoom indietro" id="zoomOut">−</button>
+		<button class="btn-tooltip" data-tooltip="Reset" id="reset">⟳</button>
+		<button class="btn-tooltip" data-tooltip="Mostra/nascondi slider" id="showZoomSlider">🔍</button>
+		<button class="btn-tooltip" data-tooltip="Mostra/nascondi lista" id="showFumettiList">≡</button>
+		<button class="btn-tooltip" data-tooltip="Mostra/nascondi punti" id="togglePoints">👁</button>
+		<input type="range" id="zoomSlider" min="1" max="4" step="0.01" style="display:none;">
+		<ul id="fumettiList"></ul>
+	</div>
 <svg id="svg" viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <g id="viewport">
@@ -717,16 +782,19 @@ body.night #scrollTopBtn:hover {
 </g>
 </svg>
 </div>
-<section id="info">
-	<div class="info-content">
+
+	<div class="info-content" align="center">
 		Descrizioni a cura 
 		<a href="https://www.instagram.com/associazioneraccontare/" target="_blank" rel="noopener noreferrer" rel="noopener"
 		aria-label="Apre in una nuova scheda"><img src="img/ass.png" width="90" height="100">
 		</a>
 	</div>
-</section>
+
   <footer>
-    © 2025 Museo della Civiltà Contadina
+    <div class="footer-content">
+	<img src="img/logo.png" class="footer-logo">
+    <span>© 2025 Museo della Civiltà Contadina</span>
+	</div>
   </footer>	
   <button id="scrollTopBtn" title="Torna su">↑</button>
   <script>

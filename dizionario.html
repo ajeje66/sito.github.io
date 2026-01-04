@@ -37,13 +37,13 @@ h1 { text-align: center; margin-bottom: 10px; }
 }
 
 .lettera:hover {
-    background-color: #1565c0;
+    background-color: #262323;
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.2);
 }
 
 .lettera.active {
-    background-color: #0d47a1;
+    background-color: #333;
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
 }
 
@@ -149,7 +149,7 @@ input[type="search"]::-moz-search-clear {
 .sticky-bar {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9;
     background-color: #f5f5f7;
     padding: 10px 0;
 }
@@ -243,22 +243,22 @@ input[type="search"]::-moz-search-clear {
 
     /* Pulsante modalità notte */
     #toggleNight {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      background: #3a2c1a;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      padding: 8px 14px;
-      cursor: pointer;
-      font-size: 0.9em;
-      transition: background 0.3s;
-    }
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		background: #3a2c1a;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		padding: 8px 14px;
+		cursor: pointer;
+		font-size: 0.9em;
+		transition: background 0.3s;
+	}
 
-    #toggleNight:hover {
-      background: #55422a;
-    }
+	#toggleNight:hover {
+		background: #55422a;
+	}
 
     nav {
       background-color: #bfae94;
@@ -290,7 +290,23 @@ footer {
       box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
       transition: background-color 0.6s, color 0.6s;
     }
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
 
+.footer-logo {
+  height: 28px;      /* logo piccolo */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
     /* ----- MODALITÀ NOTTURNA ----- */
     body.night {
       background-color: #1c1c1c;
@@ -376,6 +392,16 @@ body.night .sticky-bar {
   #toggleNight {
     position: static;
     margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 26px;
   }
 }
 @media (max-width: 600px) {
@@ -472,6 +498,21 @@ body.night .submenu li a:hover {
   background-color: #555; /* colore hover leggermente diverso */
 }
 
+
+body.night .lettera {
+    background-color: #444;
+    color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+body.night .lettera:hover {
+    background-color: #ffcc66;
+    color: #000;
+}
+
+body.night .lettera.active {
+    background-color: #f5e4c4;
+    color: #000;
+}
 #scrollTopBtn {
   display: none; /* nascosto di default */
   position: fixed;
@@ -491,13 +532,6 @@ body.night .submenu li a:hover {
 #scrollTopBtn:hover {
   background-color: #555;
 }
-.body.night #scrollTopBtn {
-  background-color: #bfae94;
-}
-
-.body.night #scrollTopBtn:hover {
-  background-color: #444;
-}
 
 body.night #scrollTopBtn {
   background-color: #d8cbb3; /* sfondo più scuro */
@@ -514,11 +548,12 @@ body.night #scrollTopBtn:hover {
 	<h1>Museo della Civiltà Contadina</h1>
 	<button id="toggleNight">🌙 Modalità Notte</button>
 </header>
-	<nav>
+<nav>
   <ul class="menu">
     <li class="dropdown">
-      <a href="#home">Home</a>
+      <a style="user-select:none;">Home</a>
       <ul class="submenu">
+		<li><a href="index.html">Pagina iniziale</a></li>
         <li><a href="index.html#info">Info</a></li>
         <li><a href="index.html#foto">Foto-gallery</a></li>
       </ul>
@@ -547,7 +582,10 @@ body.night #scrollTopBtn:hover {
 </div>
 <div id="dizionario">Caricamento...</div>
 <footer>
-	© 2025 Museo della Civiltà Contadina
+	<div class="footer-content">
+	<img src="img/logo.png" class="footer-logo">
+    <span>© 2025 Museo della Civiltà Contadina</span>
+	</div>
 </footer>
 <button id="scrollTopBtn" title="Torna su">↑</button>
 <script>
@@ -580,17 +618,17 @@ function mostraBatch() {
 
         div.innerHTML = `
             <div class="riga" style="font-weight: bold; font-size:20px;">
-				<img class="flag" src="bandiera.png">
+				<img class="flag" src="img/bandiera.png">
 				<span>${evidenziaTesto(voce.parola, filtro)}</span>
 			</div>
             <div class="fonemi">${voce.fonemi || ""}</div>
             <div class="riga">
-				<img class="flag" src="it.svg">
+				<img class="flag" src="img/it.svg">
 				<span>${evidenziaTesto(voce.definizione, filtro)}</span>
 			</div>
 
             <div class="riga">
-              <img class="flag" src="uk.svg">
+              <img class="flag" src="img/uk.svg">
 			   <span>${voce.traduzione_en !== ""
                     ? voce.traduzione_en
                     : "Non disponibile"}</span>
