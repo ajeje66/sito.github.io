@@ -288,6 +288,9 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
+#scrollTopBtn:hover {
+  background-color: #555;
+}
 
 /* =========================
    NIGHT MODE
@@ -320,6 +323,14 @@ body.night .submenu {
 
 body.night .submenu li a {
   color: #f0f0f0;
+}
+body.night #scrollTopBtn {
+  background-color: #d8cbb3; /* sfondo più scuro */
+  color: #000;         /* colore della freccia */
+}
+
+body.night #scrollTopBtn:hover {
+  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
 }
 
 /* =========================
@@ -536,4 +547,5 @@ document.querySelectorAll('.dropdown > a').forEach(link => {
 });
   </script>
 </body>
+
 </html>
