@@ -106,7 +106,6 @@
 	{ "parola": "Lumu", "fonemi": "/'AA/", "definizione": "Giogo" , "traduzione_en":"Yoke"},
 	{ "parola": "Fierru p' i cavaddi", "fonemi": "/'AA/", "definizione": "Ferro da cavallo" , "traduzione_en":"Horseshoe"},
 	{ "parola": "Masco", "fonemi": "/'AA/", "definizione": "Serratura" , "traduzione_en":"Lock"},
-	{ "parola": "Fermapurtone", "fonemi": "/'AA/", "definizione": "Fermaportone" , "traduzione_en":"Door stopper"},
 	{ "parola": "Nassa", "fonemi": "/'AA/", "definizione": "Trappola per pesci" , "traduzione_en":"Keepnet"},
 	{ "parola": "Nassedda", "fonemi": "/'AA/", "definizione": "Trappola piccola per pesci" , "traduzione_en":"Little keepnet"},
 	{ "parola": "Aratru", "fonemi": "/'AA/", "definizione": "Aratro" , "traduzione_en":"Plow"},
@@ -188,5 +187,6 @@
 	
 	
 	{ "parola": "Batacatascia", "fonemi": "/'AA/", "definizione": "Lucciola" , "traduzione_en":"Firefly"}
+
 
 ]
