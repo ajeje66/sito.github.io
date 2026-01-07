@@ -7,7 +7,7 @@
   <style>
 /* Corpo pagina */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, sans-serif;
     background-color: #f5f5f7;
     color: #222;
     transition: background 0.3s, color 0.3s;
@@ -264,7 +264,6 @@ input[type="search"]::-moz-search-clear {
       display: flex;
       justify-content: center;
       gap: 25px;
-      padding: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: background-color 0.6s;
     }
@@ -429,8 +428,10 @@ nav {
 .menu {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px;
   display: flex;
+  justify-content:center;
+  gap:25px;
 }
 .menu > li {
   position: relative; /* necessario per il sottomenu */
@@ -572,7 +573,7 @@ body.night #scrollTopBtn:hover {
 		<ul class="submenu">
 			<li><a href="servizi.html">Mappa servizi</a></li>
 			<li><a href="mappa.html">Trekking urbano</a></li>
-			<li><a href="">Trekking extraurbano</a></li>
+			<li><a href="extraurbano.html">Trekking extraurbano</a></li>
 		</ul>
 	</li>
     <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
