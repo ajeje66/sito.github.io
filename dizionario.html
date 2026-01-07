@@ -1,23 +1,429 @@
 <!DOCTYPE html>
-<!-- python -m http.server 8000 --bind 0.0.0.0-->
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Dizionario</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* Corpo pagina */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo della Civiltà Contadina</title>
+  <style>
+/* =========================
+   BASE
+   ========================= */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f7;
-    color: #222;
-    transition: background 0.3s, color 0.3s;
-	margin: 0px;
+  font-family: 'Georgia', serif;
+  background-color: #f9f7f2;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 0.6s, color 0.6s;
 }
 
-/* Titolo */
-h1 { text-align: center; margin-bottom: 10px; }
+/* =========================
+   HEADER
+   ========================= */
 
+header {
+  background-color: #d8cbb3;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  animation: fadeDown 1s ease;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  color: #3a2c1a;
+}
+
+#toggleNight {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #3a2c1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+
+#toggleNight:hover {
+  background: #55422a;
+}
+
+/* =========================
+   NAV / MENU
+   ========================= */
+
+nav {
+  background-color: #bfae94;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.6s;
+  z-index: 10;
+  gap:25px;
+}
+nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+nav a:hover {
+      color: #3a2c1a;
+      transform: scale(1.1);
+    }
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu a:hover {
+  color: #3a2c1a;
+}
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* ---------- SUBMENU ---------- */
+
+.submenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 150px;
+  background-color: #bfae94;
+  top: calc(100% -2px);
+}
+
+.submenu li a {
+  padding: 10px;
+  color: white;
+}
+.submenu li a:hover {
+  background-color: #555;
+}
+
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .dropdown:hover > .submenu {
+    display: block;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .submenu {
+    position: static;
+    margin-left: 15px;
+  }
+
+  .submenu.open {
+    display: block;
+  }
+
+  .dropdown > a::after {
+    content: " ▾";
+    float: right;
+    font-size: 0.8em;
+  }
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+  background: rgba(0,0,0,0.5);
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 2em;
+}
+
+/* =========================
+   SEZIONI
+   ========================= */
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background-color: #bfae94;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  height: 28px;      /* logo piccolo */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
+/* =========================
+   SCROLL TOP
+   ========================= */
+
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+
+/* =========================
+   NIGHT MODE
+   ========================= */
+
+body.night {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.night header {
+  background-color: #2a2a2a;
+}
+
+body.night header h1 {
+  color: #f5e6c8;
+}
+
+body.night nav {
+  background-color: #333;
+}
+
+body.night footer {
+  background-color: #2a2a2a;
+}
+
+body.night .submenu {
+  background-color: #333;
+}
+
+body.night .submenu li a {
+  color: #f0f0f0;
+}
+body.night #scrollTopBtn {
+  background-color: #d8cbb3; /* sfondo più scuro */
+  color: #000;         /* colore della freccia */
+}
+
+body.night #scrollTopBtn:hover {
+  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
+}
+/* =========================
+   RESPONSIVE TEXT
+   ========================= */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .hero h2 {
+    font-size: 1.4em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 26px;
+  }
+}
+/* =========================
+   ANIMAZIONI
+   ========================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.lang {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+.lang img {
+  width: 22px;
+  margin-top: 4px;
+}
+
+.lang p {
+  margin: 0;
+}
+.art-image {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  display: block;
+}
+
+
+/* Desktop: immagine affiancata */
+@media (min-width: 768px) {
+  .art-image {
+    float: right;
+    width: 50%;
+    margin: 0 0 15px 20px;
+  }
+}
+
+/* Mobile: immagine sopra il testo */
+@media (max-width: 767px) {
+  .art-image {
+    float: none;
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+/*==========ENTRY=======*/
+.art-row {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.art-image {
+ order:2;
+  width: 40%;
+  max-width: 360px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+.art-text {
+  order: 1;
+  flex: 1;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .art-row {
+    flex-direction: column;
+  }
+
+  .art-image {
+	order:0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#inglese{font-family:perpetua; font-size:20px;}
 /* Menu lettere */
 #alfabeto { text-align: center; margin-bottom: 15px; }
 
@@ -141,82 +547,6 @@ input[type="search"]::-webkit-search-cancel-button {
     appearance: none;
     display: none;
 }
-
-/* Rimuove la X in Firefox */
-input[type="search"]::-moz-search-clear {
-    display: none;
-}
-.sticky-bar {
-    position: sticky;
-    top: 0;
-    z-index: 9;
-    background-color: #f5f5f7;
-    padding: 10px 0;
-}
-
-/* Dark mode */
-
-#dizionario {
-    max-width: 600px;
-    margin: 20px auto;
-}
-.sticky-bar {
-    box-shadow: 0 2px 0 rgba(0,0,0,0);
-    transition: box-shadow 0.2s ease;
-}
-
-.sticky-bar.stuck {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.alfabeto-orizzontale {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    padding: 8px 6px;
-    white-space: nowrap;
-}
-
-/* Desktop → mostra scrollbar */
-@media (min-width: 769px) {
-    .alfabeto-orizzontale {
-        scrollbar-width: auto; /* Firefox */
-    }
-
-    .alfabeto-orizzontale::-webkit-scrollbar {
-        height: 8px;
-    }
-
-    .alfabeto-orizzontale::-webkit-scrollbar-thumb {
-        background-color: #bdbdbd;
-        border-radius: 4px;
-    }
-
-    .alfabeto-orizzontale::-webkit-scrollbar-track {
-        background-color: #eee;
-    }
-	    .alfabeto-orizzontale::-webkit-scrollbar-thumb:hover {
-        background-color: #9e9e9e;
-    }
-
-}
-
-/* Mobile → nasconde scrollbar */
-@media (max-width: 768px) {
-    .alfabeto-orizzontale {
-        scrollbar-width: none; /* Firefox */
-    }
-
-    .alfabeto-orizzontale::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-.riga{
-    display: flex;
-    align-items: center; /* centra verticalmente img e testo */
-    gap: 8px; /* spazio tra img e testo */
-}
-
 .flag {
 	display: block;
 	vertical-align:middle;
@@ -225,6 +555,22 @@ input[type="search"]::-moz-search-clear {
 	object-fit:cover;
     flex-shrink: 0; /* non ridimensiona */
 }
+.riga{
+    display: flex;
+    align-items: center; /* centra verticalmente img e testo */
+    gap: 8px; /* spazio tra img e testo */
+}
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      color: #3a2c1a;
+    }
+	.sticky-bar.stuck {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+h1 { text-align: center; margin-bottom: 10px; }
+
     header {
       background-color: #d8cbb3;
       text-align: center;
@@ -233,338 +579,49 @@ input[type="search"]::-moz-search-clear {
       animation: fadeDown 1s ease;
       position: relative;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-      letter-spacing: 1px;
-      color: #3a2c1a;
-    }
-
-    /* Pulsante modalità notte */
-    #toggleNight {
-		position: absolute;
-		top: 15px;
-		right: 20px;
-		background: #3a2c1a;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		padding: 8px 14px;
-		cursor: pointer;
-		font-size: 0.9em;
-		transition: background 0.3s;
-	}
-
-	#toggleNight:hover {
-		background: #55422a;
-	}
-
-    nav {
-      background-color: #bfae94;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: background-color 0.6s;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    nav a:hover {
-      color: #3a2c1a;
-      transform: scale(1.1);
-    }
-footer {
-      background-color: #bfae94;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-      box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
-      transition: background-color 0.6s, color 0.6s;
-    }
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+/* Rimuove la X in Firefox */
+input[type="search"]::-moz-search-clear {
+    display: none;
 }
-
-.footer-logo {
-  height: 28px;      /* logo piccolo */
-  width: auto;
-  opacity: 0.85;
-  transition: opacity 0.3s;
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: #f9f7f2;
+    padding: 10px 0;
 }
-
-.footer-logo:hover {
-  opacity: 1;
-}
-    /* ----- MODALITÀ NOTTURNA ----- */
-    body.night {
-      background-color: #1c1c1c;
-      color: #f0f0f0;
-    }
-
-    body.night header {
-      background-color: #2a2a2a;
-    }
-
-    body.night nav {
-      background-color: #333;
-    }
-
-    body.night nav a:hover {
-      color: #ffcc66;
-    }
-
-    body.night footer {
-      background-color: #2a2a2a;
-      color: #ddd;
-    }
-	body.night header h1 {
-		color: #f5e6c8;
-	}
-	body.night .voce {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-}
-body.night .definizione {
-    color: #cccccc;
-}
-
-body.night .fonemi {
-    color: #aaaaaa;
-}
-body.night .search-container  {
-    background-color: #00000;
-    color: #ffffff;
-    
-}
-body.night .sticky-bar {
-    background-color: #1e1e1e; /* colore sfondo area */
-}
-
-    /* ----- ANIMAZIONI KEYFRAMES ----- */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-      .hero h2 { font-size: 1.4em; }
-    }
-		@media (max-width: 600px) {
-  header {
-    flex-direction: column; /* elementi impilati verticalmente */
-    padding: 15px;
-    gap: 8px;
-  }
-
-  header .logo-header {
-    height: 40px; /* ridotto per mobile */
-  }
-
-  header h1 {
-    font-size: 1.6em; /* titolo più piccolo */
-    text-align: center;
-  }
-
-  #toggleNight {
-    position: static;
-    margin-top: 5px;
-  }
-}
-@media (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .footer-logo {
-    height: 26px;
-  }
-}
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 0.9em;
-  }
-}
-* {
-    box-sizing: border-box;
-}
-html, body {
-    overflow-x: hidden;
-}
-
-/*---SUBMENU--*/
-nav {
-  position: relative;
-  z-index:10;
-}
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.menu > li {
-  position: relative; /* necessario per il sottomenu */
-}
-.menu a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Hover desktop */
-.menu li:hover > .submenu {
-  display: block;
-}
-
-/* Sottomenu nascosto di default */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #bfae94;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-}
-.submenu li a {
-  padding: 10px;
-  color: white;
-}
-
-/* Hover sottomenu */
-.submenu li a:hover {
-  background-color: #555;
-}
-
-/* Mobile: mostra il sottomenu al tap */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
-  .submenu {
-    position: static;
-  }
-  /* usa checkbox hack per tap */
-  .dropdown > a::after {
-    content: " ▼";
-    float: right;
-  }
-}
-
-
-body.night .submenu {
-  background-color: #333; /* sfondo scuro */
-}
-
-body.night .submenu li a {
-  color: #f0f0f0; /* colore testo chiaro */
-}
-
-body.night .submenu li a:hover {
-  background-color: #555; /* colore hover leggermente diverso */
-}
-
-
-body.night .lettera {
-    background-color: #444;
-    color: #f0f0f0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
-}
-body.night .lettera:hover {
-    background-color: #ffcc66;
-    color: #000;
-}
-
-body.night .lettera.active {
-    background-color: #f5e4c4;
-    color: #000;
-}
-#scrollTopBtn {
-  display: none; /* nascosto di default */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 50; /* sopra tutto */
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-#scrollTopBtn:hover {
-  background-color: #555;
-}
-
-body.night #scrollTopBtn {
-  background-color: #d8cbb3; /* sfondo più scuro */
-  color: #000;         /* colore della freccia */
-}
-
-body.night #scrollTopBtn:hover {
-  background-color: #ffe6b3; /* sfondo al passaggio del mouse */
-}
-</style>
+  </style>
 </head>
 <body>
-<header>
-	<h1>Museo della Civiltà Contadina</h1>
-	<button id="toggleNight">🌙 Modalità Notte</button>
-</header>
+  <header>
+    <h1>Museo della Civiltà Contadina</h1>
+    <button id="toggleNight">🌙 Modalità Notte</button>
+  </header>
+
 <nav>
   <ul class="menu">
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html">Pagina iniziale</a></li>
-        <li><a href="index.html#info">Info</a></li>
-        <li><a href="index.html#foto">Foto-gallery</a></li>
+		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html">Saggezza popolare</a></li>
-    <li><a href="cultura.html">La nostra cultura</a></li>
-    <li><a href="mappa.html">Percorso urbano</a></li>
-    <li><a href="dizionario.html">Dizionario</a></li>
+    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li class="dropdown">
+		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<ul class="submenu">
+			<li><a href="servizi.html">Mappa servizi</a></li>
+			<li><a href="mappa.html">Trekking urbano</a></li>
+			<li><a href="">Trekking extraurbano</a></li>
+		</ul>
+	</li>
+    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
-<h1>📖 Dizionario</h1>
+	<h1>📖 Dizionario</h1>
 
 <div class="sticky-bar">
 <div class="alfabeto-orizzontale" id="alfabeto"></div>
@@ -581,15 +638,17 @@ body.night #scrollTopBtn:hover {
     </div>
 </div>
 <div id="dizionario">Caricamento...</div>
-<footer>
-	<div class="footer-content">
+ 
+  <footer>
+    <div class="footer-content">
 	<img src="img/logo.png" class="footer-logo">
     <span>© 2025 Museo della Civiltà Contadina</span>
 	</div>
-</footer>
-<button id="scrollTopBtn" title="Torna su">↑</button>
-<script>
-const contenitore = document.getElementById("dizionario");
+  </footer>
+
+	<button id="scrollTopBtn" title="Torna su">↑</button>
+  <script>
+  const contenitore = document.getElementById("dizionario");
 const searchInput = document.getElementById("search");
 const alfabetoContainer = document.getElementById("alfabeto");
 
@@ -619,7 +678,7 @@ function mostraBatch() {
         div.innerHTML = `
             <div class="riga" style="font-weight: bold; font-size:20px;">
 				<img class="flag" src="img/bandiera.png">
-				<span>${evidenziaTesto(voce.parola, filtro)}</span>
+				<span style="font-family:courier;">${evidenziaTesto(voce.parola, filtro)}</span>
 			</div>
             <div class="fonemi">${voce.fonemi || ""}</div>
             <div class="riga">
@@ -629,7 +688,7 @@ function mostraBatch() {
 
             <div class="riga">
               <img class="flag" src="img/uk.svg">
-			   <span>${voce.traduzione_en !== ""
+			   <span style="font-family:perpetua; font-size:20px;">${voce.traduzione_en !== ""
                     ? voce.traduzione_en
                     : "Non disponibile"}</span>
             </div>
@@ -750,7 +809,30 @@ window.addEventListener("scroll", () => {
         stickyBar.classList.remove("stuck");
     }
 });
-   // Modalità notturna
+// Effetto di comparsa sezione allo scroll
+const sections = document.querySelectorAll('section');
+const onScroll = () => {
+  sections.forEach(sec => {
+	const rect = sec.getBoundingClientRect();
+	if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // Effetto luce dinamica (spotlight)
+const hero = document.querySelector('.hero');
+    /*hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty('--x', `${x}%`);
+      hero.style.setProperty('--y', `${y}%`);
+    });*/
+
+    // Modalità notturna
 const toggleNight = document.getElementById('toggleNight');
 
 if (localStorage.getItem('theme') === 'night') {
@@ -782,7 +864,19 @@ const scrollBtn = document.getElementById("scrollTopBtn");
   scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-</script>
+
+
+document.querySelectorAll('.dropdown > a').forEach(link => {
+  link.addEventListener('touchstart', function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const submenu = this.nextElementSibling;
+      submenu.classList.toggle('open');
+    }
+  });
+});
+  </script>
 </body>
 </html>
-

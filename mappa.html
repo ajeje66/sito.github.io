@@ -482,6 +482,78 @@ body.mobile .point circle {
     text-align: center;
 }
 
+#map-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Pannello lista */
+#fumetti-panel {
+  width: 260px;
+  background: #f4f1ea;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#fumetti-panel h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#fumettiList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#fumettiList li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#fumettiList li:hover {
+  background: #ddd;
+}
+body.night #fumetti-panel {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+body.night #fumettiList li:hover {
+  background: #444;
+}
+@media (max-width: 768px) {
+  #map-layout {
+    flex-direction: column;
+  }
+
+  #fumetti-panel {
+    width: 100%;
+    max-height: 200px;
+  }
+}
+#map-layout {
+  margin-top: 40px;   /* spazio uniforme */
+   display: flex;
+  align-items: flex-start;
+}
+#fumetti-panel,
+#cornice {
+  margin: 0;
+  padding-top: 0;
+}
+
+
   </style>
   </head>
   <body>
@@ -489,42 +561,53 @@ body.mobile .point circle {
     <h1>Museo della Civiltà Contadina</h1>
     <button id="toggleNight">🌙 Modalità Notte</button>
   </header>
+
 <nav>
   <ul class="menu">
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html">Pagina iniziale</a></li>
-        <li><a href="index.html#info">Info</a></li>
-        <li><a href="index.html#foto">Foto-gallery</a></li>
+		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html">Saggezza popolare</a></li>
-    <li><a href="cultura.html">La nostra cultura</a></li>
-    <li><a href="mappa.html">Percorso urbano</a></li>
-    <li><a href="dizionario.html">Dizionario</a></li>
+    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li class="dropdown">
+		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<ul class="submenu">
+			<li><a href="servizi.html">Mappa servizi</a></li>
+			<li><a href="mappa.html">Trekking urbano</a></li>
+			<li><a href="">Trekking extraurbano</a></li>
+		</ul>
+	</li>
+    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
 	
   <div style="padding:30px;">
   <h2>Descrizione:... <br>
   Durata punti: 1-12 ~ 1.30 h </h2>
-  </div>
+  <div id="map-layout">
+  <aside id="fumetti-panel">
+	<h3>Elenco punti</h3>
+	<ul id="fumettiList"></ul>
+  </aside>
 	<div id="cornice">
 		<div class="controls">
 		<button class="btn-tooltip" data-tooltip="Zoom avanti" id="zoomIn">+</button>
 		<button class="btn-tooltip" data-tooltip="Zoom indietro" id="zoomOut">−</button>
 		<button class="btn-tooltip" data-tooltip="Reset" id="reset">⟳</button>
 		<button class="btn-tooltip" data-tooltip="Mostra/nascondi slider" id="showZoomSlider">🔍</button>
-		<button class="btn-tooltip" data-tooltip="Mostra/nascondi lista" id="showFumettiList">≡</button>
 		<button class="btn-tooltip" data-tooltip="Mostra/nascondi punti" id="togglePoints">👁</button>
-		<input type="range" id="zoomSlider" min="1" max="4" step="0.01" style="display:none;">
-		<ul id="fumettiList"></ul>
+		<input type="range" id="zoomSlider" min="1" max="5" step="0.01" style="display:none;">
+		
 	</div>
 <svg id="svg" viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <g id="viewport">
-  <image x="0" y="0" width="800" height="600" image-rendering="optimized"  xlink:href="1.png"/>
+  <image x="0" y="0" width="800" height="600" image-rendering="optimized"  xlink:href="assets/urbano.png"/>
 
   <g class="point" data-title="Museo della Civiltà Contadina" data-description="Piazza Umberto I è il cuore storico e simbolico di Castel San Lorenzo. 
 	Intitolata al Re, conserva intatto il fascino delle antiche piazze medievali, 
@@ -777,16 +860,17 @@ body.mobile .point circle {
 	
 
 <g id="fumetto">
-  <rect id="fumetto-box" rx="8" ry="8" width="230" height="100" fill="white" stroke="black"/>
+  <rect id="fumetto-box" rx="8" ry="8" width="250" height="100" fill="white" stroke="black"/>
   <text id="fumetto-title" x="10" y="20" font-size="13" font-weight="bold" style="user-select:none;"></text>
   <text id="fumetto-link-text" fill="#0066cc" font-size="10" text-decoration="underline" cursor="pointer" style="user-select:none;">Dettagli</text>
-  <foreignObject id="fumetto-desc-container" x="10" y="35" width="210" height="0" style="overflow:auto; display:none;">
+  <foreignObject id="fumetto-desc-container" x="10" y="35" width="230" height="0" style="overflow:auto; display:none; color:black;">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:15px; line-height:1.2em; user-select:none;"></div>
   </foreignObject>
 </g>
 
 </g>
 </svg>
+</div>
 </div>
 
 	<div class="ass">
@@ -854,7 +938,7 @@ const svg = document.getElementById('svg');
 const bounds = {x:0,y:0,w:800,h:600};
 let viewBox = {...bounds};
 
-const minZoom = 1, maxZoom = 4;
+const minZoom = 1, maxZoom = 5;
 let zoomFactor=1.2;
 let isPanning=false, start={x:0,y:0};
 const zoomSlider = document.getElementById('zoomSlider');
@@ -960,17 +1044,29 @@ function onWheel(e) {
     });
   }
 }
-
 svg.addEventListener('wheel', onWheel, { passive: false });
 
-/*function zoom(e){
-  e.preventDefault();
-  const rect = svg.getBoundingClientRect();
-  const mx = (e.clientX - rect.left)/rect.width*viewBox.w + viewBox.x;
-  const my = (e.clientY - rect.top)/rect.height*viewBox.h + viewBox.y;
-  const scale = e.deltaY<0?1/zoomFactor:zoomFactor;
-  applyZoom(scale,mx,my);
-}*/
+fumettiList.innerHTML = '';
+
+document.querySelectorAll('.point').forEach((point, idx) => {
+  const li = document.createElement('li');
+  const title = point.dataset.title || `Punto ${idx + 1}`;
+  li.textContent = `${idx + 1}. ${title}`;
+const fumettiPanel = document.getElementById('fumetti-panel');
+
+fumettiPanel.addEventListener('click', e => {
+  e.stopPropagation();
+});
+  li.addEventListener('click', (e) => {
+    e.stopPropagation();
+	activePoint = point;
+    mostraFumetto(point);
+  });
+
+  fumettiList.appendChild(li);
+});
+
+
 
 function zoomAtCenter(scale){applyZoom(scale,viewBox.x+viewBox.w/2,viewBox.y+viewBox.h/2);}
 function applyZoom(scale,cx,cy){
@@ -1053,34 +1149,7 @@ function mostraFumetto(point){
 function chiudiFumetto(){fumetto.classList.remove('show'); setTimeout(()=>fumetto.style.display='none',250); activePoint=null;}
 
 // Lista fumetti
-document.getElementById('showFumettiList').onclick = () => {
-  if(fumettiList.style.display==='none'){
-    fumettiList.innerHTML=''; // svuota la lista
-    document.querySelectorAll('.point').forEach((point,idx)=>{
-      const li = document.createElement('li');
-      li.style.cursor='pointer';
-      li.style.padding='5px';
-      li.style.borderBottom='1px solid #ddd';
-      li.style.fontSize = '14px';
 
-      // Usa il titolo della descrizione come testo
-      const title = point.dataset.title || `Punto ${idx+1}`;
-      li.textContent = `${idx+1}. ${title}`;
-
-      // Click mostra fumetto
-      li.addEventListener('click', e=>{
-        e.stopPropagation();
-        mostraFumetto(point);
-        fumettiList.style.display='none';
-      });
-
-      fumettiList.appendChild(li);
-    });
-    fumettiList.style.display='block';
-  } else {
-    fumettiList.style.display='none';
-  }
-};
 // Seleziona il div della descrizione dentro il foreignObject
 const descDiv = document.querySelector('#fumetto-desc-container div');
 

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museo della Civiltà Contadina</title>
+<style>
+body {
+		font-family: 'Georgia', serif;
+		background-color: #f9f7f2;
+		color: #333;
+		margin: 0;
+		overflow-x: hidden;
+		transition: background-color 0.6s, color 0.6s;
+	}
+/*=============HEAD==========*/
+	header {
+      background-color: #d8cbb3;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      animation: fadeDown 1s ease;
+      position: relative;
+    }
+	header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      color: #3a2c1a;
+    }
+	
+	/* Pulsante modalità notte */
+    #toggleNight {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #3a2c1a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+
+    #toggleNight:hover {
+      background: #55422a;
+    }
+	/*==========NAV========*/
+	nav {
+		background-color: #bfae94;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		transition: background-color 0.6s;
+		z-index: 1000;
+		gap:25px;
+	}
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #3a2c1a;
+      transform: scale(1.1);
+    }
+	.menu {
+		list-style: none;
+		margin: 0;
+		padding: 12px;
+		display: flex;
+		justify-content: center;
+		gap: 25px;
+	}
+
+	.menu > li {
+		position: relative;
+	}
+
+	.menu a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 10px 15px;
+		display: block;
+	}
+
+	.menu a:hover {
+		color: #3a2c1a;
+	}
+	.menu li:hover > .submenu {
+		display: block;
+	}
+	
+	/*===========SUBMENU========*/
+	.submenu {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		min-width: 150px;
+		background-color: #bfae94;
+	}
+
+	.submenu li a {
+		padding: 10px;
+		color: white;
+		z-index:2000;
+	}
+	.submenu li a:hover {
+		background-color: #555;
+	}
+	/* DESKTOP */
+	@media (min-width: 769px) {
+		.submenu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+
+		.dropdown:hover > .submenu {
+			display: block;
+		}
+	}
+
+	/* MOBILE */
+	@media (max-width: 768px) {
+		.menu {
+			flex-direction: column;
+			gap: 10px;
+		}
+		
+		.submenu {
+			position: static;
+			margin-left: 15px;
+		}
+		
+		.submenu.open {
+			display: block;
+		}
+		
+		.dropdown > a::after {
+			content: " ▾";
+			float: right;
+			font-size: 0.8em;
+		}
+	}
+	
+/*=========HERO========*/	
+	
+    .hero {
+		height: 70vh;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		animation: fadeIn 1.5s ease;
+	}
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.2), rgba(0,0,0,0.6) 60%);
+      mix-blend-mode: overlay;
+      transition: background 0.1s;
+    }
+
+	.hero h2 {
+		background: rgba(0,0,0,0.5);
+		padding: 10px 25px;
+		border-radius: 6px;
+		font-size: 2em;
+	}
+
+/*=======SECTION========*/
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+	
+/*=========FOOTER========*/
+	footer {
+      background-color: #bfae94;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.6s, color 0.6s;
+    }
+	.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  height: 28px;      /* logo piccolo */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+	
+	
+/* =========================
+   SCROLL TOP
+========================= */
+
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+
+/*=========NIGHT MODE==========*/
+    body.night {
+      background-color: #1c1c1c;
+      color: #f0f0f0;
+    }
+
+    body.night header {
+      background-color: #2a2a2a;
+	  
+    }
+	body.night header h1 {
+	color: #f5e6c8;
+	}
+
+    body.night nav {
+      background-color: #333;
+	  
+    }
+
+    body.night nav a:hover {
+      color: #ffcc66;
+    }
+
+    body.night footer {
+      background-color: #2a2a2a;
+      color: #ddd;
+    }
+	body.night .submenu {
+		background-color: #333;
+	}
+
+	body.night .submenu li a {
+		color: #f0f0f0;
+	}
+	body.night #scrollTopBtn {
+		background-color: #d8cbb3; /* sfondo più scuro */
+		color: #000;         /* colore della freccia */
+	}
+
+	body.night #scrollTopBtn:hover {
+		background-color: #ffe6b3; /* sfondo al passaggio del mouse */	
+	}	
+	/*========RESPONSIVE=========*/
+	@media (max-width: 600px) {
+		header h1 {
+			font-size: 1.6em;
+		}
+		
+		.hero h2 {
+			font-size: 1.4em;
+		}
+	
+	nav {
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px;
+	}
+	
+	nav a {
+		font-size: 0.9em;
+	}
+	#toggleNight {
+		position: static;
+		margin-top: 5px;
+	}
+}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 26px;
+  }
+}
+	/* ========ANIMAZIONI========) */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .hero h2 { font-size: 1.4em; }
+    }
+		
+	.img-responsive {
+	max-width: 100%;
+	height: auto;
+	}
+	@media (max-width: 600px) {
+	header {
+		flex-direction: column; /* elementi impilati verticalmente */
+		padding: 15px;
+		gap: 8px;
+	}
+
+  header .logo-header {
+    height: 40px; /* ridotto per mobile */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* titolo più piccolo */
+    text-align: center;
+  }
+
+  #toggleNight {
+    position: static;
+    margin-top: 5px;
+  }
+}
+	
+.controls {
+	pointer-events:auto;
+	position:absolute; top:10px; left:10px; z-index:10;
+	background:white; border-radius:6px;
+	box-shadow:0 2px 6px rgba(0,0,0,.3); overflow:visible;
+	}
+svg{pointer-events:auto;}
+.controls button { display:block; width:36px; height:36px; border:none; background:white; font-size:18px; cursor:pointer;   user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */}
+.controls button:hover { background:#f0f0f0; }
+.controls input[type=range] { width:100px; margin:5px; }
+.controls ul { display:none; margin:5px; padding:0; list-style:none; max-height:150px; overflow-y:auto; }
+.point { cursor:pointer; }
+.point circle { opacity:0.6; }
+.point text {font-size: 6px;  user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */}
+.point:hover circle { opacity:0.8; }
+#fumetto { opacity:0; transform:scale(0.9); transform-origin:top center; transition:0.25s; display:none; }
+#fumetto.show { opacity:1; transform:scale(1); }
+#fumetto-box { fill:white; stroke:black; rx:8; ry:8; }
+#fumetto-title { font-size:13px; font-weight:bold; }
+#fumetto-desc-container div { font-size:12px; line-height:1.2em; color: black; }
+#fumetto-desc-container div img {width: 50px; padding:10px;  border-radius: 4px;}
+
+#fumettoHTML.expanded {
+  width: 400px;
+  max-height: 300px; /* Altezza massima del fumetto */
+  overflow: hidden;
+  display: block;
+}
+
+#cornice {
+  position:relative;
+  margin:0 auto;
+  flex:1;
+  margin-top: 50px;
+  width: 100%;
+  height: 80vh;
+  max-width: 1000px;
+  border: 2px solid #333;
+  background: white;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+} 
+
+body.mobile .point circle {
+  r: 6;
+}
+.points-hidden .point {
+  display: none;
+}
+.btn-tooltip {
+  position: relative;
+}
+
+.btn-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.btn-tooltip:hover::after {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  #cornice {
+    margin-top: 10px;
+    height: 55vh;       /* ⬅️ qui la riduci */
+    max-width: 100%;
+    border-width: 1px;
+  }
+  body{margin: 0;}
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+#info {
+    text-align: center; /* centra il testo orizzontalmente */
+    margin: 20px 0;
+}
+
+.info-content {
+    display: inline-flex;       /* rende testo+immagine un blocco flex */
+    align-items: center;        /* centra verticalmente */
+    gap: 10px;                  /* spazio tra testo e immagine */
+}
+.ass {
+	padding:10px;
+    display: flex;
+    justify-content: center; /* centro orizzontale */
+    align-items: center;     /* allinea testo e immagine */
+    text-align: center;
+}
+
+/*===========ELENCO MAPPA========*/
+#map-layout {
+  display: flex;
+  align-items:stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Pannello lista */
+#fumetti-panel {
+  height:80vh;
+  width: 260px;
+  background: #f4f1ea;
+  border: 2px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#fumetti-panel h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#fumettiList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#fumettiList li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#fumettiList li:hover {
+  background: #ddd;
+}
+@media (max-width: 768px) {
+  #map-layout {
+    flex-direction: column;
+  }
+
+  #fumetti-panel {
+    width: 100%;
+    max-height: 200px;
+  }
+}
+
+
+body.night #fumetti-panel {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+body.night #fumettiList li:hover {
+  background: #444;
+}
+#map-layout{margin-top:40px; display:flex; align-items: flex-start;}
+#fumetti-panel,#cornice{margin:0; padding-top:0;
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Museo della Civiltà Contadina</h1>
+  <button id="toggleNight">🌙 Modalità Notte</button>
+</header>
+
+<nav>
+  <ul class="menu">
+    <li class="dropdown">
+      <a style="user-select:none;">Home</a>
+      <ul class="submenu">
+		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
+      </ul>
+    </li>
+    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li class="dropdown">
+		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<ul class="submenu">
+			<li><a href="servizi.html">Mappa servizi</a></li>
+			<li><a href="mappa.html">Trekking urbano</a></li>
+			<li><a href="">Trekking extraurbano</a></li>
+		</ul>
+	</li>
+    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
+  </ul>
+</nav>
+
+<div id="map-layout">
+<aside id="fumetti-panel">
+	<h3>Elenco servizi</h3>
+	<ul id="fumettiList"></ul>
+</aside>
+<div id="cornice">
+  <div class="controls">
+    <button id="zoomIn">+</button>
+    <button id="zoomOut">−</button>
+    <button id="reset">⟳</button>
+    <button id="showZoomSlider">🔍</button>
+    <button id="togglePoints">👁</button>
+    <input type="range" id="zoomSlider" min="1" max="4" step="0.01" style="display:none;">
+  </div>
+
+  <svg id="svg" viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <g id="viewport">
+      <image x="0" y="0" width="800" height="600" image-rendering="optimized" xlink:href="assets/servizi.png"/>
+      
+      <g class="point" data-title="Parcheggio|Area raccolta protezione civile" data-description="Ex campetto" data-img="assets/p.svg,assets/pr.svg" transform="translate(376 268)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">1</text>
+      </g>
+	  <g class="point" data-title="Parcheggio" data-description="Vigna della Corte" data-img="assets/p.svg" transform="translate(463 259)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">2</text>
+      </g>
+	  <g class="point" data-title="Parcheggio|Area raccolta protezione civile" data-description="Cimitero" data-img="assets/p.svg,assets/pr.svg" 
+	  transform="translate(345 191)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">3</text>
+      </g>
+	  <g class="point" data-title="Area raccolta protezione civile" data-description="Piazza G. Sabetta" data-img="assets/pr.svg" 
+	  transform="translate(403 374)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">4</text>
+      </g>
+	  <g class="point" data-title="Area raccolta protezione civile"" data-description="Campo sportivo 'Passeri'" data-img="assets/pr.svg" 
+	  transform="translate(401 530)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">5</text>
+      </g>
+	  <g class="point" data-title="Parcheggio|Area raccolta protezione civile" data-description="Noele" data-img="assets/p.svg,assets/pr.svg" 
+	  transform="translate(406 292)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">6</text>
+      </g>
+	  <g class="point" data-title="Parcheggio|Area raccolta protezione civile" data-description="Largo San Cosma" data-img="assets/p.svg,assets/pr.svg" 
+	  transform="translate(372 226)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">7</text>
+      </g>
+	  <g class="point" data-title="Botteghe di comunità" data-description="Vigna della Corte" data-img="assets/medico.svg" 
+	  transform="translate(417 261)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">8</text>
+      </g>
+	  <g class="point" data-title="Guardia Medica" data-description="Strada sotto la chiesa" data-img="assets/medico.svg" 
+	  transform="translate(428 285)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">9</text>
+      </g>
+	  <g class="point" data-title="Farmacia Dott.ssa Rosa Passaro" data-description="Via Roma,6" data-img="assets/farmacia.svg,assets/dae.svg" 
+	  transform="translate(414 276)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">10</text>
+      </g>
+	  <g class="point" data-title="Comando Carabinieri" data-description="Via P. Carafa, 140" data-img="assets/carabinieri.svg" 
+	  transform="translate(475 317)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">11</text>
+      </g>
+	  <g class="point" data-title="Servizi/Area Parcheggio" data-description="Via Generale Tommasini" data-img="assets/toilette.svg, assets/p.svg" 
+	  transform="translate(377 251)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">12</text>
+      </g>
+	  <g class="point" data-title="Servizi" data-description="Piazza Umberto I" data-img="assets/toilette.svg" 
+	  transform="translate(436 312)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">13</text>
+      </g>
+	  <g class="point" data-title="Servizi" data-description="Via Luigi Salerno" data-img="assets/toilette.svg" 
+	  transform="translate(448 296)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">14</text>
+      </g>
+	  <g class="point" data-title="DAE" data-description="Via Carmine Natale" data-img="assets/dae.svg" 
+	  transform="translate(540 180)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">15</text>
+      </g>
+	  <g class="point" data-title="DAE" data-description="Via Donato Riccio" data-img="assets/dae.svg" 
+	  transform="translate(313 214)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">16</text>
+      </g>
+	  <g class="point" data-title="Municipio" data-description="Via Luigi Salerno, 2" data-img="assets/logo.png, assets/vigili.png, assets/dae.svg" 
+	  transform="translate(449 300)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">17</text>
+      </g>
+	  <g class="point" data-title="Poste Italiane" data-description="Via Roma,2" data-img="assets/pt.svg" 
+	  transform="translate(423 280)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">18</text>
+      </g>
+	  <g class="point" data-title="Bcc Aquara" data-description="Via Roma, 28" data-img="assets/banca.svg" 
+	  transform="translate(405 265)">
+        <circle r="4" fill="red"/>
+        <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">19</text>
+      </g>
+
+      <!-- FUMETTO -->
+      <g id="fumetto">
+        <rect id="fumetto-box" width="230" height="80" color="white"/>
+        <text id="fumetto-title" x="10" y="20"></text>
+        <foreignObject id="fumetto-desc-container" x="10" y="35" width="210" height="0">
+          <div xmlns="http://www.w3.org/1999/xhtml"></div>
+        </foreignObject>
+      </g>
+    </g>
+  </svg>
+</div>
+</div>
+<footer>
+  <div class="footer-content">
+    <img src="img/logo.png" class="footer-logo">
+    <span>© 2025 Museo della Civiltà Contadina</span>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" title="Torna su">↑</button>
+
+<script>
+/* ====== SCRIPT MAPPA + FUMETTO ====== */
+const svg = document.getElementById('svg');
+const bounds = {x:0,y:0,w:800,h:600};
+let viewBox = {...bounds};
+let zoomFactor=1.2, isPanning=false, start={x:0,y:0};
+const zoomSlider = document.getElementById('zoomSlider');
+const fumetto = document.getElementById('fumetto');
+const box = document.getElementById('fumetto-box');
+const descContainer = document.getElementById('fumetto-desc-container');
+let activePoint = null;
+
+// Zoom e pan
+function zoomAtCenter(scale){applyZoom(scale,viewBox.x+viewBox.w/2,viewBox.y+viewBox.h/2);}
+function applyZoom(scale,cx,cy){
+  const newW=viewBox.w*scale, newH=viewBox.h*scale;
+  const zoomLevel=bounds.w/newW;
+  if(zoomLevel<1||zoomLevel>4) return;
+  viewBox.w=newW; viewBox.h=newH;
+  viewBox.x=cx-(cx-viewBox.x)*scale;
+  viewBox.y=cy-(cy-viewBox.y)*scale;
+  clampViewBox(); updateViewBox();
+}
+function clampViewBox(){viewBox.x=Math.max(bounds.x,Math.min(viewBox.x,bounds.x+bounds.w-viewBox.w)); viewBox.y=Math.max(bounds.y,Math.min(viewBox.y,bounds.y+bounds.h-viewBox.h));}
+function updateViewBox(){svg.setAttribute('viewBox',`${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`); updateFumettoPosition();}
+function resetView(){viewBox={...bounds}; updateViewBox();}
+
+function startPan(e){isPanning=true; start.x=e.clientX; start.y=e.clientY;}
+function pan(e){if(!isPanning) return; const dx=(e.clientX-start.x)*(viewBox.w/svg.clientWidth); const dy=(e.clientY-start.y)*(viewBox.h/svg.clientHeight); viewBox.x-=dx; viewBox.y-=dy; start.x=e.clientX; start.y=e.clientY; clampViewBox(); updateViewBox();}
+function endPan(){isPanning=false;}
+
+svg.addEventListener('pointerdown', startPan);
+svg.addEventListener('pointermove', pan);
+svg.addEventListener('pointerup', endPan);
+svg.addEventListener('pointercancel', endPan);
+svg.addEventListener('pointerleave', endPan);
+
+function mostraFumetto(point){
+  const titleEl = document.getElementById('fumetto-title');
+  const descContainer = document.getElementById('fumetto-desc-container');
+  const descDiv = descContainer.querySelector('div');
+  const box = document.getElementById('fumetto-box');
+  const m = point.transform.baseVal[0].matrix;
+  const cx = m.e, cy = m.f;
+  const x = cx - 20;
+  const y = cy - 60;
+
+
+  // Titolo a capo
+  titleEl.innerHTML = ''; // pulisce eventuali titoli precedenti
+
+const rawTitle = point.dataset.title || 
+  `Punto ${point.querySelector('text').textContent}`;
+
+const lines = rawTitle.split('|');
+
+lines.forEach((line, i) => {
+  const tspan = document.createElementNS(
+    'http://www.w3.org/2000/svg',
+    'tspan'
+  );
+  tspan.setAttribute('x', x + 10);
+  tspan.setAttribute('dy', i === 0 ? 0 : 14);
+  tspan.textContent = line;
+  titleEl.appendChild(tspan);
+});
+
+
+  // Testo
+  const description = point.dataset.description || '';
+  descDiv.innerHTML = `<div style="width:100%; text-align:center; margin-bottom:0px;">${description}</div>`;
+
+  // Immagini
+  const images = point.dataset.img ? point.dataset.img.split(',') : [];
+  if(images.length){
+    const imgContainer = document.createElement('div');
+    imgContainer.style.display = 'flex';
+    imgContainer.style.justifyContent = 'center'; // centrate orizzontalmente
+    imgContainer.style.alignItems = 'center';     // centrate verticalmente
+    imgContainer.style.gap = '5px';
+    //imgContainer.style.flexWrap = 'wrap';         // vanno a capo se non c'è spazio
+    imgContainer.style.marginTop = '0px';
+
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.width = '50px';   // dimensione fissa
+      img.style.height = '50px';  // dimensione fissa
+      img.style.objectFit = 'cover'; // mantiene proporzioni ritagliando se necessario
+      img.style.borderRadius = '4px';
+      imgContainer.appendChild(img);
+    });
+
+    descDiv.appendChild(imgContainer);
+  }
+
+  // Mostra contenitore e imposta altezza
+  const maxContentHeight = 110;
+  descContainer.style.display = 'block';
+  descContainer.setAttribute('height', maxContentHeight);
+  box.setAttribute('height', maxContentHeight + 40);
+
+  // Posizione fumetto sopra il punto
+
+  box.setAttribute('x', x);
+  box.setAttribute('y', y);
+  titleEl.setAttribute('x', x + 10);
+  titleEl.setAttribute('y', y + 15);
+  descContainer.setAttribute('x', x + 10);
+  descContainer.setAttribute('y', y + 35);
+
+  // Mostra il fumetto
+  const fumetto = document.getElementById('fumetto');
+  fumetto.style.display = 'block';
+  requestAnimationFrame(() => fumetto.classList.add('show'));
+}
+
+
+function chiudiFumetto(){fumetto.classList.remove('show'); setTimeout(()=>fumetto.style.display='none',250); activePoint=null;}
+function updateFumettoPosition(){
+  if(!activePoint) return;
+  const m = activePoint.transform.baseVal[0].matrix;
+  const cx = m.e, cy = m.f;
+  const x = cx-20, y = cy-60;
+  box.setAttribute('x', x); box.setAttribute('y', y);
+  document.getElementById('fumetto-title').setAttribute('x', x+10); document.getElementById('fumetto-title').setAttribute('y', y+15);
+  descContainer.setAttribute('x', x+10); descContainer.setAttribute('y', y+35);
+}
+
+// Click punti
+document.querySelectorAll('.point').forEach(p=>{
+  p.addEventListener('click', e=>{
+    e.stopPropagation();
+    if(activePoint===p){chiudiFumetto();} else {activePoint=p; mostraFumetto(p);}
+  });
+});
+document.addEventListener('click', e=>{if(!e.target.closest('.point')&&!e.target.closest('#fumetto')) chiudiFumetto();});
+
+
+// Zoom pulsanti
+document.getElementById('zoomIn').onclick=()=>zoomAtCenter(1/zoomFactor);
+document.getElementById('zoomOut').onclick=()=>zoomAtCenter(zoomFactor);
+document.getElementById('reset').onclick=resetView;
+document.getElementById('showZoomSlider').onclick=()=>{zoomSlider.style.display=zoomSlider.style.display==='none'?'block':'none';};
+zoomSlider.addEventListener('input', e=>{ const targetZoom=parseFloat(e.target.value); const factor=(bounds.w/viewBox.w)/targetZoom; zoomAtCenter(factor); });
+
+// Modalità notte
+const toggleNight = document.getElementById('toggleNight');
+if(localStorage.getItem('theme')==='night'){document.body.classList.add('night'); toggleNight.textContent='☀️ Modalità Giorno';}
+toggleNight.addEventListener('click', ()=>{
+  document.body.classList.toggle('night');
+  if(document.body.classList.contains('night')){localStorage.setItem('theme','night'); toggleNight.textContent='☀️ Modalità Giorno';}
+  else{localStorage.setItem('theme','light'); toggleNight.textContent='🌙 Modalità Notte';}
+});
+
+// Scroll top
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.onscroll = function(){scrollBtn.style.display=(document.documentElement.scrollTop>100)?"block":"none";}
+scrollBtn.addEventListener("click", ()=>window.scrollTo({ top:0, behavior:"smooth" }));
+let lastWheelTime = 0;
+const wheelDelay = 100; // in ms
+
+function zoomThrottled(e) {
+  const now = Date.now();
+  if (now - lastWheelTime < wheelDelay) return; // ignora eventi troppo ravvicinati
+  lastWheelTime = now;
+  zoom(e); // chiama la tua funzione di zoom originale
+}
+
+//svg.addEventListener('wheel', zoomThrottled);
+	  
+document.getElementById('zoomIn').onclick = ()=>zoomAtCenter(1/zoomFactor);
+document.getElementById('zoomOut').onclick = ()=>zoomAtCenter(zoomFactor);
+document.getElementById('reset').onclick = resetView;
+document.getElementById('showZoomSlider').onclick = ()=>{zoomSlider.style.display = zoomSlider.style.display==='none'?'block':'none';};
+zoomSlider.addEventListener('input',(e)=>{
+  const targetZoom = parseFloat(e.target.value);
+  const factor = (bounds.w/viewBox.w)/targetZoom;
+  zoomAtCenter(factor);
+});
+let wheelDelta = 0;
+let zoomRAF = null;
+
+function onWheel(e) {
+  e.preventDefault();
+
+  wheelDelta += e.deltaY;
+
+  if (!zoomRAF) {
+    zoomRAF = requestAnimationFrame(() => {
+      const scale = wheelDelta < 0 ? 1 / zoomFactor : zoomFactor;
+      zoomAtCenter(scale);
+
+      wheelDelta = 0;
+      zoomRAF = null;
+    });
+  }
+}
+
+svg.addEventListener('wheel', onWheel, { passive: false });
+// Lista fumetti
+
+const fumettiPanel = document.getElementById('fumetti-panel');
+
+fumettiPanel.addEventListener('click', e => {
+  e.stopPropagation();
+});
+
+const fumettiList = document.getElementById('fumettiList');
+
+fumettiList.innerHTML = '';
+
+document.querySelectorAll('.point').forEach((point, idx) => {
+  const li = document.createElement('li');
+  const title = point.dataset.title || `Punto ${idx + 1}`;
+  li.textContent = `${idx + 1}. ${title}`;
+
+  li.addEventListener('click', (e) => {
+	e.stopPropagation();
+    activePoint = point;
+    mostraFumetto(point);
+	
+  });
+
+  fumettiList.appendChild(li);
+});
+
+// Seleziona il div della descrizione dentro il foreignObject
+const descDiv = document.querySelector('#fumetto-desc-container div');
+
+descDiv.addEventListener('wheel', (e) => {
+  e.stopPropagation(); // impedisce allo zoom della mappa di attivarsi
+  // Lascia scorrere normalmente
+});
+let isDragging = false;
+svg.addEventListener('mousedown', e=>{
+  isPanning = true;
+  isDragging = false;
+  start.x = e.clientX; start.y = e.clientY;
+});
+window.addEventListener('mousemove', e=>{
+  if(!isPanning) return;
+  const dx = (e.clientX - start.x) * (viewBox.w / svg.clientWidth);
+  const dy = (e.clientY - start.y) * (viewBox.h / svg.clientHeight);
+  if(Math.abs(dx) > 1 || Math.abs(dy) > 1) isDragging = true;
+  viewBox.x -= dx; viewBox.y -= dy;
+  start.x = e.clientX; start.y = e.clientY;
+  clampViewBox(); updateViewBox();
+});
+window.addEventListener('mouseup', ()=> isPanning=false);
+
+window.addEventListener('click', e=>{
+  if(activePoint && !fumetto.contains(e.target) && !isDragging) chiudiFumetto();
+});
+
+const togglePointsBtn = document.getElementById('togglePoints');
+
+togglePointsBtn.addEventListener('click', () => {
+  document.body.classList.toggle('points-hidden');
+});
+
+  // Mostra il pulsante dopo 100px di scroll
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll fluido verso l'alto al click
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>

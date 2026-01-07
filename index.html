@@ -100,6 +100,7 @@ nav {
   padding: 0;
   min-width: 150px;
   background-color: #bfae94;
+  width:200px;
 }
 
 /* DESKTOP */
@@ -324,6 +325,10 @@ body.night .submenu {
 body.night .submenu li a {
   color: #f0f0f0;
 }
+body.night .submenu li a:hover {
+  color: #d8cbb3 
+}
+
 body.night #scrollTopBtn {
   background-color: #d8cbb3; /* sfondo più scuro */
   color: #000;         /* colore della freccia */
@@ -375,6 +380,28 @@ body.night #scrollTopBtn:hover {
   to { transform: translateX(-50%); }
 }
 
+/*==============IFRAME============*/
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* rapporto 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 600px) {
+  .map-container {
+    padding-bottom: 75%; /* più alta su mobile */
+  }
+}
 
   </style>
 </head>
@@ -389,15 +416,22 @@ body.night #scrollTopBtn:hover {
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html">Pagina iniziale</a></li>
-        <li><a href="#info">Info</a></li>
-        <li><a href="#foto">Foto-gallery</a></li>
+		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html">Saggezza popolare</a></li>
-    <li><a href="cultura.html">La nostra cultura</a></li>
-    <li><a href="mappa.html">Percorso urbano</a></li>
-    <li><a href="dizionario.html">Dizionario</a></li>
+    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li class="dropdown">
+		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<ul class="submenu">
+			<li><a href="servizi.html">Mappa servizi</a></li>
+			<li><a href="mappa.html">Trekking urbano</a></li>
+			<li><a href="">Trekking extraurbano</a></li>
+		</ul>
+	</li>
+    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
 <!--TEVHR0VOLSBub24gdGkgbXVvdmVyZS0gREFSSU8=-->
@@ -411,7 +445,10 @@ body.night #scrollTopBtn:hover {
 	<h2>Informazioni/Informations</h2>
 	<p>⏰ Orari di apertura/Opening hours:<br> <strong>Lun–Dom, 9:00-13:00 &nbsp&nbsp&nbsp 14:00–19:00</strong><br>
 	</p>
-	<p>📍 Ci troviamo in/We are located at:<br><strong>Piazza Umberto I n° 3, Castel San Lorenzo (SA)</strong> </p>
+	<p>📍 Ci troviamo in/We are located at:<br><strong>Piazza Umberto I n° 3, Castel San Lorenzo (SA)</strong><br><br>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.2856479529429!2d15.229936916708098!3d40.41615025533867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13394f7c61781165%3A0xf2c54168270ea3a4!2sMuseo%20della%20Cultura%20e%20Civilt%C3%A0%20Contadina!5e1!3m2!1sit!2sit!4v1767709368746!5m2!1sit!2sit" 
+		width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</p>
 	<br><br>
 	<h2>Descrizione/Description</h2>
 		Il museo della civiltà contadina di Castel San Lorenzo, si trova nel vecchio Municipio, sito in Piazza Umberto I,

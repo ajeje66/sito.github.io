@@ -97,8 +97,8 @@
 	{ "parola": "Cor", "fonemi": "/'AA/", "definizione": "Cuore" , "traduzione_en":"Heart"},
 	{ "parola": "Purmon", "fonemi": "/'AA/", "definizione": "Polmone" , "traduzione_en":"Lung"},
 	{ "parola": "Fecatu", "fonemi": "/'AA/", "definizione": "Fegato" , "traduzione_en":"Liver"},
-	{ "parola": "'Ndstinu", "fonemi": "/'AA/", "definizione": "Intestino" , "traduzione_en":"Intestine"},
-	{ "parola": "'Nzalatiera", "fonemi": "/'AA/", "definizione": "Insalatiera" , "traduzione_en":"Salad bowl"},
+	{ "parola": "Ndstinu", "fonemi": "/'AA/", "definizione": "Intestino" , "traduzione_en":"Intestine"},
+	{ "parola": "Nzalatiera", "fonemi": "/'AA/", "definizione": "Insalatiera" , "traduzione_en":"Salad bowl"},
 	{ "parola": "Rota", "fonemi": "/'AA/", "definizione": "Ruota" , "traduzione_en":"Whel"},
 	{ "parola": "Campanacciu", "fonemi": "/'AA/", "definizione": "Campanaccio" , "traduzione_en":"Cowbell"},
 	{ "parola": "Cuddaru", "fonemi": "/'AA/", "definizione": "Collare" , "traduzione_en":"Collar"},
@@ -106,6 +106,7 @@
 	{ "parola": "Lumu", "fonemi": "/'AA/", "definizione": "Giogo" , "traduzione_en":"Yoke"},
 	{ "parola": "Fierru p' i cavaddi", "fonemi": "/'AA/", "definizione": "Ferro da cavallo" , "traduzione_en":"Horseshoe"},
 	{ "parola": "Masco", "fonemi": "/'AA/", "definizione": "Serratura" , "traduzione_en":"Lock"},
+	{ "parola": "Fermapurtone", "fonemi": "/'AA/", "definizione": "Fermaportone" , "traduzione_en":"Door stopper"},
 	{ "parola": "Nassa", "fonemi": "/'AA/", "definizione": "Trappola per pesci" , "traduzione_en":"Keepnet"},
 	{ "parola": "Nassedda", "fonemi": "/'AA/", "definizione": "Trappola piccola per pesci" , "traduzione_en":"Little keepnet"},
 	{ "parola": "Aratru", "fonemi": "/'AA/", "definizione": "Aratro" , "traduzione_en":"Plow"},
@@ -187,6 +188,5 @@
 	
 	
 	{ "parola": "Batacatascia", "fonemi": "/'AA/", "definizione": "Lucciola" , "traduzione_en":"Firefly"}
-
 
 ]
