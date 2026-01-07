@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.19 228.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00408b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-size: 174.95px;
+        font-weight: 700;
+        isolation: isolate;
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M3.03,0H197.16c1.63,0,3.03,1.4,3.03,3.03V194.83c0,1.63-1.4,3.03-3.03,3.03H3.03c-1.63,0-3.03-1.4-3.03-3.03V3.03C0,1.4,1.4,0,3.03,0Z"/>
+  <text class="cls-2" transform="translate(39.78 162.34) scale(1.06 1)"><tspan x="0" y="0">P</tspan></text>
+</svg>
