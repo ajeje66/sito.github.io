@@ -529,13 +529,14 @@ body.mobile .point circle {
 #fumettiList li:hover {
   background: #ddd;
 }
+
 @media (max-width: 768px) {
   #map-layout {
     flex-direction: column;
   }
 
   #fumetti-panel {
-    width: 100%;
+    width: 95%;
     max-height: 200px;
   }
 }
@@ -578,7 +579,7 @@ body.night #fumettiList li:hover {
 		<ul class="submenu">
 			<li><a href="servizi.html">Mappa servizi</a></li>
 			<li><a href="mappa.html">Trekking urbano</a></li>
-			<li><a href="">Trekking extraurbano</a></li>
+			<li><a href="extraurbano.html">Trekking extraurbano</a></li>
 		</ul>
 	</li>
     <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
@@ -816,7 +817,7 @@ lines.forEach((line, i) => {
   }
 
   // Mostra contenitore e imposta altezza
-  const maxContentHeight = 110;
+  const maxContentHeight = 90;
   descContainer.style.display = 'block';
   descContainer.setAttribute('height', maxContentHeight);
   box.setAttribute('height', maxContentHeight + 40);
