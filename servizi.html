@@ -11,7 +11,7 @@
 		color: #333;
 		margin: 0;
 		overflow-x: hidden;
-	transition: background-color 0.6s, color 0.6s;
+		transition: background-color 0.6s, color 0.6s;
 	}
 /*=============HEAD==========*/
 	header {
@@ -52,7 +52,7 @@
 		background-color: #bfae94;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 		transition: background-color 0.6s;
-		z-index: 10;
+		z-index: 1000;
 		gap:25px;
 	}
 
@@ -80,19 +80,17 @@
 		position: relative;
 	}
 
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  display: block;
-  transition: color 0.3s, transform 0.3s;
-}
+	.menu a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 10px 15px;
+		display: block;
+	}
 
-.menu a:hover {
-  color: #f5e6c8;
-  transform: scale(1.1)
-}
+	.menu a:hover {
+		color: #3a2c1a;
+	}
 	.menu li:hover > .submenu {
 		display: block;
 	}
@@ -110,6 +108,7 @@
 	.submenu li a {
 		padding: 10px;
 		color: white;
+		z-index:2000;
 	}
 	.submenu li a:hover {
 		background-color: #555;
@@ -368,7 +367,6 @@
   }
 }
 	
-
 .controls {
 	pointer-events:auto;
 	position:absolute; top:10px; left:10px; z-index:10;
@@ -390,12 +388,13 @@ svg{pointer-events:auto;}
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* Edge */}
 .point:hover circle { opacity:0.8; }
-#fumetto {opacity:0; transform:scale(0.9); transform-origin:top center; transition:0.25s; display:none; }
+#fumetto { opacity:0; transform:scale(0.9); transform-origin:top center; transition:0.25s; display:none; }
 #fumetto.show { opacity:1; transform:scale(1); }
-#fumetto-link-text{ fill:#0066cc; font-size:14px; text-decoration:underline; cursor:pointer; }
-#fumettoHTML {
-  width: 300px; 
-}
+#fumetto-box { fill:white; stroke:black; rx:8; ry:8; }
+#fumetto-title { font-size:13px; font-weight:bold; }
+#fumetto-desc-container div { font-size:12px; line-height:1.2em; color: black; }
+#fumetto-desc-container div img {width: 50px; padding:10px;  border-radius: 4px;}
+
 #fumettoHTML.expanded {
   width: 400px;
   max-height: 300px; /* Altezza massima del fumetto */
@@ -406,6 +405,7 @@ svg{pointer-events:auto;}
 #cornice {
   position:relative;
   margin:0 auto;
+  flex:1;
   margin-top: 50px;
   width: 100%;
   height: 80vh;
@@ -485,8 +485,10 @@ body.mobile .point circle {
     text-align: center;
 }
 
+/*===========ELENCO MAPPA========*/
 #map-layout {
   display: flex;
+  align-items:stretch;
   max-width: 1200px;
   margin: 0 auto;
   gap: 15px;
@@ -495,6 +497,7 @@ body.mobile .point circle {
 
 /* Pannello lista */
 #fumetti-panel {
+  height:80vh;
   width: 260px;
   background: #f4f1ea;
   border: 2px solid #333;
@@ -526,15 +529,7 @@ body.mobile .point circle {
 #fumettiList li:hover {
   background: #ddd;
 }
-body.night #fumetti-panel {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #f0f0f0;
-}
 
-body.night #fumettiList li:hover {
-  background: #444;
-}
 @media (max-width: 768px) {
   #map-layout {
     flex-direction: column;
@@ -545,16 +540,21 @@ body.night #fumettiList li:hover {
     max-height: 200px;
   }
 }
-#map-layout {
-  margin-top: 40px;   /* spazio uniforme */
-   display: flex;
-  align-items: flex-start;
+
+
+body.night #fumetti-panel {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
 }
-#fumetti-panel,
-#cornice {
-  margin: 0;
-  padding-top: 0;
+
+body.night #fumettiList li:hover {
+  background: #444;
 }
+
+#map-layout{margin-top:40px; display:flex; align-items: flex-start;}
+#fumetti-panel,#cornice{margin:0; padding-top:0;
+
 /* Icona base */
 .icon {
   display: inline-block;
@@ -733,12 +733,12 @@ body.night .icon {
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">14</text>
       </g>
-	  <g class="point" data-title="DAE" data-description="Via Carmine Natale" data-img="assets/dae.svg" 
+	  <g class="point" data-title="Defibrillatori DAE" data-description="Via Carmine Natale" data-img="assets/dae.svg" 
 	  transform="translate(540 180)">
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">15</text>
       </g>
-	  <g class="point" data-title="DAE" data-description="Via Donato Riccio" data-img="assets/dae.svg" 
+	  <g class="point" data-title="Defibrillatori DAE" data-description="Via Donato Riccio" data-img="assets/dae.svg" 
 	  transform="translate(313 214)">
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">16</text>
