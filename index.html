@@ -85,10 +85,12 @@ nav {
   font-weight: bold;
   padding: 10px 15px;
   display: block;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .menu a:hover {
-  color: #3a2c1a;
+  color: #f5e6c8;
+  transform: scale(1.1)
 }
 
 /* ---------- SUBMENU ---------- */
@@ -403,6 +405,62 @@ body.night #scrollTopBtn:hover {
 
   }
 }
+/* Icona base */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+
+  /* colore default icona */
+  background-color: black;
+
+  /* maschera PNG */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  transition: background-color 0.3s ease; /* animazione colore */
+}
+
+/* Icona Info specifica */
+.home-icon {
+  -webkit-mask-image: url("assets/home.png");
+  mask-image: url("assets/home.png");
+}
+.info-icon {
+  -webkit-mask-image: url("assets/info.png");
+  mask-image: url("assets/info.png");
+}
+.foto-icon {
+  -webkit-mask-image: url("assets/camera.png");
+  mask-image: url("assets/camera.png");
+}
+.rumor-icon {
+  -webkit-mask-image: url("assets/rumor.png");
+  mask-image: url("assets/rumor.png");
+}
+.museum-icon {
+  -webkit-mask-image: url("assets/museum.png");
+  mask-image: url("assets/museum.png");
+}
+.track-icon {
+  -webkit-mask-image: url("assets/track.png");
+  mask-image: url("assets/track.png");
+}
+.book-icon {
+  -webkit-mask-image: url("assets/book.png");
+  mask-image: url("assets/book.png");
+}
+/* Modalità notte */
+body.night .icon {
+  background-color: white;
+}
+
 
   </style>
 </head>
@@ -417,22 +475,22 @@ body.night #scrollTopBtn:hover {
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
-        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
-        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
+		<li><a href="index.html"><span class="icon home-icon"></span> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="#info"><span class="icon info-icon"></span> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="#foto"><span class="icon foto-icon"></span><span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
-    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li><a href="proverbi.html"><span class="icon rumor-icon"></span> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><span class="icon museum-icon"></span><span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
     <li class="dropdown">
-		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<a style="user-select:none;"><span class="icon track-icon"></span> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
 		<ul class="submenu">
 			<li><a href="servizi.html">Mappa servizi</a></li>
 			<li><a href="mappa.html">Trekking urbano</a></li>
 			<li><a href="extraurbano.html">Trekking extraurbano</a></li>
 		</ul>
 	</li>
-    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
+    <li><a href="dizionario.html"><span class="icon book-icon"></span><span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
 <!--TEVHR0VOLSBub24gdGkgbXVvdmVyZS0gREFSSU8=-->
@@ -452,7 +510,7 @@ body.night #scrollTopBtn:hover {
 	</p>
 	<br><br>
 	<h2>Descrizione/Description</h2>
-		Il museo della civiltà contadina di Castel San Lorenzo, si trova nel vecchio Municipio, sito in Piazza Umberto I,
+		Il museo della civiltà contadina di Castel San Lorenzo si trova nel vecchio Municipio, sito in Piazza Umberto I
 		(centro storico del paese). In esso potrete osservare com'era la vita della popolazione 'castellese' negli anni passati,
 		incentrata principalmente tra agricoltura e artigianato.<br><br>
 		The Rural Life Museum in Castel San Lorenzo is located in the old town hall, in Piazza Umberto I (the village historical centre). 

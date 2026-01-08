@@ -80,17 +80,19 @@ body {
 		position: relative;
 	}
 
-	.menu a {
-		color: #fff;
-		text-decoration: none;
-		font-weight: bold;
-		padding: 10px 15px;
-		display: block;
-	}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
 
-	.menu a:hover {
-		color: #3a2c1a;
-	}
+.menu a:hover {
+  color: #f5e6c8;
+  transform: scale(1.1)
+}
 	.menu li:hover > .submenu {
 		display: block;
 	}
@@ -553,6 +555,61 @@ body.night #fumettiList li:hover {
 }
 #map-layout{margin-top:40px; display:flex; align-items: flex-start;}
 #fumetti-panel,#cornice{margin:0; padding-top:0;
+/* Icona base */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+
+  /* colore default icona */
+  background-color: black;
+
+  /* maschera PNG */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  transition: background-color 0.3s ease; /* animazione colore */
+}
+
+/* Icona Info specifica */
+.home-icon {
+  -webkit-mask-image: url("assets/home.png");
+  mask-image: url("assets/home.png");
+}
+.info-icon {
+  -webkit-mask-image: url("assets/info.png");
+  mask-image: url("assets/info.png");
+}
+.foto-icon {
+  -webkit-mask-image: url("assets/camera.png");
+  mask-image: url("assets/camera.png");
+}
+.rumor-icon {
+  -webkit-mask-image: url("assets/rumor.png");
+  mask-image: url("assets/rumor.png");
+}
+.museum-icon {
+  -webkit-mask-image: url("assets/museum.png");
+  mask-image: url("assets/museum.png");
+}
+.track-icon {
+  -webkit-mask-image: url("assets/track.png");
+  mask-image: url("assets/track.png");
+}
+.book-icon {
+  -webkit-mask-image: url("assets/book.png");
+  mask-image: url("assets/book.png");
+}
+/* Modalità notte */
+body.night .icon {
+  background-color: white;
+}
 </style>
 </head>
 <body>
@@ -567,22 +624,22 @@ body.night #fumettiList li:hover {
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
-        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
-        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
+		<li><a href="index.html"><span class="icon home-icon"></span> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="index.html#info"><span class="icon info-icon"></span> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="index.html#foto"><span class="icon foto-icon"></span><span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
-    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li><a href="proverbi.html"><span class="icon rumor-icon"></span> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><span class="icon museum-icon"></span><span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
     <li class="dropdown">
-		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<a style="user-select:none;"><span class="icon track-icon"></span> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
 		<ul class="submenu">
 			<li><a href="servizi.html">Mappa servizi</a></li>
 			<li><a href="mappa.html">Trekking urbano</a></li>
 			<li><a href="extraurbano.html">Trekking extraurbano</a></li>
 		</ul>
 	</li>
-    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
+    <li><a href="dizionario.html"><span class="icon book-icon"></span><span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
 <br><br><br><br>
@@ -659,17 +716,17 @@ body.night #fumettiList li:hover {
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">11</text>
       </g>
-	  <g class="point" data-title="Servizi/Area Parcheggio" data-description="Via Generale Tommasini" data-img="assets/toilette.svg, assets/p.svg" 
+	  <g class="point" data-title="Servizi igienici/Area Parcheggio" data-description="Via Generale Tommasini" data-img="assets/toilette.svg, assets/p.svg" 
 	  transform="translate(377 251)">
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">12</text>
       </g>
-	  <g class="point" data-title="Servizi" data-description="Piazza Umberto I" data-img="assets/toilette.svg" 
+	  <g class="point" data-title="Servizi igienici" data-description="Piazza Umberto I" data-img="assets/toilette.svg" 
 	  transform="translate(436 312)">
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">13</text>
       </g>
-	  <g class="point" data-title="Servizi" data-description="Via Luigi Salerno" data-img="assets/toilette.svg" 
+	  <g class="point" data-title="Servizi igienici" data-description="Via Luigi Salerno" data-img="assets/toilette.svg" 
 	  transform="translate(448 296)">
         <circle r="4" fill="red"/>
         <text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">14</text>

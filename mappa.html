@@ -79,17 +79,19 @@
 		position: relative;
 	}
 
-	.menu a {
-		color: #fff;
-		text-decoration: none;
-		font-weight: bold;
-		padding: 10px 15px;
-		display: block;
-	}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
 
-	.menu a:hover {
-		color: #3a2c1a;
-	}
+.menu a:hover {
+  color: #f5e6c8;
+  transform: scale(1.1)
+}
 	.menu li:hover > .submenu {
 		display: block;
 	}
@@ -552,7 +554,61 @@ body.night #fumettiList li:hover {
   margin: 0;
   padding-top: 0;
 }
+/* Icona base */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 
+  /* colore default icona */
+  background-color: black;
+
+  /* maschera PNG */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  transition: background-color 0.3s ease; /* animazione colore */
+}
+
+/* Icona Info specifica */
+.home-icon {
+  -webkit-mask-image: url("assets/home.png");
+  mask-image: url("assets/home.png");
+}
+.info-icon {
+  -webkit-mask-image: url("assets/info.png");
+  mask-image: url("assets/info.png");
+}
+.foto-icon {
+  -webkit-mask-image: url("assets/camera.png");
+  mask-image: url("assets/camera.png");
+}
+.rumor-icon {
+  -webkit-mask-image: url("assets/rumor.png");
+  mask-image: url("assets/rumor.png");
+}
+.museum-icon {
+  -webkit-mask-image: url("assets/museum.png");
+  mask-image: url("assets/museum.png");
+}
+.track-icon {
+  -webkit-mask-image: url("assets/track.png");
+  mask-image: url("assets/track.png");
+}
+.book-icon {
+  -webkit-mask-image: url("assets/book.png");
+  mask-image: url("assets/book.png");
+}
+/* Modalità notte */
+body.night .icon {
+  background-color: white;
+}
 
   </style>
   </head>
@@ -567,27 +623,28 @@ body.night #fumettiList li:hover {
     <li class="dropdown">
       <a style="user-select:none;">Home</a>
       <ul class="submenu">
-		<li><a href="index.html"><img src="assets/home.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
-        <li><a href="#info"><img src="assets/info.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Info</span></a></li>
-        <li><a href="#foto"><img src="assets/camera.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Foto-gallery</span></a></li>
+		<li><a href="index.html"><span class="icon home-icon"></span> <span style="vertical-align: middle;"> Pagina iniziale</span></a></li>
+        <li><a href="index.html#info"><span class="icon info-icon"></span> <span style="vertical-align: middle;"> Info</span></a></li>
+        <li><a href="index.html#foto"><span class="icon foto-icon"></span><span style="vertical-align: middle;"> Foto-gallery</span></a></li>
       </ul>
     </li>
-    <li><a href="proverbi.html"><img src="assets/rumor.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
-    <li><a href="cultura.html"><img src="assets/museum.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
+    <li><a href="proverbi.html"><span class="icon rumor-icon"></span> <span style="vertical-align: middle;"> Saggezza popolare</span></a></li>
+    <li><a href="cultura.html"><span class="icon museum-icon"></span><span style="vertical-align: middle;"> La nostra cultura</span> </a></li>
     <li class="dropdown">
-		<a style="user-select:none;"><img src="assets/track.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
+		<a style="user-select:none;"><span class="icon track-icon"></span> <span style="vertical-align: middle;"> Percorsi e mappe</span></a>
 		<ul class="submenu">
 			<li><a href="servizi.html">Mappa servizi</a></li>
 			<li><a href="mappa.html">Trekking urbano</a></li>
 			<li><a href="extraurbano.html">Trekking extraurbano</a></li>
 		</ul>
 	</li>
-    <li><a href="dizionario.html"><img src="assets/book.png" style="height:20px;vertical-align:middle;"> <span style="vertical-align: middle;">Dizionario</span> </a></li>
+    <li><a href="dizionario.html"><span class="icon book-icon"></span><span style="vertical-align: middle;">Dizionario</span> </a></li>
   </ul>
 </nav>
 	
   <div align="center">
-  <h2>Descrizione:... <br>
+  <h2>Descrizione: Lungo questo percorso è possibile vedere e visitare gli edifici storici e religiosi di Castel San Lorenzo <br>
+  Difficoltà: Medio-bassa.<br>
   Durata punti: 1-12 ~ 1.30 h </h2>
   </div>
   <div id="map-layout">
@@ -643,7 +700,7 @@ body.night #fumettiList li:hover {
 	entrambi appartenenti ai Principi Carafa.
 	Il Palazzo Vigna della Corte era la dimora estiva dei principi che amavano circondarsi di artisti, scrittori, pittori, 
 	dando vita ad una delle Pinacoteche più importanti della Provincia di Salerno. 
-	In basso invece, è possibile osservare il personaggio 'Ù Munaciello'. 
+	In basso invece, è possibile osservare il personaggio 'Ù Munaciello'.
 	La leggenda narra che nel Castello vagasse il fantasma di un monaco, il quale aveva il compito di custodire il tesoro dei Principi. 
 	Solo chi fosse riuscito nell’intento di togliergli il famoso cappuccio rosso sarebbe stato accompagnato nella stanza del tesoro.
 	Pumpanaro:Questo murales raffigura una delle leggende più popolari di Castel San Lorenzo, 
@@ -739,7 +796,7 @@ body.night #fumettiList li:hover {
 	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">12</text>
 	</g>
 	<g class="point" data-title="Pietre dei Santi" 
-	data-description="E' un luogo simbolico della devozione del popolo castellese verso i 5 Santi. Difatti, i 5 Santi venivano portati sulla parte alta del paese
+	data-description="E' un luogo simbolico della devozione del popolo castellese verso i 5 Santi (San Giovanni Battista, Santi Medici Cosma e Damiano, San Francesco Borgia, San Luigi Gonzaga). Difatti, i 5 Santi venivano portati sulla parte alta del paese
 	(località Tempa), per chiedere le Grazie in occasione di eventi avversi."
 	transform="translate(66 110)">
 	<circle r="4" fill="orange"/>
@@ -775,13 +832,13 @@ body.night #fumettiList li:hover {
 	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">15</text>
 	</g>
 	<g class="point" data-title="Fontana dei 'Ciucci' sopra" 
-	data-description="Una sorgente a cui storicamente ci si recava per abbeverare gli asini"
+	data-description="Una sorgente a cui storicamente ci si recava per far abbeverare gli asini"
 	transform="translate(518 287)">
 	<circle r="4" fill="grey"/>
 	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">16</text>
 	</g>
 	<g class="point" data-title="Fontana dei 'Ciucci' sotto" 
-	data-description="Una sorgente a cui storicamente ci si recava per abbeverare gli asini"
+	data-description="Una sorgente a cui storicamente ci si recava per far abbeverare gli asini"
 	transform="translate(533 288)">
 	<circle r="4" fill="grey"/>
 	<text text-anchor="middle" dominant-baseline="middle" fill="white" pointer-events="none">17</text>
@@ -861,7 +918,7 @@ body.night #fumettiList li:hover {
 	
 
 <g id="fumetto">
-  <rect id="fumetto-box" rx="8" ry="8" width="250" height="100" fill="white" stroke="black"/>
+  <rect id="fumetto-box" rx="8" ry="8" width="250" height="130" fill="white" stroke="black"/>
   <text id="fumetto-title" x="10" y="20" font-size="13" font-weight="bold" style="user-select:none;"></text>
   <text id="fumetto-link-text" fill="#0066cc" font-size="10" text-decoration="underline" cursor="pointer" style="user-select:none;">Dettagli</text>
   <foreignObject id="fumetto-desc-container" x="10" y="35" width="230" height="0" style="overflow:auto; display:none; color:black;">
@@ -1131,13 +1188,15 @@ function mostraFumetto(point){
   fumetto.style.display = 'block';
   requestAnimationFrame(()=>fumetto.classList.add('show'));
 
+
+
   // Gestione click sul link per espandere/contrarre
   linkText.onclick = (e) => {
     e.stopPropagation();
     if(descContainer.style.display === 'none'){
       descContainer.style.display = 'block';
-      descContainer.setAttribute('height', 80);
-      box.setAttribute('height', 120); // espande il rettangolo
+      descContainer.setAttribute('height', 110);
+      box.setAttribute('height', 150); // espande il rettangolo
 	  descContainer.scrollTop = 0;
     } else {
       descContainer.style.display = 'none';
