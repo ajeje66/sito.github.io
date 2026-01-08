@@ -118,15 +118,14 @@ nav a:hover {
   padding: 0;
   min-width: 150px;
   background-color: #bfae94;
+  width:200px;
 }
 
 .submenu li a {
   padding: 10px;
   color: white;
 }
-.submenu li a:hover {
-  background-color: #555;
-}
+
 
 /* DESKTOP */
 @media (min-width: 769px) {
@@ -389,6 +388,7 @@ body.night #scrollTopBtn:hover {
     width: 100%;
     margin: 15px 0;
   }
+
 }
 
 
@@ -453,6 +453,38 @@ body.night #scrollTopBtn:hover {
 body.night .icon {
   background-color: white;
 }
+#immagine{
+	max-width:100%;
+	height:auto;
+	display:block;
+	}
+@media (min-width: 768px) {
+  #immagine-sinistra{
+    float: left;
+    width: 40%;
+    margin: 0 20px 15px 0; /* spazio dal testo a destra */
+  }
+  #immagine-destra{
+    float: right;
+    width: 40%;
+    margin: 0 30px 20px 0; /* spazio dal testo a destra */
+  }
+}
+
+/* MOBILE: immagine centrata */
+@media (max-width: 767px) {
+  #immagine-sinistra {
+    float: none;
+    width: 100%;
+    margin: 20px auto;
+  }
+  #immagine-destra{
+	float: none;
+    width: 100%;
+    margin: 20px auto;
+	}
+}
+
   </style>
 	</head>
 	<body>
@@ -491,7 +523,7 @@ body.night .icon {
 		<h2>Welcome to the "Folk Wisdom" page, where you will find traditional proverbs from Castello, which imply certain aspects and situations of everyday life.
 		</h2>
 	</div>
-	<div align="center" style="margin-left:10px; margin-right:10px;">
+	<div id="principale" align="center" style="margin-left:10px; margin-right:10px;">
 		<h4>
 			<p id="dialetto">Unu</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> Addo cantano troppi addi, nun fac' mai juorn'!</p>
@@ -533,6 +565,7 @@ body.night .icon {
 			<p id="inglese"> <img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;"> When a pregnant woman's belly is flat, the baby will be a boy. If the belly is pointed, it will be a girl.</p>
 		</h4>
 			<br>
+			<img id="immagine-sinistra" src="img/9.jpeg" >
 		<h4>
 			<p id="dialetto" style="text-decoration: underline;">Cinc</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> Mbacci a u mastr' a cauce è tosta.</p>
@@ -583,10 +616,11 @@ body.night .icon {
 			<p id="inglese"> <img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;"> Those who cause problems or disturbances will inevitably have to deal with the consequences of their actions.</p>
 		</h4>
 			<br>
+			<img id="immagine-destra" src="img/10.jpeg">
 		<h4>
 			<p id="dialetto" style="text-decoration: underline;">Rieci</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> So fnuti i maccaruni ngoppa e u caso sotta.</p>
-			<p id="letterale"><img src="img/it.svg" alt="🇮🇹" style="width:24px;height:auto;"> E' finito la pasta sopra e il formaggio sotto.
+			<p id="letterale"><img src="img/it.svg" alt="🇮🇹" style="width:24px;height:auto;"> E' finita la pasta sopra e il formaggio sotto.
 			<p id="inglese-letterale"><img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;"> The pasta is on top and the cheese is underneath.</p></p>
 			<div align="center"> Si intende/It means:</div>
 			<p><img src="img/it.svg" alt="🇮🇹" style="width:24px;height:auto;"> Si è ribaltata la situazione.</p>
@@ -633,6 +667,7 @@ body.night .icon {
 			<p id="inglese"> <img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;">  One person is not trustworthy, but the other is no better.</p>
 		</h4>
 			<br>
+			<img id="immagine-sinistra" src="img/11.jpeg">
 		<h4>
 			<p id="dialetto" style="text-decoration: underline;">Quinnici</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> Nun sap' fà a O cu u bicchiere.</p>
@@ -652,7 +687,7 @@ body.night .icon {
 			<p><img src="img/it.svg" alt="🇮🇹" style="width:24px;height:auto;"> Nel tentativo di fare una buona azione, si finisce per farne una cattiva.</p>
 			<p id="inglese"> <img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;">  While trying to do a good action, you end to do a bad one.</p>
 		</h4>
-			<br>
+			<br><br>
 		<h4>
 			<p id="dialetto" style="text-decoration: underline;">Ricissetti</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> U sparagno è nu mal uaragno.</p>
@@ -683,6 +718,7 @@ body.night .icon {
 			<p id="inglese"> <img src="img/uk.svg" alt="🇬🇧" style="width:24px;height:auto;">  To assign a task to unqualified people.</p>
 		</h4>
 			<br>
+			<img id="immagine-destra" src="img/12.jpeg">
 		<h4>
 			<p id="dialetto" style="text-decoration: underline;">Vinti</p>
 			<p id="frase-dialetto"><img src="img/bandiera.png" alt="dialetto" style="width:24px;height:auto;"> Chi fravca e sfravca nu perd mai tiempo.</p>
