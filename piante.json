@@ -1,0 +1,1162 @@
+{
+  "categorie": [
+    {
+      "codice": "A",
+      "titolo": "Nomi correlati alla morfologia o a particolari caratteristiche della specie",
+      "voci": [
+        {
+          "nome_dialettale": "Campanèlle",
+          "nome_scientifico": [
+            "Cerinthe major L.",
+            "Anemone apennina L.",
+            "Briza sp."
+          ],
+          "famiglia": [
+            "Boraginaceae",
+            "Ranunculaceae",
+            "Poaceae"
+          ],
+          "categoria": "A",
+          "significato_nome": "Riferimento alla forma a campana",
+          "descrizione": "Il nome dialettale si riferisce all'aspetto delle corolle che ricordano una piccola campana o, nel caso di Briza, alle spighette pendule.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Capu6zzolu",
+          "nome_scientifico": [
+            "Dactylis glomerata L.",
+            "Phalaris sp."
+          ],
+          "famiglia": ["Poaceae"],
+          "categoria": "A",
+          "significato_nome": "capòccia, resta",
+          "descrizione": "Riferimento alle pannocchie corte con spighette addensate.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cecau6cchi",
+          "nome_scientifico": ["Cardamine hirsuta L."],
+          "famiglia": ["Brassicaceae"],
+          "categoria": "A",
+          "significato_nome": "acceca occhi",
+          "descrizione": "Il nome allude alla disseminazione esplosiva delle silique mature che, se urtate, lanciano i semi anche negli occhi.",
+          "note": "Specie infestante molto comune nell'area."
+        },
+        {
+          "nome_dialettale": "Cincunèrve",
+          "nome_scientifico": [
+            "Plantago major L.",
+            "Plantago lanceolata L."
+          ],
+          "famiglia": ["Plantaginaceae"],
+          "categoria": "A",
+          "significato_nome": "cinque nervi",
+          "descrizione": "Riferimento alle nervature molto evidenti delle foglie.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cu6rni",
+          "nome_scientifico": ["Scandix pecten-veneris L."],
+          "famiglia": ["Apiaceae"],
+          "categoria": "A",
+          "significato_nome": "corni",
+          "descrizione": "Il fitonimo si riferisce ai tipici frutti a forma di corno.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Èrva pel6sa",
+          "nome_scientifico": ["Kickxia sp."],
+          "famiglia": ["Plantaginaceae"],
+          "categoria": "A",
+          "significato_nome": "erba pelosa",
+          "descrizione": "Nome dovuto alla densa peluria della pianta.",
+          "note": "Localmente detta anche stutafu6cu per la capacità di rendere difficoltosa la bruciatura delle stoppie."
+        },
+        {
+          "nome_dialettale": "Erva sapunàra",
+          "nome_scientifico": ["Saponaria officinalis L."],
+          "famiglia": ["Caryophyllaceae"],
+          "categoria": "A",
+          "significato_nome": "erba saponaria",
+          "descrizione": "Riferimento alla presenza di saponine detersive e schiumogene.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Mùcchia",
+          "nome_scientifico": ["Dittrichia viscosa (L.) Greuter s.l."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "A",
+          "significato_nome": "vischiosa",
+          "descrizione": "Il fitonimo è collegato alle secrezioni vischiose presenti sulle foglie.",
+          "note": "Da latino mùccus; nomi simili presenti in varie regioni italiane."
+        },
+        {
+          "nome_dialettale": "Muriéllo",
+          "nome_scientifico": ["Ligustrum vulgare L."],
+          "famiglia": ["Oleaceae"],
+          "categoria": "A",
+          "significato_nome": "scuro",
+          "descrizione": "Dal latino morus, in riferimento al colore nero dei frutti.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pungarùlu",
+          "nome_scientifico": ["Agave americana L."],
+          "famiglia": ["Agavaceae"],
+          "categoria": "A",
+          "significato_nome": "punteruolo",
+          "descrizione": "Riferimento alle foglie appuntite con robusta spina terminale.",
+          "note": "Nome analogo: pugnale (Abruzzo)."
+        },
+        {
+          "nome_dialettale": "Rezzuliéddu",
+          "nome_scientifico": ["Arctium sp."],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "A",
+          "significato_nome": "piccolo riccio",
+          "descrizione": "Riferimento ai frutti spinosi o uncinati.",
+          "note": "Il termine indica anche Xanthium e Torilis."
+        },
+        {
+          "nome_dialettale": "Ricciullìno",
+          "nome_scientifico": [
+            "Sedum album L.",
+            "Sedum dasyphyllum L.",
+            "Sedum acre L."
+          ],
+          "famiglia": ["Crassulaceae"],
+          "categoria": "A",
+          "significato_nome": "riccioluto",
+          "descrizione": "Riferimento all'aspetto dei pulvini dovuto alle foglie carnose e appressate.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Sàngulo",
+          "nome_scientifico": ["Cornus sanguinea L."],
+          "famiglia": ["Cornaceae"],
+          "categoria": "A",
+          "significato_nome": "sanguigno",
+          "descrizione": "Riferimento al colore rossastro dei rami.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Scantamàno",
+          "nome_scientifico": ["Erica arborea L."],
+          "famiglia": ["Ericaceae"],
+          "categoria": "A",
+          "significato_nome": "provoca dolore alle mani",
+          "descrizione": "Riferimento al legno molto duro che si scheggia facilmente.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Scazzèdda",
+          "nome_scientifico": ["Chondrilla juncea L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "A",
+          "significato_nome": "schiacciata",
+          "descrizione": "Riferimento alle foglie basali appressate al suolo.",
+          "note": "Usato anche in senso ironico per persone basse."
+        },
+        {
+          "nome_dialettale": "Sev6ne",
+          "nome_scientifico": ["Sonchus sp."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "A",
+          "significato_nome": "sego",
+          "descrizione": "Riferimento al lattice abbondante e untuoso simile al sego.",
+          "note": "Deriva dal latino SEBUM."
+        },
+        {
+          "nome_dialettale": "Spatélla",
+          "nome_scientifico": ["Gladiolus sp."],
+          "famiglia": ["Iridaceae"],
+          "categoria": "A",
+          "significato_nome": "piccola spada",
+          "descrizione": "Riferimento alla forma delle foglie.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Spezzegghiùngi",
+          "nome_scientifico": ["Equisetum telmateja Ehrh."],
+          "famiglia": ["Equisetaceae"],
+          "categoria": "A",
+          "significato_nome": "spezza e ricongiungi",
+          "descrizione": "Riferimento alla possibilità di spezzare e reinserire i fusti a livello dei nodi.",
+          "note": "Nome alternativo: curivùlpi."
+        },
+        {
+          "nome_dialettale": "Spicaddòsa",
+          "nome_scientifico": ["Lavandula angustifolia Miller"],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "A",
+          "significato_nome": "spiga odorosa",
+          "descrizione": "Riferimento alla spiga profumata, distinta da altre spighe non odorose.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Strazzacàni",
+          "nome_scientifico": ["Smilax aspera L."],
+          "famiglia": ["Smilacaceae"],
+          "categoria": "A",
+          "significato_nome": "stracciacani",
+          "descrizione": "Riferimento alla notevole spinosità della pianta.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Strazzavesàzzu",
+          "nome_scientifico": ["Bromus sp."],
+          "famiglia": ["Poaceae"],
+          "categoria": "A",
+          "significato_nome": "straccia-bisaccia",
+          "descrizione": "Riferimento alle spighette pungenti difficili da rimuovere.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Vammaciéddu",
+          "nome_scientifico": ["Cirsium arvense (L.) Scop."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "A",
+          "significato_nome": "ovatta",
+          "descrizione": "Riferimento ai frutti con pappo cotonoso.",
+          "note": ""
+        }
+      ]
+    },
+	{
+		 "codice": "B",
+      "titolo": "Nomi correlati a similitudine con specie più note",
+      "voci": [
+        {
+          "nome_dialettale": "Agliardiéddo",
+          "nome_scientifico": ["Allium sp."],
+          "famiglia": ["Amaryllidaceae"],
+          "categoria": "B",
+          "significato_nome": "piccolo aglio",
+          "descrizione": "Nell'area sono così chiamate tutte le specie spontanee del genere Allium.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cannaùlo / Cannav6ne",
+          "nome_scientifico": [
+            "Cephalaria sp.",
+            "Scabiosa sp.",
+            "Knautia sp."
+          ],
+          "famiglia": ["Caprifoliaceae"],
+          "categoria": "B",
+          "significato_nome": "simile a canna o canapa",
+          "descrizione": "Riferimento ai fusti cilindrici e cavi simili a quelli della canna (Arundo donax).",
+          "note": "Cannav6ne potrebbe riferirsi anche alla somiglianza con la canapa."
+        },
+        {
+          "nome_dialettale": "Cannecèdda",
+          "nome_scientifico": [
+            "Phragmites australis (Cav.) Trin. ex Steud.",
+            "Arundo plinii Turra"
+          ],
+          "famiglia": ["Poaceae"],
+          "categoria": "B",
+          "significato_nome": "cannuccia",
+          "descrizione": "Riferimento alla somiglianza con Arundo donax, ma di dimensioni minori.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cannògna",
+          "nome_scientifico": ["Sorghum halepense (L.) Pers."],
+          "famiglia": ["Poaceae"],
+          "categoria": "B",
+          "significato_nome": "falsa canna",
+          "descrizione": "Assimilazione alla canna domestica per la grandezza e robustezza.",
+          "note": "Suffisso -gna con valore peggiorativo."
+        },
+        {
+          "nome_dialettale": "Cardìllo",
+          "nome_scientifico": ["Senecio vulgaris L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "B",
+          "significato_nome": "piccolo cardo",
+          "descrizione": "Somiglianza con i cardi, nonostante l'assenza di spine.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cardóne",
+          "nome_scientifico": [
+            "Carduus pycnocephalus L.",
+            "Galactites elegans (All.) Soldano"
+          ],
+          "famiglia": ["Asteraceae"],
+          "categoria": "B",
+          "significato_nome": "cardo",
+          "descrizione": "Nome collettivo per specie erbacee molto spinose.",
+          "note": "Esteso a numerosi generi affini."
+        },
+        {
+          "nome_dialettale": "Cepùllu",
+          "nome_scientifico": ["Muscari comosum (L.) Mill."],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "B",
+          "significato_nome": "cipollotto",
+          "descrizione": "Riferimento alla somiglianza dei bulbi con quelli della cipolla.",
+          "note": "Maschile per dimensioni minori."
+        },
+        {
+          "nome_dialettale": "Cepùllu jancu",
+          "nome_scientifico": ["Bellevalia romana (L.) Sweet"],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "B",
+          "significato_nome": "cipollotto bianco",
+          "descrizione": "Assimilata a Muscari comosum e distinta per il colore chiaro.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cerzòdda",
+          "nome_scientifico": ["Teucrium chamaedrys L."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "B",
+          "significato_nome": "piccola cerza",
+          "descrizione": "Riferimento alla somiglianza delle foglie con quelle della quercia.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Curriùlu ggentìle",
+          "nome_scientifico": ["Fallopia convolvulus (L.) A. Löve"],
+          "famiglia": ["Convolvulaceae"],
+          "categoria": "B",
+          "significato_nome": "convolvolo gentile",
+          "descrizione": "Somiglianza con Convolvulus arvensis, considerato più elegante.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Èrbacétra",
+          "nome_scientifico": ["Lippia triphylla (L'Hér.) Kuntze"],
+          "famiglia": ["Verbenaceae"],
+          "categoria": "B",
+          "significato_nome": "erba cedra",
+          "descrizione": "Riferimento all'aroma agrumato simile al limone.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fecàina",
+          "nome_scientifico": ["Ficus carica L. var. caprificus"],
+          "famiglia": ["Moraceae"],
+          "categoria": "B",
+          "significato_nome": "fico selvatico",
+          "descrizione": "Forma selvatica del fico, distinta da quello coltivato.",
+          "note": "Suffisso -àin con valore di selvaticità."
+        },
+        {
+          "nome_dialettale": "Fenucchiènno",
+          "nome_scientifico": ["Phyllostachys sp."],
+          "famiglia": ["Poaceae"],
+          "categoria": "B",
+          "significato_nome": "simile al finocchio",
+          "descrizione": "Riferimento ai nodi marcati e agli internodi lunghi.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fenùcchio salevàtico",
+          "nome_scientifico": ["Foeniculum vulgare Miller"],
+          "famiglia": ["Apiaceae"],
+          "categoria": "B",
+          "significato_nome": "finocchio selvatico",
+          "descrizione": "Distinto dal finocchio coltivato.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Garufaniéddo",
+          "nome_scientifico": ["Dianthus guliae Janka"],
+          "famiglia": ["Caryophyllaceae"],
+          "categoria": "B",
+          "significato_nome": "garofanino",
+          "descrizione": "Riferimento alla somiglianza con il garofano coltivato.",
+          "note": "Specie rara ed endemica."
+        },
+        {
+          "nome_dialettale": "Gliàstro",
+          "nome_scientifico": ["Olea europaea L."],
+          "famiglia": ["Oleaceae"],
+          "categoria": "B",
+          "significato_nome": "olivastro",
+          "descrizione": "Olivo selvatico distinto dalle varietà coltivate.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Jèddu",
+          "nome_scientifico": [
+            "Chenopodium album L.",
+            "Amaranthus sp."
+          ],
+          "famiglia": ["Amaranthaceae"],
+          "categoria": "B",
+          "significato_nome": "piccola bietola",
+          "descrizione": "Somiglianza con Beta vulgaris.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Lattecèdda",
+          "nome_scientifico": ["Lactuca serriola L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "B",
+          "significato_nome": "piccola lattuga",
+          "descrizione": "Riferimento alla somiglianza con la lattuga e al lattice.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Lupenèlla",
+          "nome_scientifico": ["Melilotus sp."],
+          "famiglia": ["Fabaceae"],
+          "categoria": "B",
+          "significato_nome": "piccolo lupino",
+          "descrizione": "Somiglianza con il genere Lupinus.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Melàino",
+          "nome_scientifico": ["Malus sylvestris (L.) Miller"],
+          "famiglia": ["Rosaceae"],
+          "categoria": "B",
+          "significato_nome": "melo selvatico",
+          "descrizione": "Forma spontanea del melo.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Peràino",
+          "nome_scientifico": [
+            "Pyrus communis L.",
+            "Pyrus spinosa Forssk."
+          ],
+          "famiglia": ["Rosaceae"],
+          "categoria": "B",
+          "significato_nome": "pero selvatico",
+          "descrizione": "Specie affini al pero coltivato.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pumparuliéddu",
+          "nome_scientifico": [
+            "Solanum nigrum L.",
+            "Solanum villosum Mill."
+          ],
+          "famiglia": ["Solanaceae"],
+          "categoria": "B",
+          "significato_nome": "pomodorino",
+          "descrizione": "Riferimento alla somiglianza dei frutti con il pomodoro.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Rusiéddo",
+          "nome_scientifico": ["Cistus sp."],
+          "famiglia": ["Cistaceae"],
+          "categoria": "B",
+          "significato_nome": "simile alla rosa",
+          "descrizione": "Riferimento alla somiglianza dei fiori con quelli delle rose.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Salecóne",
+          "nome_scientifico": [
+            "Salix alba L.",
+            "Salix eleagnos Scop.",
+            "Salix purpurea L."
+          ],
+          "famiglia": ["Salicaceae"],
+          "categoria": "B",
+          "significato_nome": "salice",
+          "descrizione": "Nome collettivo per le specie spontanee del genere Salix.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Spayarògna",
+          "nome_scientifico": ["Asparagus acutifolius L."],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "B",
+          "significato_nome": "asparago non buono",
+          "descrizione": "Indica i fusti sviluppati e spinosi, non eduli.",
+          "note": "Contrapposto a spàyaro, il turione edule."
+        },
+        {
+          "nome_dialettale": "Spiézio",
+          "nome_scientifico": ["Thymus longicaulis C. Presl"],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "B",
+          "significato_nome": "spezia",
+          "descrizione": "Riconosciuto come spezia per antonomasia.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Spina ulivèdda",
+          "nome_scientifico": ["Ononis spinosa L."],
+          "famiglia": ["Fabaceae"],
+          "categoria": "B",
+          "significato_nome": "olivo spinoso",
+          "descrizione": "Riferimento alla spinescenza e alle foglie simili all'olivastro.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Vetàglia",
+          "nome_scientifico": ["Clematis vitalba L."],
+          "famiglia": ["Ranunculaceae"],
+          "categoria": "B",
+          "significato_nome": "vite",
+          "descrizione": "Somiglianza con la vite per il portamento.",
+          "note": "Suffisso con valore dispregiativo."
+        },
+        {
+          "nome_dialettale": "Vetecèdda",
+          "nome_scientifico": ["Tamus communis L."],
+          "famiglia": ["Dioscoreaceae"],
+          "categoria": "B",
+          "significato_nome": "piccola vite",
+          "descrizione": "Riferimento al portamento lianoso.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Vetùsu",
+          "nome_scientifico": ["Vitis vinifera L. subsp. sylvestris"],
+          "famiglia": ["Vitaceae"],
+          "categoria": "B",
+          "significato_nome": "vite selvatica",
+          "descrizione": "Indica esclusivamente la vite spontanea.",
+          "note": ""
+        }
+      ]
+    },
+	{
+      "codice": "C",
+      "titolo": "Nomi correlati alla similitudine con animali",
+      "voci": [
+        {
+          "nome_dialettale": "Barbavìsciu",
+          "nome_scientifico": ["Tragopogon porrifolius L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "C",
+          "significato_nome": "barba di serpente",
+          "descrizione": "Riferimento all'infiorescenza piumosa e allungata che ricorda una barba.",
+          "note": "Fitonimo diffuso anche come barba di becco."
+        },
+        {
+          "nome_dialettale": "Capillìni",
+          "nome_scientifico": ["Adiantum capillus-veneris L."],
+          "famiglia": ["Pteridaceae"],
+          "categoria": "C",
+          "significato_nome": "capelli",
+          "descrizione": "Riferimento alle fronde sottili e pendule simili a capelli.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Còdda cavàdda",
+          "nome_scientifico": ["Equisetum arvense L."],
+          "famiglia": ["Equisetaceae"],
+          "categoria": "C",
+          "significato_nome": "coda di cavallo",
+          "descrizione": "Riferimento alla forma dei fusti sterili ramificati.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Còdda de lupu",
+          "nome_scientifico": ["Lycium europaeum L."],
+          "famiglia": ["Solanaceae"],
+          "categoria": "C",
+          "significato_nome": "coda di lupo",
+          "descrizione": "Allusione ai rami lunghi e flessibili.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Còdda re jatta",
+          "nome_scientifico": ["Phleum pratense L."],
+          "famiglia": ["Poaceae"],
+          "categoria": "C",
+          "significato_nome": "coda di gatto",
+          "descrizione": "Riferimento all'infiorescenza cilindrica e vellutata.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cresta de gallu",
+          "nome_scientifico": ["Celosia argentea L."],
+          "famiglia": ["Amaranthaceae"],
+          "categoria": "C",
+          "significato_nome": "cresta di gallo",
+          "descrizione": "Riferimento alla forma dell'infiorescenza.",
+          "note": "Nome usato anche per altre specie ornamentali."
+        },
+        {
+          "nome_dialettale": "Dènte de cane",
+          "nome_scientifico": ["Erythronium dens-canis L."],
+          "famiglia": ["Liliaceae"],
+          "categoria": "C",
+          "significato_nome": "dente di cane",
+          "descrizione": "Riferimento alla forma del bulbo.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Lingua de boi",
+          "nome_scientifico": ["Anchusa azurea Mill."],
+          "famiglia": ["Boraginaceae"],
+          "categoria": "C",
+          "significato_nome": "lingua di bue",
+          "descrizione": "Riferimento alle foglie grandi e ruvide.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Lingua de cane",
+          "nome_scientifico": ["Cynoglossum officinale L."],
+          "famiglia": ["Boraginaceae"],
+          "categoria": "C",
+          "significato_nome": "lingua di cane",
+          "descrizione": "Riferimento alle foglie ruvide e allungate.",
+          "note": "Dal greco kynós (cane) e glôssa (lingua)."
+        },
+        {
+          "nome_dialettale": "Mustàzzu re gatto",
+          "nome_scientifico": ["Setaria verticillata (L.) P. Beauv."],
+          "famiglia": ["Poaceae"],
+          "categoria": "C",
+          "significato_nome": "baffi di gatto",
+          "descrizione": "Riferimento alle setole uncinante dell'infiorescenza.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Orecchièdda",
+          "nome_scientifico": ["Umbilicus rupestris (Salisb.) Dandy"],
+          "famiglia": ["Crassulaceae"],
+          "categoria": "C",
+          "significato_nome": "orecchietta",
+          "descrizione": "Riferimento alla forma tondeggiante e concava delle foglie.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pèlle de ràna",
+          "nome_scientifico": ["Euphorbia sp."],
+          "famiglia": ["Euphorbiaceae"],
+          "categoria": "C",
+          "significato_nome": "pelle di rana",
+          "descrizione": "Riferimento alla superficie verrucosa del fusto.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pèru de porcu",
+          "nome_scientifico": ["Cyclamen hederifolium Aiton"],
+          "famiglia": ["Primulaceae"],
+          "categoria": "C",
+          "significato_nome": "piede di porco",
+          "descrizione": "Riferimento alla forma del tubero.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pìcci de jatta",
+          "nome_scientifico": ["Galium aparine L."],
+          "famiglia": ["Rubiaceae"],
+          "categoria": "C",
+          "significato_nome": "peli di gatto",
+          "descrizione": "Riferimento ai peli uncinati che si attaccano ai vestiti.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Rruòzza de porcu",
+          "nome_scientifico": ["Arum italicum Mill."],
+          "famiglia": ["Araceae"],
+          "categoria": "C",
+          "significato_nome": "orecchia di porco",
+          "descrizione": "Riferimento alla forma delle foglie.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Spina de jatta",
+          "nome_scientifico": ["Ulex europaeus L."],
+          "famiglia": ["Fabaceae"],
+          "categoria": "C",
+          "significato_nome": "spina di gatto",
+          "descrizione": "Riferimento alla forte spinescenza.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Zampa de gaddìna",
+          "nome_scientifico": ["Geranium molle L."],
+          "famiglia": ["Geraniaceae"],
+          "categoria": "C",
+          "significato_nome": "zampa di gallina",
+          "descrizione": "Riferimento alla forma delle foglie palmato-lobate.",
+          "note": ""
+        }
+      ]
+    },
+	{
+      "codice": "D",
+      "titolo": "Nomi correlati all’uso, alle proprietà o agli effetti",
+      "voci": [
+        {
+          "nome_dialettale": "Ammazzavèrmi",
+          "nome_scientifico": ["Artemisia absinthium L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "D",
+          "significato_nome": "uccide i vermi",
+          "descrizione": "Riferimento all’uso tradizionale come vermifugo.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Cacciasangue",
+          "nome_scientifico": ["Urtica dioica L."],
+          "famiglia": ["Urticaceae"],
+          "categoria": "D",
+          "significato_nome": "fa uscire il sangue",
+          "descrizione": "Riferimento all’effetto urticante sulla pelle.",
+          "note": "Usata anche in pratiche di frizione stimolante."
+        },
+        {
+          "nome_dialettale": "Cacciaspìriti",
+          "nome_scientifico": ["Ruta graveolens L."],
+          "famiglia": ["Rutaceae"],
+          "categoria": "D",
+          "significato_nome": "scaccia spiriti",
+          "descrizione": "Attribuite proprietà apotropaiche e protettive.",
+          "note": "Pianta rituale in ambito popolare."
+        },
+        {
+          "nome_dialettale": "Cicatrizzànta",
+          "nome_scientifico": ["Plantago major L."],
+          "famiglia": ["Plantaginaceae"],
+          "categoria": "D",
+          "significato_nome": "che cicatrizza",
+          "descrizione": "Riferimento all’uso delle foglie su ferite e piaghe.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Curafèmmine",
+          "nome_scientifico": ["Malva sylvestris L."],
+          "famiglia": ["Malvaceae"],
+          "categoria": "D",
+          "significato_nome": "cura le donne",
+          "descrizione": "Uso tradizionale in disturbi femminili.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Erva bona",
+          "nome_scientifico": ["Melissa officinalis L."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "D",
+          "significato_nome": "erba buona",
+          "descrizione": "Indicata come pianta benefica per molteplici usi.",
+          "note": "Fitonimo generico elogiativo."
+        },
+        {
+          "nome_dialettale": "Erva de li verrùche",
+          "nome_scientifico": ["Chelidonium majus L."],
+          "famiglia": ["Papaveraceae"],
+          "categoria": "D",
+          "significato_nome": "erba delle verruche",
+          "descrizione": "Uso del lattice per eliminare verruche.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Erva medecìna",
+          "nome_scientifico": ["Salvia officinalis L."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "D",
+          "significato_nome": "erba medicina",
+          "descrizione": "Ritenuta pianta curativa per eccellenza.",
+          "note": "Dal latino salvare."
+        },
+        {
+          "nome_dialettale": "Erva pisciaròla",
+          "nome_scientifico": ["Parietaria judaica L."],
+          "famiglia": ["Urticaceae"],
+          "categoria": "D",
+          "significato_nome": "fa urinare",
+          "descrizione": "Riferimento alle proprietà diuretiche.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Erva r’ la paura",
+          "nome_scientifico": ["Hypericum perforatum L."],
+          "famiglia": ["Hypericaceae"],
+          "categoria": "D",
+          "significato_nome": "erba contro la paura",
+          "descrizione": "Usata come calmante e protettiva.",
+          "note": "Collegata a riti di protezione."
+        },
+        {
+          "nome_dialettale": "Fèrula",
+          "nome_scientifico": ["Ferula communis L."],
+          "famiglia": ["Apiaceae"],
+          "categoria": "D",
+          "significato_nome": "bastone",
+          "descrizione": "Usata per realizzare verghe e bastoni.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Frìgola",
+          "nome_scientifico": ["Thymus sp."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "D",
+          "significato_nome": "aromatica",
+          "descrizione": "Utilizzata come condimento e per tisane.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Matafèmmine",
+          "nome_scientifico": ["Mentha sp."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "D",
+          "significato_nome": "stordisce",
+          "descrizione": "Riferimento all’odore intenso e agli effetti stimolanti.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Purgatèdda",
+          "nome_scientifico": ["Euphorbia lathyris L."],
+          "famiglia": ["Euphorbiaceae"],
+          "categoria": "D",
+          "significato_nome": "purga",
+          "descrizione": "Usata come purgante drastico.",
+          "note": "Pianta tossica."
+        },
+        {
+          "nome_dialettale": "Scurdavècchia",
+          "nome_scientifico": ["Rosmarinus officinalis L."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "D",
+          "significato_nome": "fa dimenticare",
+          "descrizione": "In contrasto ironico con l’uso per la memoria.",
+          "note": "Fitonimo scherzoso."
+        },
+        {
+          "nome_dialettale": "Spaccapietre",
+          "nome_scientifico": ["Ceterach officinarum Willd."],
+          "famiglia": ["Aspleniaceae"],
+          "categoria": "D",
+          "significato_nome": "spacca pietre",
+          "descrizione": "Riferimento alla capacità di crescere nelle fessure rocciose.",
+          "note": "Associata a proprietà litolitiche."
+        },
+        {
+          "nome_dialettale": "Tossicària",
+          "nome_scientifico": ["Conium maculatum L."],
+          "famiglia": ["Apiaceae"],
+          "categoria": "D",
+          "significato_nome": "velenosa",
+          "descrizione": "Riferimento alla forte tossicità.",
+          "note": "Pianta storicamente nota per uso come veleno."
+        }
+      ]
+    },
+	{
+      "codice": "E",
+      "titolo": "Nomi correlati a credenze, simboli e tradizioni popolari",
+      "voci": [
+        {
+          "nome_dialettale": "Erva de San Giuvànni",
+          "nome_scientifico": ["Hypericum perforatum L."],
+          "famiglia": ["Hypericaceae"],
+          "categoria": "E",
+          "significato_nome": "erba di San Giovanni",
+          "descrizione": "Raccolta tradizionalmente nella notte di San Giovanni per le sue virtù protettive.",
+          "note": "Associata a riti solstiziali."
+        },
+        {
+          "nome_dialettale": "Erva de li sette camìse",
+          "nome_scientifico": ["Verbascum thapsus L."],
+          "famiglia": ["Scrophulariaceae"],
+          "categoria": "E",
+          "significato_nome": "erba delle sette camicie",
+          "descrizione": "Riferimento simbolico agli strati lanosi delle foglie.",
+          "note": "Usata in rituali di protezione."
+        },
+        {
+          "nome_dialettale": "Erva santa",
+          "nome_scientifico": ["Salvia officinalis L."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "E",
+          "significato_nome": "erba sacra",
+          "descrizione": "Considerata pianta benedetta e protettiva.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fìglia d’ la Madonna",
+          "nome_scientifico": ["Lilium candidum L."],
+          "famiglia": ["Liliaceae"],
+          "categoria": "E",
+          "significato_nome": "figlia della Madonna",
+          "descrizione": "Simbolo di purezza e devozione mariana.",
+          "note": "Usata in contesti religiosi."
+        },
+        {
+          "nome_dialettale": "Fiori de li muòrti",
+          "nome_scientifico": ["Chrysanthemum sp."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "E",
+          "significato_nome": "fiori dei morti",
+          "descrizione": "Associati al culto dei defunti.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Manu de Ddìu",
+          "nome_scientifico": ["Orchis sp."],
+          "famiglia": ["Orchidaceae"],
+          "categoria": "E",
+          "significato_nome": "mano di Dio",
+          "descrizione": "Riferimento alla forma palmata delle radici.",
+          "note": "Valore simbolico e apotropaico."
+        },
+        {
+          "nome_dialettale": "Occhi de la Madonna",
+          "nome_scientifico": ["Viola odorata L."],
+          "famiglia": ["Violaceae"],
+          "categoria": "E",
+          "significato_nome": "occhi della Madonna",
+          "descrizione": "Riferimento poetico al colore dei fiori.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Palma benedètta",
+          "nome_scientifico": ["Chamaerops humilis L."],
+          "famiglia": ["Arecaceae"],
+          "categoria": "E",
+          "significato_nome": "palma benedetta",
+          "descrizione": "Utilizzata nei riti della Domenica delle Palme.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Rosa de la Madonna",
+          "nome_scientifico": ["Rosa gallica L."],
+          "famiglia": ["Rosaceae"],
+          "categoria": "E",
+          "significato_nome": "rosa della Madonna",
+          "descrizione": "Simbolo mariano di bellezza e purezza.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Scacciafùrti",
+          "nome_scientifico": ["Allium sativum L."],
+          "famiglia": ["Amaryllidaceae"],
+          "categoria": "E",
+          "significato_nome": "scaccia ladri",
+          "descrizione": "Ritenuto protettivo contro il male e le influenze negative.",
+          "note": "Usato anche contro il malocchio."
+        }
+      ]
+    },
+	{
+      "codice": "F",
+      "titolo": "Nomi correlati al ciclo vitale, alla stagionalità o al periodo di fioritura",
+      "voci": [
+        {
+          "nome_dialettale": "Ciammarùche primaticce",
+          "nome_scientifico": ["Asparagus acutifolius L."],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "F",
+          "significato_nome": "germogli primaverili",
+          "descrizione": "Riferimento ai primi turioni che compaiono all’inizio della primavera.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Ciammarùche tardìve",
+          "nome_scientifico": ["Asparagus acutifolius L."],
+          "famiglia": ["Asparagaceae"],
+          "categoria": "F",
+          "significato_nome": "germogli tardivi",
+          "descrizione": "Indica i turioni che emergono più avanti nella stagione.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fiore de quatr’arìlle",
+          "nome_scientifico": ["Anemone hortensis L."],
+          "famiglia": ["Ranunculaceae"],
+          "categoria": "F",
+          "significato_nome": "fiore di aprile",
+          "descrizione": "Riferimento al periodo di fioritura primaverile.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fiore de maju",
+          "nome_scientifico": ["Crataegus monogyna Jacq."],
+          "famiglia": ["Rosaceae"],
+          "categoria": "F",
+          "significato_nome": "fiore di maggio",
+          "descrizione": "Riferimento alla fioritura abbondante nel mese di maggio.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fiore de San Giusèppe",
+          "nome_scientifico": ["Narcissus tazetta L."],
+          "famiglia": ["Amaryllidaceae"],
+          "categoria": "F",
+          "significato_nome": "fiore di San Giuseppe",
+          "descrizione": "Fiorisce in prossimità della festa di San Giuseppe.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Gràne d’ vierne",
+          "nome_scientifico": ["Hordeum vulgare L."],
+          "famiglia": ["Poaceae"],
+          "categoria": "F",
+          "significato_nome": "grano d’inverno",
+          "descrizione": "Seminato in autunno e raccolto in tarda primavera.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Gràne de state",
+          "nome_scientifico": ["Zea mays L."],
+          "famiglia": ["Poaceae"],
+          "categoria": "F",
+          "significato_nome": "grano d’estate",
+          "descrizione": "Coltivato e raccolto nella stagione estiva.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Jèrva novèlla",
+          "nome_scientifico": ["Taraxacum officinale Weber"],
+          "famiglia": ["Asteraceae"],
+          "categoria": "F",
+          "significato_nome": "erba nuova",
+          "descrizione": "Indica le giovani rosette primaverili.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Jèrva vecchjàra",
+          "nome_scientifico": ["Taraxacum officinale Weber"],
+          "famiglia": ["Asteraceae"],
+          "categoria": "F",
+          "significato_nome": "erba vecchia",
+          "descrizione": "Riferimento alle piante mature, meno apprezzate.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Spìna jernàra",
+          "nome_scientifico": ["Eryngium campestre L."],
+          "famiglia": ["Apiaceae"],
+          "categoria": "F",
+          "significato_nome": "spina invernale",
+          "descrizione": "Pianta persistente anche nei mesi freddi.",
+          "note": ""
+        }
+      ]
+    },
+	{
+      "codice": "G",
+      "titolo": "Nomi correlati alla presunta provenienza",
+      "voci": [
+        {
+          "nome_dialettale": "Flcurìnia",
+          "nome_scientifico": ["Opuntia ficus-indica (L.) Mill."],
+          "famiglia": ["Cactaceae"],
+          "categoria": "G",
+          "significato_nome": "fico d’India",
+          "descrizione": "Il fitonimo riflette l’antica credenza che la specie provenisse dall’India; in realtà è originaria delle Americhe.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Garufaniéddo spagnuòlo",
+          "nome_scientifico": ["Tagetes patula L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "G",
+          "significato_nome": "garofanino spagnolo",
+          "descrizione": "Nome legato alla presunta provenienza dalla Spagna, probabilmente diffuso nel periodo borbonico.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Granurìnio",
+          "nome_scientifico": ["Zea mays L."],
+          "famiglia": ["Poaceae"],
+          "categoria": "G",
+          "significato_nome": "grano d’India",
+          "descrizione": "Deriva dalla credenza che il mais provenisse dall’India; in realtà è di origine americana.",
+          "note": "La varietà da scoppio è detta localmente fcàccatu."
+        },
+        {
+          "nome_dialettale": "Juremàna",
+          "nome_scientifico": ["Secale cereale L."],
+          "famiglia": ["Poaceae"],
+          "categoria": "G",
+          "significato_nome": "segale tedesca",
+          "descrizione": "Il nome è associato alla presunta provenienza germanica oppure al significato di ‘autentico’.",
+          "note": ""
+        }
+      ]
+    },
+	{
+      "codice": "H",
+      "titolo": "Contrapposizioni di specie",
+      "voci": [
+        {
+          "nome_dialettale": "Cipuddàzza niura",
+          "nome_scientifico": ["Allium cepa L."],
+          "famiglia": ["Amaryllidaceae"],
+          "categoria": "H",
+          "significato_nome": "cipolla nera",
+          "descrizione": "Contrapposta alla cipolla bianca locale; la colorazione scura è stata usata per distinguere le varietà.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Pommodòru russi",
+          "nome_scientifico": ["Solanum lycopersicum L."],
+          "famiglia": ["Solanaceae"],
+          "categoria": "H",
+          "significato_nome": "pomodoro rosso",
+          "descrizione": "Usato per distinguere la varietà rossa da altre varietà locali gialle o verdi.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Lattùcca janca",
+          "nome_scientifico": ["Lactuca sativa L."],
+          "famiglia": ["Asteraceae"],
+          "categoria": "H",
+          "significato_nome": "lattuga bianca",
+          "descrizione": "Contrapposizione a lattughe più scure o rosse coltivate nella zona.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fàvu negru",
+          "nome_scientifico": ["Vicia faba L."],
+          "famiglia": ["Fabaceae"],
+          "categoria": "H",
+          "significato_nome": "fava nera",
+          "descrizione": "Distinta dalla fava chiara locale per colore e utilizzo alimentare.",
+          "note": ""
+        }
+      ]
+    },
+	{
+      "codice": "I",
+      "titolo": "Ridondanze semantiche",
+      "voci": [
+        {
+          "nome_dialettale": "Acitu acitu",
+          "nome_scientifico": ["Acetosella spp."],
+          "famiglia": ["Oxalidaceae"],
+          "categoria": "I",
+          "significato_nome": "aceto aceto",
+          "descrizione": "La ripetizione enfatizza l’acidità della pianta.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Menta menta",
+          "nome_scientifico": ["Mentha spp."],
+          "famiglia": ["Lamiaceae"],
+          "categoria": "I",
+          "significato_nome": "menta menta",
+          "descrizione": "Ripetizione che rafforza l’identità aromatica della pianta.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Fagiolu fagiolu",
+          "nome_scientifico": ["Phaseolus vulgaris L."],
+          "famiglia": ["Fabaceae"],
+          "categoria": "I",
+          "significato_nome": "fagiolo fagiolo",
+          "descrizione": "Ripetizione per indicare una varietà comune di fagiolo locale.",
+          "note": ""
+        },
+        {
+          "nome_dialettale": "Zucca zucca",
+          "nome_scientifico": ["Cucurbita pepo L."],
+          "famiglia": ["Cucurbitaceae"],
+          "categoria": "I",
+          "significato_nome": "zucca zucca",
+          "descrizione": "Ripetizione per enfatizzare il frutto principale del periodo autunnale.",
+          "note": ""
+        }
+      ]
+    }
+	
+  ]
+}
