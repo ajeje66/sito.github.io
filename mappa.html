@@ -606,6 +606,10 @@ body.night #fumettiList li:hover {
   -webkit-mask-image: url("assets/book.png");
   mask-image: url("assets/book.png");
 }
+.flower-icon{
+	-webkit-mask-image: url("assets/flower.png");
+  mask-image: url("assets/flower.png");
+}
 /* Modalità notte */
 body.night .icon {
   background-color: white;
@@ -640,6 +644,13 @@ body.night .icon {
 		</ul>
 	</li>
     <li><a href="dizionario.html"><span class="icon book-icon"></span><span style="vertical-align: middle;"> Dizionario</span> </a></li>
+  	<li class="dropdown">
+		<a style="user-select:none;"><span class="icon flower-icon"></span> <span style="vertical-align: middle;"> Sezione botanica</span></a>
+		<ul class="submenu">
+			<li><a href="fitonimi.html">Fitonimi</a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</li>
   </ul>
 </nav>
 	
@@ -1312,4 +1323,5 @@ window.addEventListener('load', warmUpZoomOnce);
 
 
 </html>
+
 
