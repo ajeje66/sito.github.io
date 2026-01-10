@@ -15,8 +15,8 @@ h1,h2 { text-align:center; margin:0.5em 0;}
 .voce:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.2s;}
 .voce .parola { font-weight:bold; font-size:18px;}
 .voce .fonemi { font-style:italic; color:#888; margin-left:32px; }
-.voce .definizione { margin-left:5px; color:#555;}
-.voce .riga { display:flex; align-items:center; gap:8px;}
+.voce .definizione { margin-left:1px; color:#555;}
+.voce .riga { display:flex;gap:8px;}
 .flag { width:22px; height:auto; object-fit:cover; flex-shrink:0;}
 body.night { background:#1c1c1c; color:#f0f0f0;}
 body.night .voce { background:#2a2a2a; color:#f0f0f0;}
@@ -241,11 +241,12 @@ input[type="search"]::-moz-search-clear {
 
 .riga{
     display: flex;
-    align-items: center; /* centra verticalmente img e testo */
+    align-items: flex-start; /* centra verticalmente img e testo */
     gap: 8px; /* spazio tra img e testo */
 }
 
 .flag {
+	margin-top:2px;
 	display: block;
 	vertical-align:middle;
     width: 22px;
@@ -336,11 +337,6 @@ footer {
   opacity: 1;
 }
 /* ----- MODALITÀ NOTTURNA ----- */
-    body.night {
-      background-color: #1c1c1c;
-      color: #f0f0f0;
-    }
-
     body.night header {
       background-color: #2a2a2a;
     }
@@ -360,13 +356,6 @@ footer {
 	body.night header h1 {
 		color: #f5e6c8;
 	}
-	body.night .voce {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-}
-body.night .definizione {
-    color: #cccccc;
-}
 
 body.night .fonemi {
     color: #aaaaaa;
@@ -739,14 +728,14 @@ function mostraDizionario() {
                     <img class="flag" src="img/bandiera.png">
                     <span class="parola">${evidenziaTesto(voce.nome_dialettale, filtro)}</span>
                 </div>
-				${voce.famiglia ? `<div class="riga" style="margin-left:32px"><strong>Famiglia:</strong> ${voce.famiglia.join(", ")}</div>` : ""}
+				${voce.famiglia ? `<div class="riga" style="margin-left:32px"><strong>Famiglia: </strong> ${voce.famiglia.join(", ")}</div>` : ""}
                
-                <div class="fonemi">${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
+                <div class="fonemi"><strong>Specie: </strong>${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
                 <div class="riga">
                     <img class="flag" src="img/it.svg">
                     <span class="definizione">${evidenziaTesto(voce.descrizione, filtro)}</span>
                 </div>
-                 ${voce.note ? `<div class="riga"><strong>Note:</strong> ${voce.note}</div>` : ""}
+                 ${voce.note ? `<div class="riga" style="margin-left:32px;"><strong>Note:</strong> ${voce.note}</div>` : ""}
             `;
             catDiv.appendChild(div);
         });
