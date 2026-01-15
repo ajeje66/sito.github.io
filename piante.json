@@ -217,7 +217,7 @@
           "famiglia": ["Asteraceae"],
           "categoria": "A",
           "significato_nome": "ovatta",
-          "descrizione": ". Il fitonimo prende origine da varnrnàce = 'bambagià, 'ovattà, in riferimento ai suoi frutti con pappo cotonoso.",
+          "descrizione": ". Il fitonimo prende origine da vammàce = 'bambagià, 'ovattà, in riferimento ai suoi frutti con pappo cotonoso.",
           "note": "il corone (Gossypiurn sp.) infatti, è detto varnrnacia a Larino, in Molise."
         }
       ]
@@ -1019,7 +1019,7 @@
         },
 		{
           "nome_dialettale": "Lapàzzo",
-          "nome_scientifico": ["Rurnex"],
+          "nome_scientifico": ["Rumex"],
           "famiglia": ["Polygonaceae"],
           "categoria": "E",
           "significato_nome": "",
@@ -1378,3 +1378,4 @@
     }
   ]
 }
+
