@@ -15,7 +15,7 @@ h1,h2 { text-align:center; margin:0.5em 0;}
 .voce:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.2s;}
 .voce .parola { font-weight:bold; font-size:18px;}
 .voce .fonemi { font-style:italic; color:#888; margin-left:32px; }
-.voce .definizione { margin-left:1px; color:#555;}
+.voce .definizione { margin-left:1px;}
 .voce .riga { display:flex;gap:8px;}
 .flag { width:22px; height:auto; object-fit:cover; flex-shrink:0;}
 body.night { background:#1c1c1c; color:#f0f0f0;}
@@ -33,16 +33,6 @@ header { background:#d8cbb3; padding:30px 20px; text-align:center; box-shadow:0 
 #toggleNight { position:absolute; top:15px; right:20px; background:#3a2c1a; color:#fff; border:none; border-radius:4px; padding:6px 12px; cursor:pointer; font-size:0.9em;}
 #toggleNight:hover{background:#55422a;}
 footer { background:#bfae94; color:#fff; text-align:center; padding:25px; margin-top:50px;}
-
-/* Corpo pagina */
-body {
-    font-family: Georgia, sans-serif;
-    background-color: #f5f5f7;
-    color: #222;
-    transition: background 0.3s, color 0.3s;
-	margin: 0px;
-}
-
 /* Titolo */
 h1 { text-align: center; margin-bottom: 10px; }
 
@@ -102,7 +92,7 @@ input {
 
 .parola { font-weight: bold; font-size: 18px; }
 .fonemi { font-style: italic; color: #888; margin-left: 10px; }
-.definizione { margin-left: 10px; color: #555; }
+.definizione { margin-left: 10px;}
 
 mark { background-color: yellow; }
 
@@ -664,6 +654,15 @@ body.night .icon {
 	</li>
   </ul>
 </nav>
+<div style="padding:30px; text-align:center;">
+	<h3>In questa sezione sono riportati i nomi con cui vengono indicate le piante - sia quelle coltivate che le spontanee - a Castel San Lorenzo, i cosiddetti "fitonimi dialettali". 
+	L'elenco è tratto da uno studio condotto negli anni 2006-2007 nel nostro comune e si inserisce nell'ambito di ricerche etnobotaniche effettuate nell'Italia meridionale con l'intento di fornire un contributo alla conoscenza sia degli usi tradizionali delle piante che dei loro nomi dialettali. 
+	Nell'indagine su Castel San Lorenzo sono stati riscontrati 207 fitonimi dialettali associati a 232 entità vegetali, per 160 delle quali si è accertato anche un uso popolare che viene riportato nella sezione "Patrimonio Etnobotanico di Castel San Lorenzo".
+	Il repertorio dei fitonimi "castellesi" è suddiviso in 9 categorie di origine del nome popolare della pianta; per ciasuna categoria sono riportati, in ordine alfabetico, i fitonimi locali seguiti dai nomi scientifici della specie, dalla famiglia botanica di appartenenza e da eventuali note.
+	Dal punto di vista linguistico l'area di Castel San Lorenzo appartiene al sistema dialettale "centro-meridionale", e, in particolare, all'area "alto-meridionale" o "meridionale intermedia", estesa dalle Marche meridionali (Ascoli Piceno) e dal basso Lazio (Circeo) fino alla zona di Taranto e alla Calabria settentrionale, di cui, però non condivide tutte le caratteristiche. 
+	Il lavoro completo, pubblicato nel 2015 sulla rivista "Informatore Botanico Italiano", è riportato in allegato, in fondo all'elenco dei fitonimi popolari.
+	</h3>
+</div>
 <input type="text" id="search" placeholder="Cerca parola, fonemi o definizione..." autocomplete="off">
 <select id="filtroCategoria"
   style="width:90%; max-width:600px; padding:10px; margin:0 auto 20px; display:block; border-radius:8px; border:1px solid #ccc;">
@@ -728,9 +727,10 @@ function mostraDizionario() {
                     <img class="flag" src="img/bandiera.png">
                     <span class="parola">${evidenziaTesto(voce.nome_dialettale, filtro)}</span>
                 </div>
+				<div class="fonemi"><strong>Specie: </strong>${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
 				${voce.famiglia ? `<div class="riga" style="margin-left:32px"><strong>Famiglia: </strong> ${voce.famiglia.join(", ")}</div>` : ""}
                
-                <div class="fonemi"><strong>Specie: </strong>${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
+                
                 <div class="riga">
                     <img class="flag" src="img/it.svg">
                     <span class="definizione">${evidenziaTesto(voce.descrizione, filtro)}</span>
