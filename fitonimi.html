@@ -729,8 +729,10 @@ function mostraDizionario() {
                 </div>
 				<div class="fonemi"><strong>Specie: </strong>${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
 				${voce.famiglia ? `<div class="riga" style="margin-left:32px"><strong>Famiglia: </strong> ${voce.famiglia.join(", ")}</div>` : ""}
-               
-                
+				<div class="riga" style="margin-left:32px;"><strong>Traduzione: </strong>
+                    <span class="definizione">${evidenziaTesto(voce.significato_nome, filtro)}</span>
+                </div>
+			   
                 <div class="riga">
                     <img class="flag" src="img/it.svg">
                     <span class="definizione">${evidenziaTesto(voce.descrizione, filtro)}</span>
