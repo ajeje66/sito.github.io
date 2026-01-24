@@ -218,7 +218,7 @@
           "categoria": "A",
           "significato_nome": "ovatta",
           "descrizione": ". Il fitonimo prende origine da vammàce = 'bambagià, 'ovattà, in riferimento ai suoi frutti con pappo cotonoso.",
-          "note": "il corone (Gossypiurn sp.) infatti, è detto varnrnacia a Larino, in Molise."
+          "note": "il corone (Gossypiu sp.) infatti, è detto vammacia a Larino, in Molise."
         }
       ]
     },
@@ -287,7 +287,7 @@
           "famiglia": ["Asteraceae"],
           "categoria": "B",
           "significato_nome": "cardo",
-          "descrizione": "Nome collettivo riferito al Cardo, usato anche per tutte le specie erbacee provviste di abbondanti spine (generi Carduus, Ptilosternon, Cirsium, Onopordum, Carlina, Scolyrnus, Echinops, Cartharnus, Eryngiurn).",
+          "descrizione": "Nome collettivo riferito al Cardo, usato anche per tutte le specie erbacee provviste di abbondanti spine (generi Carduus, Ptilostemon, Cirsium, Onopordum, Carlina, Scolymus, Echinops, Carthamus, Eryngium).",
           "note": ""
         },
         {
@@ -305,7 +305,7 @@
           "famiglia": ["Asparagaceae"],
           "categoria": "B",
           "significato_nome": "cipollotto bianco",
-          "descrizione": "Localmente la specie è quindi assimi­lata a Muscari cornosurn e distinta da questa per il colore chiaro dei fiori e dei bulbi (jancu=bianco)",
+          "descrizione": "Localmente la specie è quindi assimi­lata a Muscari comosum e distinta da questa per il colore chiaro dei fiori e dei bulbi (jancu=bianco)",
           "note": ""
         },
         {
@@ -341,7 +341,7 @@
           "famiglia": ["Moraceae"],
           "categoria": "B",
           "significato_nome": "fico selvatico",
-          "descrizione": "Il fitonimo locale del fico spontaneo che, per la pre­senza del suffisso -àin-, indica la forma selvatica e la distingue dal fìco coltivato denominato jìcu che, localmente, è distinto in numerose varietà:ficu janca,f néura,f Santa Maria, f verdésca,f lattaròla,f triàna,f culornba.",
+          "descrizione": "Il fitonimo locale del fico spontaneo che, per la pre­senza del suffisso -àin-, indica la forma selvatica e la distingue dal fìco coltivato denominato jìcu che, localmente, è distinto in numerose varietà:ficu janca,f néura,f Santa Maria, f verdésca,f lattaròla,f triàna,f culomba.",
           "note": ""
         },
         {
@@ -856,13 +856,13 @@
           "note": ""
         },
 		{
-          "nome_dialettale": "Letiémo",
+          "nome_dialettale": "Letiérno",
           "nome_scientifico": ["Rhamnus alaternus"],
           "famiglia": ["Rhamnaceae"],
           "categoria": "D",
           "significato_nome": "",
           "descrizione": "Da 'alaternus', nome latino di Rhamnus. ",
-          "note": "Nell'area in esame con tale fitonimo viene indicata anche Phillyrea latifolia, per­ cepita come simile; tale omonimia, con alcune varianti, si riscontra anche in altre aree dell'Italia centro-meridionale e in Sardegna."
+          "note": "Nell'area in esame con tale fitonimo viene indicata anche Phillyrea latifolia, per­cepita come simile; tale omonimia, con alcune varianti, si riscontra anche in altre aree dell'Italia centro-meridionale e in Sardegna."
         },
 		{
           "nome_dialettale": "Mastùrzo",
@@ -874,12 +874,12 @@
           "note": "Fitonimi simili in molte altre aree d'Italia: mastruzzo (Napoletano), mastrozzu, nastrozzu, mastruzzu, martuzzu (Sicilia), martuzzu (Sardegna), nasturzi (Bologna), nastort, nassort (Piemonte)."
         },
 		{
-          "nome_dialettale": "Mapparnàgno",
+          "nome_dialettale": "Mappamàgno",
           "nome_scientifico": ["Petasites"],
           "famiglia": ["Asteraceae"],
           "categoria": "D",
           "significato_nome": "",
-          "descrizione": "Potrebbe derivare da MAPPA= panno, pezza e MAGNUM= gran­ de', in riferimento alle grandi foglie morbide e un po' increspate simili a pezzi di stoffa.",
+          "descrizione": "Potrebbe derivare da MAPPA= panno, pezza e MAGNUM= gran­de, in riferimento alle grandi foglie morbide e un po' increspate simili a pezzi di stoffa.",
           "note": ""
         },
 		{
@@ -915,7 +915,7 @@
           "famiglia": ["Rosaceae"],
           "categoria": "D",
           "significato_nome": "",
-          "descrizione": "Da praecox, precoce, attraverso precoca e praecociurn che tuttavia indicavano l'al­bicocco (Parrneniaca) in riferimento alla sua matu­ razione precoce; successivamente il termine sarebbe passato ad indicare il pesco, specie affine all'albicoc­co.",
+          "descrizione": "Da praecox, precoce, attraverso precoca e praecocium che tuttavia indicavano l'al­bicocco (P.armeniaca) in riferimento alla sua matu­ razione precoce; successivamente il termine sarebbe passato ad indicare il pesco, specie affine all'albicoc­co.",
           "note": ""
         },
 		{
@@ -929,7 +929,7 @@
         },
 		{
           "nome_dialettale": "Putrusino",
-          "nome_scientifico": ["Petroselinurn crispurn"],
+          "nome_scientifico": ["Petroselinum crispum"],
           "famiglia": ["Apiaceae"],
           "categoria": "D",
           "significato_nome": "",
@@ -947,20 +947,20 @@
         },
 		{
           "nome_dialettale": "Savùcu",
-          "nome_scientifico": ["Sarnbucus nigra"],
+          "nome_scientifico": ["Sambucus nigra"],
           "famiglia": ["Adoxaceae"],
           "categoria": "D",
           "significato_nome": "",
-          "descrizione": "Il fitonimo è decisamente più vicino al latino sabucus e allo spa­ gnolo saùco. Nell'area le sue infiorescenze sono dette rnajàteche, che si ricollega ad altri fitonimi quali Fiori di Maje o Fiuri di Majo (fìor di Maggio, per la fenologia) con i quali la specie è indicata rispettivamente in Calabria e in Sicilia",
+          "descrizione": "Il fitonimo è decisamente più vicino al latino sabucus e allo spa­gnolo saùco. Nell'area le sue infiorescenze sono dette majàteche, che si ricollega ad altri fitonimi quali Fiori di Maje o Fiuri di Majo (fìor di Maggio, per la fenologia) con i quali la specie è indicata rispettivamente in Calabria e in Sicilia",
           "note": ""
         },
 		{
           "nome_dialettale": "Uórjo",
-          "nome_scientifico": ["Hordeurn vulgare"],
+          "nome_scientifico": ["Hordeum vulgare"],
           "famiglia": ["Poaceae"],
           "categoria": "D",
           "significato_nome": "",
-          "descrizione": "Fitonimo che si ricollega al latino volgare hordjurn e presenta forti similitudini con uoreje, oreje in Abruzzo e con orju in Sardegna.",
+          "descrizione": "Fitonimo che si ricollega al latino volgare hordjum e presenta forti similitudini con uoreje, oreje in Abruzzo e con orju in Sardegna.",
           "note": ""
         },
 		{
@@ -969,7 +969,7 @@
           "famiglia": ["Oleaceae"],
           "categoria": "D",
           "significato_nome": "",
-          "descrizione": "Voce derivante dall'antico nome latino della pianta 'ornus: a cui si ricollega l'epiteto specifico.",
+          "descrizione": "Voce derivante dall'antico nome latino della pianta ornus: a cui si ricollega l'epiteto specifico.",
           "note": ""
         },
 		
@@ -1015,7 +1015,7 @@
           "categoria": "E",
           "significato_nome": "",
           "descrizione": "Nome collettivo usato indistintamente per numerose tallofite. Da lìpos, grasso, in riferimento all'aspetto e alla consi­stenza untuosa e viscosa.",
-          "note": "Fitonimo noto anche in Sicilia per designare specie dei generi Parrnelia e Stereocaulon) e nel napoletano per il gene­ re conferva (Algae)."
+          "note": "Fitonimo noto anche in Sicilia per designare specie dei generi Parmelia e Stereocaulon) e nel napoletano per il gene­ re conferva (Algae)."
         },
 		{
           "nome_dialettale": "Lapàzzo",
@@ -1037,8 +1037,8 @@
         },
 		{
           "nome_dialettale": "Masinicòja ",
-          "nome_scientifico": ["Ocirnurn basilicurn "],
-          "famiglia": ["Larniaceae"],
+          "nome_scientifico": ["Ocimum basilicum"],
+          "famiglia": ["Lamiaceae"],
           "categoria": "E",
           "significato_nome": "",
           "descrizione": "Dal greco bizantino'basilico', forse con il significato originario di 'erba del re', in riferimento al gradevole profumo.",
@@ -1055,8 +1055,8 @@
         },
 		{
           "nome_dialettale": "Népeta ",
-          "nome_scientifico": ["Calarnintha nepeta"],
-          "famiglia": ["Larniaceae"],
+          "nome_scientifico": ["Calamintha nepeta"],
+          "famiglia": ["Lamiaceae"],
           "categoria": "E",
           "significato_nome": "",
           "descrizione": "Da nepa = scorpione poiché si credeva efficace contro la puntura di questo animale.",
@@ -1078,7 +1078,7 @@
           "categoria": "E",
           "significato_nome": "",
           "descrizione": "Il fitonimo riprende il nome greco di tali piante: tithy­maloi, passato nel latino come tithymallus",
-          "note": "). Il nome dialettale, con piccole variazioni (titi­ rnalo, tittirnaglio, triturnrnajo, titurnajju, ecc.), è ampiamente diffuso nell'Italia centro-meridionale ."
+          "note": "Il nome dialettale, con piccole variazioni (titi­malo, tittimaglio, tritummajo, titumajju, ecc.), è ampiamente diffuso nell'Italia centro-meridionale ."
         }
       ]
     },
@@ -1097,7 +1097,7 @@
         },
 		{
           "nome_dialettale": "Erva ll'asceénzióne",
-          "nome_scientifico": ["Sedurn album"],
+          "nome_scientifico": ["Sedum album"],
           "famiglia": ["Crassulaceae"],
           "categoria": "F",
           "significato_nome": "Erba dell'ascensione",
