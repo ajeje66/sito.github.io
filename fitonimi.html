@@ -14,7 +14,7 @@ h1,h2 { text-align:center; margin:0.5em 0;}
 .voce { background:#fff; padding:12px; margin:10px 0; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
 .voce:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.2s;}
 .voce .parola { font-weight:bold; font-size:18px;}
-.voce .fonemi { font-style:italic;  margin-left:32px; padding-top:4px;padding-bottom:4px;}
+.voce .fonemi { margin-left:32px; padding-top:4px;padding-bottom:4px;}
 .voce .definizione { margin-left:1px;}
 .voce .riga {display:flex;padding-top:4px; padding-bottom:4px}
 .flag { width:22px; height:auto; object-fit:cover; flex-shrink:0;}
@@ -91,7 +91,6 @@ input {
 }
 
 .parola { font-weight: bold; font-size: 18px; }
-.fonemi { font-style: italic; margin-left: 10px; }
 .definizione { margin-left: 10px;}
 
 mark { background-color: yellow; }
@@ -232,7 +231,7 @@ input[type="search"]::-moz-search-clear {
 .riga{
     display: flex;
     align-items: flex-start; /* centra verticalmente img e testo */
-    gap: 8px; /* spazio tra img e testo */
+    gap: 4px; /* spazio tra img e testo */
 }
 
 .flag {
@@ -616,6 +615,7 @@ body.night #scrollTopBtn:hover {
 body.night .icon {
   background-color: white;
 }
+.normale{font-style:normal;}
 
 </style>
 </head>
@@ -670,7 +670,7 @@ body.night .icon {
 </select>
 
 <div id="dizionario">Caricamento...</div>
-<div align="center"><h3>Sezione a cura del Dott. Giovanni Salerno</h3><br>Per tutti i riferimenti e la bibliografia si rimanda a questa <a href="https://www.societabotanicaitaliana.it/sbi//IBI%2047%20(1)%202015/003-014%20Salerno,%20Guarrera%20-%20I%20fitonimi%20popolari%20di%20Castel%20San%20Lorenzo.pdf" target="_blank" style="font-weight:bold; text-decoration:none;color:blue; "> pubblicazione </a></div>
+<div align="center"><h3>Sezione a cura del Dott. Giovanni Salerno</h3><br>Per tutti i riferimenti e la bibliografia si rimanda a questa <a href="https://www.societabotanicaitaliana.it/sbi//IBI%2047%20(1)%202015/003-014%20Salerno,%20Guarrera%20-%20I%20fitonimi%20popolari%20di%20Castel%20San%20Lorenzo.pdf" style="font-weight:bold; text-decoration:none;color:blue;"> pubblicazione </a></div>
   <footer>
     <div class="footer-content">
 	<img src="img/logo.png" class="footer-logo">
@@ -728,7 +728,7 @@ function mostraDizionario() {
                     <span class="parola">${evidenziaTesto(voce.nome_dialettale, filtro)}</span>
                 </div>
 				<div class="fonemi"><strong>Specie: </strong>${evidenziaTesto(voce.nome_scientifico.join(", "), filtro)}</div>
-				${voce.famiglia ? `<div class="riga" style="margin-left:32px; font-size:14px;font-style:italic;"><strong>Famiglia: </strong> ${voce.famiglia.join(", ")}</div>` : ""}
+				${voce.famiglia ? `<div class="riga" style="margin-left:32px; font-size:16px;font-style:italic;"><strong>Famiglia: </strong> ${voce.famiglia.join(", ")}</div>` : ""}
 				<div class="riga" style="margin-left:32px;font-style:italic;"><strong>Traduzione: </strong>
                     <span class="definizione">${evidenziaTesto(voce.significato_nome, filtro)}</span>
                 </div>
@@ -806,6 +806,5 @@ document.querySelectorAll('.dropdown > a').forEach(link => {
 </script>
 </body>
 </html>
-
 
 
