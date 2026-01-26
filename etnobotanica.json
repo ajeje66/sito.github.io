@@ -1,0 +1,2573 @@
+{
+  "dataset": "etnobotanica",
+  "rows": [
+    [
+      "Nome scientifico\ne famiglia",
+      "<img class=\"flag\"src=\"img\\bandiera.png\">Fitonimo",
+      "Parti usate, modalità d’uso e funzione",
+      "C",
+      "F",
+      "A"
+    ],
+    [
+      "<i>Acer campestre </i>L. <i> Aceraceae</i>",
+      "Ócchianu",
+      "Legno come combustibile",
+      "13",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Acer campestre </i>L. <i> Aceraceae</i>",
+      "Ócchianu",
+      "Polloni come vimini per intrecciare cesti",
+      "7",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Acer campestre </i>L. <i> Aceraceae</i>",
+      "Ócchianu",
+      "Tronchi capitozzati come pali per le “viti maritate”",
+      "5",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Acer campestre </i>L. <i> Aceraceae</i>",
+      "Ócchianu",
+      "Fusti per realizzare forche; venivano scelti grossi polloni con ramificazione triforcata, i “denti” erano surriscaldati alla fiamma - per poterli modellare più facilmente - e poi incastrati fra i pioli di una scala per “fissare” la curvatura. Tali forche erano utilizzate durante la trebbiatura dei cereali per sollevare in aria la paglia che era così allontanata dal vento e, quindi, separata dai chicchi",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Agave americana </i>L.  <i>Agavaceae</i>",
+      "Pungarùlu",
+      "Foglie pestate per dolori reumatici o artrite",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Aira </i>sp. pl.  \n<i>Graminaceae</i>",
+      "Pumpistèlla",
+      "Le spighette con lemmi aristati venivano usate dai bambini per gioco, solleticandosi l'interno delle narici e provocando talvolta piccole emorragie; l'azione era accompagnata da una filastrocca",
+      "6",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Allium cepa </i>L. <i>Liliaceae</i>",
+      "Cepòdda",
+      "Bulbo cotto come galattagogo",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Allium cepa </i>L. <i>Liliaceae</i>",
+      "Cepòdda",
+      "Applicazione del bulbo fresco contro punture di insetti",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Allium cepa </i>L. <i>Liliaceae</i>",
+      "Cepòdda",
+      "Bulbo macerato in acqua per allontanare pulci e cimici",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Allium cepa </i>L. <i>Liliaceae</i>",
+      "Cepòdda",
+      "Bulbo macerato in vino per prevenire e curare trombosi in equini",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Allium sativum </i>L. <i>Liliaceae</i>",
+      "Ágliu",
+      "Spicchi del bulbo aromatizzanti di un tipo di salsiccia detta nnòglia",
+      "25",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Allium sativum </i>L. <i>Liliaceae</i>",
+      "Ágliu",
+      "Bulbo contro la bronchite di volatili da cortile (macerato in acqua da bere)",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Allium sativum </i>L. <i>Liliaceae</i>",
+      "Ágliu",
+      "Per far rinvenire persone prive di conoscenza (aglio con aceto)",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Allium sativum </i>L. <i>Liliaceae</i>",
+      "Ágliu",
+      "Bulbo fatto cuocere insieme ai funghi per capire se questi erano velenosi (l’aglio doveva annerire)",
+      "16",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Allium sativum </i>L. <i>Liliaceae</i>",
+      "Ágliu",
+      "Bulbo sfregato sulle crepe di pentole di coccio, per otturarle",
+      "8",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Allium </i>sp. pl.\n<i>Liliaceae</i>",
+      "Agliardièddu",
+      "Bulbi, soprattutto fritti, per alimentazione umana",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Alnus glutinosa </i>L.   <i>Betulaceae</i>",
+      "Áusanu",
+      "Legna da ardere",
+      "12",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Amaranthus </i>sp. <i>Amaranthaceae</i>",
+      "Jetìddu",
+      "Foglie per alimentazione umana",
+      "11",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Amaranthus </i>sp. <i>Amaranthaceae</i>",
+      "Jetìddu",
+      "Parti aeree per alimentazione animale",
+      "15",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Ampelodesmos \nmauritanicus</i> (Poiret) Dur. et Sch. <i>Graminaceae</i>",
+      "Pàglia re séggie",
+      "Foglie per realizzare scope e scopini per il focolare",
+      "11",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Ampelodesmos \nmauritanicus</i> (Poiret) Dur. et Sch. <i>Graminaceae</i>",
+      "Pàglia re séggie",
+      "Pannocchie (scìsciuli) come elementi decorativi per la casa",
+      "5",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ampelodesmos \nmauritanicus</i> (Poiret) Dur. et Sch. <i>Graminaceae</i>",
+      "Pàglia re séggie",
+      "Culmi per realizzare il fondo di setacci, di cui esistevano diversi tipi (cernìcchio, iràle, crìvo), caratterizzati da fondi con culmi più o meno distanziati tra loro a seconda del materiale da cernere: granaglie da separare da glume, lemmi e paglia; legumi secchi dai resti dei baccelli dopo la battitura; olive dalle foglie (cfr. Rubus)",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Arbutus unedo </i>L.  <i>Ericaceae</i>",
+      "Sòrva, sòrva  pelòsa",
+      "Frutti per alimentazione umana",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Arbutus unedo </i>L.  <i>Ericaceae</i>",
+      "Sòrva, sòrva  pelòsa",
+      "Frascame per alimentazione animale",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Arctium </i>sp. pl.\n<i>Compositae</i>",
+      "Rezzulièddu",
+      "Frutti lanciati per scherzo dai ragazzi sui vestiti delle persone, e soprattutto delle ragazze",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Arum italicum </i>Miller <i>Araceae</i>",
+      "Lanzànu",
+      "Foglie bollite per alimentazione animale (soprattutto dei maiali)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Fusti secchi come tutori per giovani viti e ortaggi",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Culmi divisi longitudinalmente e ridotti in listarelle utilizzate per intrecciare cesti e per realizzare graticciati (graddicèdde) adoperati per seccare la frutta al sole, in particolare i fichi",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Culmi divisi longitudinalmente e intessuti strettamente per costruire grandi contenitori a forma di cilindro o di parallelepipedo (cammaracànne, “camere di canna”) in cui si conservava il grano",
+      "8",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Usciarùlu, attrezzo per ravvivare la fiamma del focolare",
+      "23",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Foglie per l’alimentazione animale",
+      "17",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Cannèdde, sorta di lunghi ditali usati per proteggere le dita e il dorso delle mani durante la mietitura",
+      "19",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Fusti per realizzare pifferi e flauti",
+      "11",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Arundo donax </i>L.\n<i>Graminaceae</i>",
+      "Cànna",
+      "Internodi tagliati in pezzi di circa 10 cm e utilizzati - durante la frittura - per dare forma alla sfoglia per fare i cannoli",
+      "22",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Arundo pliniana </i>Turra   <i>Graminaceae</i>",
+      "Cannecédda",
+      "Parti aeree per alimentazione animale",
+      "10",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Asparagus acutifolius</i> L.   <i>Liliaceae</i>",
+      "Spagarògna",
+      "Turioni - chiamati spàgari - consumati soprattutto in frittate",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Avena sativa </i>L.\n<i>Graminaceae</i>",
+      "Biàma",
+      "Parti aeree fresche e cariossidi per alimentazione animale",
+      "12",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Avena </i>sp.pl.\n<i>Graminaceae</i>",
+      "Gràlatu",
+      "Parti aeree come foraggio",
+      "14",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Ballota pseudodictamnus </i>(L.) Bentham.  <i>Labiatae</i>",
+      "Sampatiérni",
+      "Calici secchi come stoppini per lumini votivi ad olio",
+      "7",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Bellevalia romana </i>(L.) Sweet.   <i>Liliaceae</i>",
+      "Cipùllu jàncu",
+      "E’ nota la tossicità dei suoi bulbi",
+      "3",
+      "-",
+      "-"
+    ],
+    [
+      "<i>Borago officinalis </i>L.   <i>Boraginaceae</i>",
+      "Vurràina",
+      "Foglie delle rosette basali in alimentazione umana (zuppe miste o fritte con la pastella)",
+      "25",
+      "CCC",
+      "D"
+    ],
+    [
+      "<i>Brachypodium rupestre </i>(Host) Roem. & Schult. <i>Graminaceae</i>",
+      "Falascìna",
+      "Parti aeree per alimentazione animale",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Brachypodium rupestre </i>(Host) Roem. & Schult. <i>Graminaceae</i>",
+      "Falascìna",
+      "Foglie utilizzate per fasciature come emostatico soprattutto per piccole ferite alle dita",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Buglossoides purpurocaerulea </i>(L.) I.M.Johnst. \n<i>Boraginaceae</i>",
+      "Èrva 'lla tòssa",
+      "Parti aeree in decotto contro le infezioni delle vie respiratorie, in particolare la tosse, insieme a camomilla, radici di malva, fichi secchi (e raramente anche menta)",
+      "6",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Calamintha nepeta </i>(L.) Savi   <i>Labiatae</i>",
+      "Népeta",
+      "Mazzi di parti aeree usati per attirare lo sciame di api in una nuova arnia",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Capsicum annuum </i>L. <i>Solanaceae</i>",
+      "Pupaiuòlu",
+      "Frutti secchi ridotti in polvere nella preparazione di insaccati e salumi di carne di maiale",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Carpinus orientalis </i>Miller  \n<i>Corylaceae</i>",
+      "Càrpinu",
+      "Legno come combustibile",
+      "8",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Carpinus orientalis </i>Miller  \n<i>Corylaceae</i>",
+      "Càrpinu",
+      "Fusti per paleria",
+      "6",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Carpinus orientalis </i>Miller  \n<i>Corylaceae</i>",
+      "Càrpinu",
+      "Frascame per alimentazione animale",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Castagne secche cotte insieme ai fagioli",
+      "13",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Frutti in pasticceria (castagnaccio e marmellata)",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Fusti in edilizia per fabbricare travi e assicelle per solai",
+      "20",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Legno per la fabbricazione di mobili",
+      "15",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Fusti e rami per tutori in agricoltura (pali)",
+      "22",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Legna da ardere",
+      "24",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Castagne per alimentazione animale (soprattutto suini)",
+      "20",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Cilindri di corteccia di polloni di un anno erano “sfilati” dai fusti incidendoli con un coltello in primavera (quando la corteccia si stacca più facilmente) per realizzare flauti (frìscku) per bambini",
+      "7",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Fusti per realizzare particolari uncini per appendere salumi",
+      "7",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Castanea sativa</i>\nMiller \n<i>Fagaceae</i>",
+      "Castàgna",
+      "Fusti di circa 2 cm di diametro per realizzare il “vètto” usato per battere le spighe di grano ed anche i baccelli secchi di fave e ceci per estrarre i semi. Tale arnese era costituito da 2 bastoni di circa un metro, connessi fra loro alle estremità (modellate a occhiello) come due anelli di una catena",
+      "3",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Centaurium Rafn <//i>subsp. <i>erythraea \nGentianaceae</i>",
+      "Cemmìno",
+      "Essendo note in loco le proprietà purganti di questa specie, se ne usavano le capsule che venivano inserite nei siconi maturi degli alberi di fico soggetti a “visite” di ladruncoli di frutta e ciò per scoprire (e scoraggiare) i furfanti",
+      "4",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Cephalaria </i>sp.pl.\n</i>Dipsacaceae</i>",
+      "Cannaùlu o Cannavòne",
+      "Parti aeree per alimentazione degli animali (soprattutto conigli)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Ceratonia siliqua </i>L. </i>Leguminosae</i>",
+      "Sciuscélla, erbacavàlli",
+      "Baccelli secchi per alimentazione animale (soprattutto equina, da cui il secondo fitonimo dialettale)",
+      "23",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Ceratonia siliqua </i>L. </i>Leguminosae</i>",
+      "Sciuscélla, erbacavàlli",
+      "Baccelli secchi per alimentazione umana",
+      "23",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Cerinthe major </i>L. \n<i>Boraginaceae</i>",
+      "Campanélle",
+      "Base dei fiori succhiata (soprattutto dai bambini) per il dolce succo che ne derivava",
+      "20",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Chenopodium album </i>L. <i>Chenopodiaceae</i>",
+      "Jetìddu",
+      "Foglie per alimentazione umana (cime tenere)",
+      "18",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Chenopodium album </i>L. <i>Chenopodiaceae</i>",
+      "Jetìddu",
+      "Parti aeree per alimentazione animale",
+      "18",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Cicer arietinum </i>L. \n<i>Leguminosae</i>",
+      "Cècere",
+      "Una zuppa mista di legumi e cereali detta ciccimmaretàti (ceci maritati) era preparata in occasione del primo Maggio",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Cicer arietinum </i>L. \n<i>Leguminosae</i>",
+      "Cècere",
+      "Piantine fatte germinare al buio - insieme a quelle di grano e lenticchie - per le decorazioni dell'altare, detto sabbùrcu (sepolcro) durante i riti del Venerdì Santo",
+      "12",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Citrus sinensis </i>(L.) Osbeck.  <i>Rutaceae</i>",
+      "Purtuàllu",
+      "Foglie per aromatizzare il sapone fatto in casa",
+      "7",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Clematis vitalba </i>L. <i>Ranunculaceae</i>",
+      "Vetàglia",
+      "Giovani getti cotti per alimentazione umana",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Coleosthephus myconis </i>(L.) Cass. <i>Compositae</i>",
+      "Fiòre re Sàn Giuànni",
+      "Fiori lanciati dalle finestre sulla strada prima del passaggio della processione del Corpus Domini e della Pentecoste",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Convolvolus arvensis </i>L.  <i>Convolvulaceae</i>",
+      "Curriòla",
+      "Parti aeree per alimentazione animale (soprattutto conigli)",
+      "16",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Cornus sanguinea </i>L. <i>Cornaceae</i>",
+      "Sàngulu",
+      "Polloni nell’intrecciatura",
+      "9",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Coronilla emerus </i>L.   <i> Leguminosae</i>",
+      "Livuòrnu",
+      "Parti aeree come foraggio",
+      "7",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Coronilla scorpioides </i>(L.) W.D.J. Koch\n<i>Leguminosae</i>",
+      "Erva ròsa",
+      "Foglie sminuzzate applicate da giovani ragazze su una ristretta area del braccio: un debole arrossamento voleva dire che la persona amata ricambiava il loro amore",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Corylus avellana </i>L.<i>Corylaceae</i>",
+      "Nucèlla",
+      "Polloni per realizzare le intelaiature di graticciati (graddicèdde), utilizzati per seccare al sole la frutta",
+      "10",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Crataegus monogyna </i>Jacq.   <i>Rosaceae</i>",
+      "Spinapòlece",
+      "Pianta come portainnesto per Mespilus germanica",
+      "17",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Cucurbita </i>sp. pl. \n<i>Cucurbitaceae</i>",
+      "Cucòzza zùcca",
+      "Frutti teneri e maturi, fiori, cime tenere, semi tostati per alimentazione umana",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Cucurbita </i>sp. pl. \n<i>Cucurbitaceae</i>",
+      "Cucòzza zùcca",
+      "Semi secchi sbucciati contro vermi intestinali dei bambini",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cucurbita </i>sp. pl. \n<i>Cucurbitaceae</i>",
+      "Cucòzza zùcca",
+      "Foglie fresche per pulire e sgrassare stoviglie",
+      "15",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cucurbita </i>sp. pl. \n<i>Cucurbitaceae</i>",
+      "Cucòzza zùcca",
+      "Frutti giovani (soprattutto quelli soggetti a cascola) per realizzare pupazzetti simulanti animali (maialini o asinelli) come giocattoli per bambini; in particolare tali zucchine servivano per realizzare il “corpo” dell'animale, le zampe venivano costruite con rametti, le orecchie con foglie di olivo e la coda con viticci di zucca",
+      "13",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cynara cardunculus </i>L. subsp. <i>scolymus </i>(L.) Hayek.  <i>Compositae</i>",
+      "Carciòffola",
+      "Foglie in decotto come rimedio per l'insufficienza epatica",
+      "4",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Cynodon dactylon </i>(L) Pers.  <i>Graminaceae</i>",
+      "Gramègna",
+      "Parti aeree per alimentazione animale (soprattutto conigli)",
+      "10",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Cynodon dactylon </i>(L) Pers.  <i>Graminaceae</i>",
+      "Gramègna",
+      "Decotto di parti aeree contro dolori di stomaco",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cynodon dactylon </i>(L) Pers.  <i>Graminaceae</i>",
+      "Gramègna",
+      "Decotto di parti aeree come diuretico",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cynodon dactylon </i>(L) Pers.  <i>Graminaceae</i>",
+      "Gramègna",
+      "Decotto di parti aeree contro problemi dei reni",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cynodon dactylon </i>(L) Pers.  <i>Graminaceae</i>",
+      "Gramègna",
+      "Parti aeree cotte, in impacchi contro foruncolosi e ascessi",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Cytisus villosus </i>Pourr. <i>Leguminosae</i>",
+      "Livuòrnu",
+      "Parti aeree per alimentazione animale",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Dactylis glomerata </i>L.<i>Graminaceae</i>",
+      "Capuòzzulu",
+      "Infiorescenze per ricavarne speciali scopini (mùnnuli) utilizzati per ripulire il forno a legna da brace e cenere; la raccolta delle infiorescenze va fatta prima dell'emissione delle antere per evitare che queste ultime restino nel forno, attaccandosi alle forme di pane",
+      "18",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Dactylis glomerata </i>L.<i>Graminaceae</i>",
+      "Capuòzzulu",
+      "Fusti utilizzati per assemblare e trasportare le more (cfr Rubus sp.)",
+      "12",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Daucus carota </i>L. (sottospecie spontanee)\n<i>Umbelliferae</i>",
+      "Pastenàca salevàteca",
+      "Radici in alimentazione umana; consumate soprattutto fritte con la pastella",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Digitaria sanguinalis </i>(L.) Scop. <i>Graminaceae</i>",
+      "Panecastrièddu  femmenìnu",
+      "Parti aeree per alimentazione animale (soprattutto conigli)",
+      "20",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Equisetum telmateja </i>Ehrh.   <i>Equisetaceae</i>",
+      "Curivùlpi, spezzagghjùngi",
+      "I coni dei fusti fertili consumati fritti con la pastella",
+      "3",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Erica arborea </i>L.  <i>Ericaceae</i>",
+      "Frascèdda,  èreca, sckantamàno",
+      "Fusti per confezionare scope",
+      "22",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Erica arborea </i>L.  <i>Ericaceae</i>",
+      "Frascèdda,  èreca, sckantamàno",
+      "Fusti secchi per accendere il fuoco",
+      "15",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Erica arborea </i>L.  <i>Ericaceae</i>",
+      "Frascèdda,  èreca, sckantamàno",
+      "Fusti secchi come combustibile per il forno durante la panificazione",
+      "8",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Erica arborea </i>L.  <i>Ericaceae</i>",
+      "Frascèdda,  èreca, sckantamàno",
+      "Fusticini lunghi e secchi per realizzare una sorta di trappola (làzzo) per catturare volatili",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Erica arborea </i>L.  <i>Ericaceae</i>",
+      "Frascèdda,  èreca, sckantamàno",
+      "Fusti come “tutori orizzontali” per i tralci di vite nell’allevamento a spalliera",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Euphorbia </i>sp. pl.\n<i>Euphorbiaceae</i>",
+      "Tutumàgliu",
+      "Un tempo i ragazzi, per truce scherzo, “consigliavano” ai propri, ignari, amici di applicare sul pene - per aumentarne le dimensioni - il latice di queste piante (soprattutto E. helioscopia) che provocava, oltre al gonfiore, anche effetti rubefacenti e vescicanti",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Euphorbia </i>sp. pl.\n<i>Euphorbiaceae</i>",
+      "Tutumàgliu",
+      "Latice contro le verruche",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Frutti secchi in pasticceria; vengono tradizionalmente preparati con un ripieno di noci, semi di finocchio e buccia di mandarino.",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Frutti secchi in decotto contro le infiammazioni dell’apparato respiratorio (cfr. Buglossoides)",
+      "22",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Foglie per alimentazione animale (soprattutto secche, per capre).  Le foglie si raccoglievano quando cominciavano ad ingiallire (si staccavano più facilmente), si facevano seccare e si conservavano, come il fieno, per l’inverno",
+      "8",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Latice contro punture di insetti (soprattutto vespe e api)",
+      "7",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Latice contro verruche",
+      "18",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Legno come combustibile",
+      "15",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Cenere per la liscivia (lessìa), desueto sistema per il bucato",
+      "8",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Corteccia di fusti di un anno “sfilata” - alla ripresa vegetazione, in primavera, quando questa viene via molto facilmente - per realizzare flauti (frìscku)",
+      "9",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Ficus carica </i>L. \n<i>Moraceae</i>",
+      "Fìcu",
+      "Latice per cagliare il latte",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Foeniculum vulgare </i>Miller <i>Umbelliferae</i>",
+      "Fenùcchiu salevàtecu",
+      "Frutti per aromatizzare salsicce, fichi secchi e biscotti",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Foeniculum vulgare </i>Miller <i>Umbelliferae</i>",
+      "Fenùcchiu salevàtecu",
+      "Il decotto dei frutti come digestivo",
+      "2",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Fraxinus ornus </i>L.\n<i>Oleaceae</i>",
+      "Uòrnu",
+      "Giovani getti per l'intelaiatura di cesti e graticciati",
+      "9",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Fraxinus ornus </i>L.\n<i>Oleaceae</i>",
+      "Uòrnu",
+      "Fusti per realizzare il manico (stìle) di utensili agricoli",
+      "21",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Fraxinus ornus </i>L.\n<i>Oleaceae</i>",
+      "Uòrnu",
+      "Tronchi “vivi” capitozzati come tutori per viti",
+      "12",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Fraxinus ornus </i>L.\n<i>Oleaceae</i>",
+      "Uòrnu",
+      "Foglie macerate in acqua contro malattie di volatili da cortile (far bere il liquido)",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Gossypium </i>sp. pl. <i>Malvaceae</i>",
+      "Cuttòne",
+      "Le fibre per ottenere tessuti, utilizzate da sole o per ricavare l’ordito per la tessitura del lino (cfr). La sua coltivazione è continuata fino agli anni ’60",
+      "11",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Hedysarum coronarium </i>L. <i>Leguminosae</i>",
+      "Sòrda",
+      "Parti aeree per alimentazione animale",
+      "25",
+      "CCC",
+      "D"
+    ],
+    [
+      "<i>Hedysarum coronarium </i>L.   <i>Leguminosae</i>",
+      "Sòrda",
+      "Cime tenere per alimentazione umana (dopo cottura)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Holoschoenus \nvulgaris</i> L.\n<i>Cyperaceae</i>",
+      "Jòncule",
+      "Fusti per legare ai tutori gli ortaggi, soprattutto pomodori",
+      "21",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Holoschoenus \nvulgaris</i> L.\n<i>Cyperaceae</i>",
+      "Jòncule",
+      "Fusti per realizzare contenitori (fascèdde) per formaggio fresco e ricotta",
+      "20",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Hordeum murinum </i>L. <i>Graminaceae</i>",
+      "Juremàna salevàteca",
+      "Parti aeree per alimentazione animale",
+      "9",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Hordeum vulgare </i>L. <i>Graminaceae</i>",
+      "Uòriu",
+      "Cariossidi tostate con utensile detto abbrustulatùru e macinate per preparare il caffè d'orzo",
+      "25",
+      "CC",
+      ""
+    ],
+    [
+      "<i>Hordeum vulgare </i>L. <i>Graminaceae</i>",
+      "Uòriu",
+      "Cariossidi per alimentazione del bestiame",
+      "25",
+      "CCC",
+      "D"
+    ],
+    [
+      "<i>Hypericum perforatum</i> L. <i>Guttiferae</i>",
+      "Erva ll’ascenziòne",
+      "Fiori in boccio raccolti la sera precedente del giorno dell’Ascensione; se all’alba erano sbocciati ciò era di buon auspicio",
+      "2",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Juglans regia </i>L.\n<i>Juglandaceae</i>",
+      "Nòce",
+      "Legno per fabbricazione di mobili",
+      "20",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Knautia </i>sp.\n<i>Dipsacaceae</i>",
+      "Cannaùlu,\nCannavòne",
+      "Parti aeree per alimentazione di animali da cortile (soprattutto conigli)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Lactuca sativa </i>L. \n<i>Compositae</i>",
+      "Lattùca",
+      "Una zuppa tipica, “lattùche e patàte” è preparata all'inizio dell'estate quando la lattuga si avvia alla fioritura e le sue foglie sono più amare e quindi meno buone se crude",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Lagenaria siceraria </i>(Molina) Standl.\n<i>Cucurbitaceae</i>",
+      "Cucòzza 'a mùtu",
+      "Frutti secchi per ricavare imbuti e recipienti",
+      "11",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Laurus nobilis </i>L.\n<i>Lauraceae</i>",
+      "Làuru",
+      "Foglie come aromatizzanti (soprattutto per castagne bollite e carne di maiale)",
+      "25",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Laurus nobilis </i>L.\n<i>Lauraceae</i>",
+      "Làuru",
+      "Foglie in decotto contro le infiammazioni dell’apparato respiratorio (cfr. Buglossoides)",
+      "4",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Laurus nobilis </i>L.\n<i>Lauraceae</i>",
+      "Làuru",
+      "Frutti pestati calmanti di dolori addominali",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Lavandula angustifolia </i>Miller   <i>Labiatae</i>",
+      "Spicaddòsa",
+      "Infiorescenze per decorare la statua di S. Giovanni nel giorno della festa del Santo (24 giugno)",
+      "22",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Lathyrus sylvestris </i>L.\n<i>Leguminosae</i>",
+      "Rulecòne",
+      "Parti aeree per alimentazione degli animali da cortile",
+      "5",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Lens culinaris </i>Med. <i>Leguminosae</i>",
+      "Nemìccula",
+      "Per decorazioni durante i riti del Venerdì Santo (cfr. Cicer arietinum)",
+      "12",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Leopoldia comosa </i>(L.) Parl. <i>Liliaceae</i>",
+      "Cipùllu",
+      "Bulbi come alimento, soprattutto in frittata",
+      "24",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Lepidium sativum </i>L. <i>Cruciferae</i>",
+      "Mastùrzio",
+      "Foglie crude per alimentazione umana",
+      "8",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Ligustrum vulgare </i>L. <i>Oleaceae</i>",
+      "Murièllu, murenièllo",
+      "Succo dei frutti usato come inchiostro",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Lilium candidum </i>L.\n<i>Liliaceae</i>",
+      "Gìgliu re Sant'Andòniu",
+      "Fusti pestati e avvolti in garza in impacchi sulle tempie contro il mal di testa",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Linum usitatissimum </i>L. <i>Linaceae</i>",
+      "Lìnu",
+      "Le fibre, estratte dai fusti dopo macerazione e battitura con un apposito attrezzo detto màngano, erano successivamente lavorate (cardatura e filatura) per ricavarne tessuti; cfr. anche Gossypium sp. pl. La sua coltivazione è continuata fino agli anni ’50",
+      "22",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Linum usitatissimum </i>L. <i>Linaceae</i>",
+      "Lìnu",
+      "Scarti della lavorazione (capìzzu) per imbottire selle e materassi",
+      "13",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Linum usitatissimum </i>L. <i>Linaceae</i>",
+      "Lìnu",
+      "Semi, pestati in un mortaio, impastati, scaldati in padella, avvolti in un canovaccio e applicati in cataplasmi caldi sul petto come sedativo della tosse, contro la bronchite, la polmonite; anche contro ascessi",
+      "21",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Lippa triphylla </i>(L’Hér) Kuntze \n<i>Verbenaceae</i>",
+      "Èrba cèdra",
+      "Foglie in decotto contro il mal di stomaco",
+      "3",
+      "RR",
+      "D"
+    ],
+    [
+      "<i>Lolium </i>sp. pl.\n<i>Graminaceae</i>",
+      "Jugliàta, juògliu",
+      "Parti aeree per alimentazione animale",
+      "21",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Lolium </i>sp. pl.\n<i>Graminaceae</i>",
+      "Jugliàta, juògliu",
+      "Spighe per fini divinatori: cominciando dal basso si associavano alle spighette le parole “pàne - vìnu - vunnànzia - carestìa” (pane, vino, abbondanza, carestia); l’ultima spighetta e la parola ad essa associata, pronosticavano la produttività dell’annata",
+      "7",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Lotus </i>sp. pl.\n<i>Leguminosae</i>",
+      "Vezzìddi",
+      "La pianta intera nella pratica del sovescio",
+      "6",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Lupinus albus </i>L.\n<i>Leguminosae</i>",
+      "Lupìnu",
+      "Alimentazione umana. Per essere consumati i semi dovevano essere bolliti e successivamente tenuti in acqua corrente (nei fontanili) per qualche giorno al fine di eliminare gli alcaloidi",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Lupinus albus </i>L.\n<i>Leguminosae</i>",
+      "Lupìnu",
+      "Tutta la pianta nella pratica del sovescio",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Lycopersicon esculentum </i>Miller\n<i>Solanaceae</i>",
+      "Pumparòla",
+      "Frutti acidi per eliminare macchie ostinate (succhi di piante, di frutti di Morus nigra, ecc.) dalle mani",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Lycopersicon esculentum </i>Miller\n<i>Solanaceae</i>",
+      "Pumparòla",
+      "Polpa del frutto mista a zucchero per facilitare la maturazione dei foruncoli",
+      "3",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Malus domestica </i>Borkh  <i>Rosaceae</i>",
+      "Mìlu",
+      "Frutto grattugiato per l’alimentazione dei bambini",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Malus domestica </i>Borkh  <i>Rosaceae</i>",
+      "Mìlu",
+      "Frutti cotti contro inappetenza e malessere generale",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Malus domestica </i>Borkh  <i>Rosaceae</i>",
+      "Mìlu",
+      "Frutti freschi e secchi per alimentazione animale",
+      "23",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Malus sylvestre </i>Miller   <i>Rosaceae</i>",
+      "Melàino",
+      "Pianta come portainnesto per le varietà di Malus domestica",
+      "14",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Malva sylvestris </i>L. <i>Malvaceae</i>",
+      "Màleva",
+      "Radici in decotto contro le infiammazioni dell’apparato respiratorio (cfr. Buglossoides)",
+      "19",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Matricaria  chamomilla </i>L. <i>Compositae</i>",
+      "Cammamìlla",
+      "Tisana come calmante e per conciliare il sonno",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Matricaria  chamomilla </i>L. <i>Compositae</i>",
+      "Cammamìlla",
+      "Tisana per impacchi contro le infiammazioni degli occhi",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Matricaria  chamomilla </i>L. <i>Compositae</i>",
+      "Cammamìlla",
+      "Tisana contro il mal di pancia",
+      "21",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Matricaria  chamomilla </i>L. <i>Compositae</i>",
+      "Cammamìlla",
+      "Decotto di parti aeree contro le infiammazioni dell’apparato respiratorio (cfr. Buglossoides)",
+      "20",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Matricaria  chamomilla </i>L. <i>Compositae</i>",
+      "Cammamìlla",
+      "Parti aeree in impacchi per maturare foruncoli e ascessi",
+      "6",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Melilotus </i>sp.pl. \n<i>Leguminosae</i>",
+      "Lupenélla",
+      "Parti aeree per alimentazione animale",
+      "6",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Mentha </i>sp. pl.\n<i>Labiatae</i>",
+      "Mènta",
+      "Aromatizzante",
+      "25",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Mentha </i>sp. pl.\n<i>Labiatae</i>",
+      "Mènta",
+      "Foglie in decotto contro le infiammazioni dell’apparato respiratorio (cfr. Buglossoides)",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Mercurialis annua </i>L.  <i>Euphorbiaceae</i>",
+      "Merculèdda",
+      "Pianta ritenuta tossica, da eliminare dal foraggio e dal fieno",
+      "12",
+      "",
+      ""
+    ],
+    [
+      "<i>Mespilus germanica </i>L.  <i>Rosaceae</i>",
+      "Néscepra vernìna",
+      "Frutti per alimentazione umana. Generalmente il nespolo veniva innestato su Crataegus monogyna",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Morus alba </i>L.\n<i>Moraceae</i>",
+      "Cèuza",
+      "Per l’alimentazione di animali da cortile (frutti a maiali e volatili, foglie ad erbivori). Un tempo era molto diffusa nei pressi delle abitazioni rurali; nel periodo della maturazione veniva quasi quotidianamente abbattùta (cioè percossa sui rami) per farne cadere i frutti",
+      "20",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Morus nigra </i>L. \n<i>Moraceae</i>",
+      "Cièuzu",
+      "Frutti per alimentazione umana",
+      "18",
+      "R",
+      "P"
+    ],
+    [
+      "<i>Myrtus communis </i>L.    <i>Myrtaceae</i>",
+      "Murtèdda",
+      "Rametti freschi per realizzare corone funebri",
+      "20",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Myrtus communis </i>L.    <i>Myrtaceae</i>",
+      "Murtèdda",
+      "I fusti privati delle foglie per realizzare scope",
+      "15",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ocimum basilicum </i>L.    <i>Labiatae</i>",
+      "Masinicòia",
+      "Aromatizzante di alimenti, soprattutto per conserve di pomodoro",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Foglie ridotte in poltiglia (ottenuta masticandole) in impacco su ferite ed escoriazioni come cicatrizzante",
+      "20",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio caldo contro dolori articolari e reumatici",
+      "16",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio (un cucchiaio da minestra) come purgante",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio contro le scottature",
+      "8",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio in emulsione con acqua per infiammazioni della pelle (soprattutto per bambini)",
+      "20",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio per friggere foglie di ruta: conservato in un vasetto di vetro, rappresentava un rimedio per contusioni ed ematomi sia per gli animali domestici che per l'uomo",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio come combustibile per torce e lucerne",
+      "16",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Olio per conservare la salsiccia fatta in casa",
+      "14",
+      "CCC",
+      "P"
+    ],
+    [
+      "Olea europea L.\nOleaceae",
+      "Aulìva",
+      "Deposito dell’olio per fare il sapone",
+      "8",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "La cenere per la liscivia (lessìa), antico sistema per il bucato",
+      "7",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Rametti benedetti nel giorno delle Palme posti all’ingresso della casa, con quelli di rosmarino (cfr.), contro",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Polloni per intrecciare cesti, utilizzati anche a scopo decorativo per il colore argenteo della corteccia (cfr. Ulmus)",
+      "13",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Fumo di foglie bruciate (insieme a quelle di rosmarino) da inalare durante i riti effettuati per togliere il malocchio",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Olea europea </i>L.\n<i>Oleaceae</i>",
+      "Aulìva",
+      "Frascame ricavato dalla potatura per alimentare forni a legna. E’ ancora il combustibile preferito per questo uso",
+      "23",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Opuntia ficus-indica </i>(L.) Miller\n<i>Cactaceae</i>",
+      "Fecurìnia",
+      "Frutti per alimentazione umana",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Opuntia ficus-indica </i>(L.) Miller\n<i>Cactaceae</i>",
+      "Fecurìnia",
+      "Bucce private delle spine, seccate al sole e conservate per l’inverno per essere fritte insieme alle patate come succedaneo di peperoni secchi (cfr. testo).",
+      "4",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Opuntia ficus-indica </i>(L.) Miller\n<i>Cactaceae</i>",
+      "Fecurìnia",
+      "Cladodi spezzettati e interrati nel luogo in cui sarebbero stati piantati ortaggi (soprattutto i cetrioli) per mantenere più fresco e umido il suolo",
+      "6",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Origanum vulgare </i>L.    <i>Labiatae</i>",
+      "Arègana",
+      "Aromatizzante",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Ostrya carpinifolia </i>\nScop.  <i>Corylaceae</i>",
+      "Càrpinu",
+      "Legno come combustibile",
+      "4",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Ostrya carpinifolia </i>\nScop.  <i>Corylaceae</i>",
+      "Càrpinu",
+      "Fusti per paleria",
+      "3",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Ostrya carpinifolia </i>\nScop.  <i>Corylaceae</i>",
+      "Càrpinu",
+      "Frascame per alimentazione del bestiame",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Papaver rhoeas </i>L.  <i>Papaveraceae</i>",
+      "Papàgnu",
+      "Foglie delle rosette basali cotte per alimentazione umana",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Papaver somniferum </i>L.  <i>Papaveraceae</i>",
+      "Papàgnu",
+      "Semi messi nel latte come narcotico, soprattutto per bambini",
+      "23",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Parietaria diffusa </i>M. et K.   <i>Urticaceae</i>",
+      "Palatàna",
+      "Foglie per decorare i vestiti sfruttando le loro proprietà adesive  (gioco per bambini)",
+      "20",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Parietaria diffusa </i>M. et K.   <i>Urticaceae</i>",
+      "Palatàna",
+      "Decotto delle parti aeree contro l’insufficienza epatica",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Parietaria diffusa </i>M. et K.   <i>Urticaceae</i>",
+      "Palatàna",
+      "Parti aeree fresche per l’alimentazione di volatili da cortile",
+      "16",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Petasites </i>sp.pl.\n<i>Compositae</i>",
+      "Mappamàgno",
+      "Foglie fresche pestate in impacchi per facilitare la maturazione dei foruncoli",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Petroselinum sativum </i>Hoffm.\n<i>Umbelliferae</i>",
+      "Putrusìnu",
+      "Foglie, unite a scaglie di sapone e sotto forma di supposta, per stimolare l'evacuazione nei bambini",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Petroselinum sativum </i>Hoffm.\n<i>Umbelliferae</i>",
+      "Putrusìnu",
+      "Succo fresco di parti aeree contro il mal di stomaco",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Petroselinum sativum </i>Hoffm.\n<i>Umbelliferae</i>",
+      "Putrusìnu",
+      "Parti aeree fresche come abortivo",
+      "7",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Petroselinum sativum </i>Hoffm.\n<i>Umbelliferae</i>",
+      "Putrusìnu",
+      "Parti aeree fresche strofinate su punture di api",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Phragmites australis </i>(Cav.) Trin. <i>Graminaceae</i>",
+      "Cannecédda",
+      "Foglie per l'alimentazione di animali da cortile",
+      "11",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Phyllostachys </i>sp.\n<i>Graminaceae</i>",
+      "Fenucchiéttu",
+      "Culmi lignificati per far cadere le olive dai rami, battendoli",
+      "8",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Picris echioides </i>L.  <i>Compositae</i>",
+      "Asprédda",
+      "Parti aeree per l’alimentazione di animali da cortile",
+      "15",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Picris hieracioides </i>L.   <i>Compositae</i>",
+      "Asprédda ciuccìna,\na. senìna",
+      "Parti aeree per l’alimentazione di animali da cortile",
+      "13",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Pistacia lentiscus </i>L. <i>Anacardiaceae</i>",
+      "Stìngi",
+      "Foglie usate per curare la dissenteria dei maiali",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Pistacia lentiscus </i>L. <i>Anacardiaceae</i>",
+      "Stìngi",
+      "Rametti freschi per realizzare corone funebri",
+      "13",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Pistacia lentiscus </i>L. <i>Anacardiaceae</i>",
+      "Stìngi",
+      "Foglie masticate e applicate su denti doloranti",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Plantago lanceolata </i>L.   <i>Plantaginaceae</i>",
+      "Cincunérve",
+      "Impiastro di foglie pestate e lardo per facilitare la maturazione dei foruncoli",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Plantago major </i>L. \n<i>Plantaginaceae</i>",
+      "Cincunérve",
+      "Impiastro di foglie pestate applicate con lardo per facilitare la maturazione dei foruncoli",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Populus </i>sp.\n<i>Salicaceae</i>",
+      "Chiùppu",
+      "Legno per la fabbricazione di mobilio",
+      "8",
+      "R",
+      ""
+    ],
+    [
+      "<i>Populus </i>sp.\n<i>Salicaceae</i>",
+      "Chiùppu",
+      "Legno come combustibile",
+      "13",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Portulaca oleracea </i>L.   <i>Portulacaceae</i>",
+      "Purchjàcca",
+      "Cime tenere aggiunte alle insalate miste",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Portulaca oleracea </i>L.   <i>Portulacaceae</i>",
+      "Purchjàcca",
+      "Parti aeree in decotto contro il mal di denti; il preparato prima dell’uso era lasciato all'aperto (alla sirèna) per tutta la notte",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Prunus avium </i>L.<i> Rosaceae</i>",
+      "Ceràso",
+      "Legno per la fabbricazione di mobilio",
+      "7",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Prunus spinosa </i>L. \n<i>Rosaceae</i>",
+      "Latrègna",
+      "Come portainnesto per numerose specie di Prunus coltivate",
+      "19",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Pteridium aquilinum </i>(L) Kuhn. \n<i>Hypolepidaceae</i>",
+      "Felètta",
+      "Foglie per costruire tetti dei capanni di montagna (pagliarùli)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Pteridium aquilinum </i>(L) Kuhn. \n<i>Hypolepidaceae</i>",
+      "Felètta",
+      "Foglie fresche come cuscino contro il mal di testa",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Pyrus amygdaliformis </i>Vill.    <i>Rosaceae</i<",
+      "Peràino, pero selvatico",
+      "La pianta come portainnesto per le varietà di Pyrus coltivate",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Pyrus amygdaliformis </i>Vill.    <i>Rosaceae</i<",
+      "Peràino, pero selvatico",
+      "Come portainnesto per le varietà di Pyrus coltivate",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Quercus cerris </i>L.\n<i>Fagaceae</i>",
+      "Cièrro",
+      "In agricoltura rami come tutori o pali (preferiti perché ritenuti meno soggetti a deterioramento)",
+      "5",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Quercus cerris </i>L.\n<i>Fagaceae</i>",
+      "Cièrro",
+      "Legna da ardere",
+      "20",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Quercus ilex </i>L. \n<i>Fagaceae</i>",
+      "Èlece",
+      "Legno combustibile",
+      "21",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Quercus ilex </i>L. \n<i>Fagaceae</i>",
+      "Èlece",
+      "Fusti (cilindri lunghi ca. 20 cm e larghi 15) per realizzare la testa del “maglio”, grosso martello usato per spaccare la legna, picchiando su cunei di ferro inseriti nelle fessure dei tronchi da spaccare",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Quercus ilex </i>L. \n<i>Fagaceae</i>",
+      "Èlece",
+      "Frutti per alimentazione animale (soprattutto maiali)",
+      "9",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Legno come combustibile",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Ghiande secche macinate per ricavarne pane",
+      "5",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Frutti per alimentazione animali da cortile",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Cenere della legna per la liscivia (lessìa), per fare il bucato",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Tronchi per fabbricare travi e assicelle per solai",
+      "7",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Un mazzetto di fusti e foglie posto davanti al foro delle botti come filtro per le impurità del mosto (vinacce, raspi)",
+      "13",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Quercus pubescens </i>Willd.    <i>Fagaceae</i>",
+      "Cèrza",
+      "Fusti per paleria",
+      "9",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Rosmarinus \nofficinalis </i>L.\n<i>Labiatae</i>",
+      "Rosamarìna",
+      "Aromatizzante",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Rosmarinus \nofficinalis </i>L.\n<i>Labiatae</i>",
+      "Rosamarìna",
+      "Decotto di parti aeree contro dolori addominali",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Rosmarinus \nofficinalis </i>L.\n<i>Labiatae</i>",
+      "Rosamarìna",
+      "Rametti benedetti nel giorno delle Palme posti all’ingresso della casa insieme a quelli dell'olivo (cfr.), contro i malefici",
+      "21",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Rosmarinus \nofficinalis </i>L.\n<i>Labiatae</i>",
+      "Rosamarìna",
+      "Fumo di foglie bruciate (insieme a quelle di olivo) da inalare durante i riti contro il malocchio",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Rosmarinus \nofficinalis </i>L.\n<i>Labiatae</i>",
+      "Rosamarìna",
+      "Parti aeree in aceto bollente, lasciato raffreddare e usato contro gengiviti",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Rubus ulmifolius </i>Schott.   \n<i>Rosaceae</i>",
+      "Ruvèta",
+      "Frutti per alimentazione: erano tipicamente assemblati - per essere trasportati - infilzandoli in un fusto di Dactylis (cfr.)",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Rubus ulmifolius </i>Schott.   \n<i>Rosaceae</i>",
+      "Ruvèta",
+      "Foglie fresche pestate e applicate alle ferite come cicatrizzante",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Rubus ulmifolius </i>Schott.   \n<i>Rosaceae</i>",
+      "Ruvèta",
+      "Fusti per realizzare il fondo di setacci utilizzati per cernere legumi secchi - precedentemente battuti - per separarli dai residui dei baccelli. I fusti scelti erano quelli più lunghi, giovani e lignificati che venivano avvolti in una spirale continua - con spire distanziate di circa mezzo cm - che veniva fissata a raggi di fil di ferro (cfr.  Ampelodesmos)",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Rumex </i>sp. pl. \n<i>Polygonaceae</i>",
+      "Lapàzzu",
+      "Parti aeree per alimentazione animale",
+      "12",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Ruscus aculeatus </i>L.  <i>Liliaceae</i>",
+      "Frùsci",
+      "Fusti in mazzetti posti in luoghi strategici per evitare l'accesso dei topi alle derrate alimentari",
+      "7",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Ruscus aculeatus </i>L.  <i>Liliaceae</i>",
+      "Frùsci",
+      "Turioni cotti a scopo alimentare, soprattutto in frittata",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Ruta graveolens </i>L.\n<i>Rutaceae</i>",
+      "Arùta",
+      "L'olio della frittura delle foglie contro contusioni ed ematomi sia per gli animali domestici che per l'uomo",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ruta graveolens </i>L.\n<i>Rutaceae</i>",
+      "Arùta",
+      "L'olio ricavato dalla frittura delle foglie contro le infezioni della pelle negli asini",
+      "6",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ruta graveolens </i>L.\n<i>Rutaceae</i>",
+      "Arùta",
+      "Parti aeree verdi in cataplasmi contro dolori reumatici",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Salix  alba </i>L. subsp. <i>alba, S. eleagnos </i>Scop., <i>S. purpurea </i>L.\n<i>Salicaceae</i>",
+      "Salecòne",
+      "Vimini utilizzati nell'intrecciatura di cesti, canestri e rivestimenti per fiaschi",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Salix alba </i>L. subsp. <i>vitellina </i>(L.) Arcang.\n<i>Salicaceae</i>",
+      "Sàlece",
+      "Rami come legaccio (soprattutto per fissare i tralci delle viti ai tutori e per legare fascine di legna) per tale scopo è comunemente coltivata lungo gli argini dei campi e in prossimità di fossati",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Salix alba </i>L. subsp. <i>vitellina </i>(L.) Arcang.\n<i>Salicaceae</i>",
+      "Sàlece",
+      "Fusti sottili e lunghi per fissare ai graticciati (cfr. A. donax) un bordo fatto di fusti di Spartium  (cfr.)",
+      "18",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Salix alba </i>L. subsp. <i>vitellina </i>(L.) Arcang.\n<i>Salicaceae</i>",
+      "Sàlece",
+      "Fusti giovani (tòrte) in numero di 3 da legare al tronco degli alberi di noce nelle notti di San Giovanni e dell’Ascensione per scongiurare l’attacco di patologie ai frutti in maturazione",
+      "2",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Salvia officinalis </i>L. <i>Labiatae</i>",
+      "Sàlevia",
+      "In cucina come aromatizzante",
+      "25",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Salvia officinalis </i>L. <i>Labiatae</i>",
+      "Sàlevia",
+      "Foglie in decotto -  insieme a foglie di carciofo (cfr.) - in casi di insufficienza epatica",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Sambucus nigra </i>L.\n<i>Caprifoliaceae</i>",
+      "Savùcu",
+      "Fusti di circa 20 cm privati del midollo per realizzare una sorta di cerbottana (scucchiarùlo). Le “munizioni” erano costituite da pallottole di stoppa bagnata: si ne inseriva una dalla base e veniva spinta con un bastoncino fino all’apice, quindi se ne inseriva un’altra che, spinta anch’essa, creava una compressione dell’aria interposta fra le due pallottole determinando l’espulsione violenta della prima munizione",
+      "5",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Sambucus nigra </i>L.\n<i>Caprifoliaceae</i>",
+      "Savùcu",
+      "Succo dei frutti maturi come inchiostro",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Sambucus nigra </i>L.\n<i>Caprifoliaceae</i>",
+      "Savùcu",
+      "Fiori pestati in impacchi come rimedio per vene varicose",
+      "1",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Saponaria officinalis </i>L.    <i>Caryophyllaceae</i>",
+      "Èrva sapunàra, èrva 'llu ssapòne",
+      "Detergente per le mani",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Scabiosa </i>sp. \n<i>Dipsacaceae</i>",
+      "Cannaùlu, Cannavòne",
+      "Alimentazione animali da cortile (soprattutto conigli)",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Scorpiurus </i>sp.  \n<i>Leguminosae</i>",
+      "Aurècchie re lièparu",
+      "Alimentazione animali da cortile (soprattutto conigli)",
+      "10",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Secale cereale </i>L. \n<i>Graminaceae</i>",
+      "Juremàna",
+      "Fusti e spighe per ricavarne il mùnnulo, un particolare scopino utilizzato per pulire il forno da cenere e brace (cfr. Phalaris)",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Sechium edule </i>(Jacq.) Sw    <i>Cucurbitaceae</i>",
+      "Masciùsciu",
+      "Frutti consumati cotti come zucchine",
+      "2",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Senecio vulgaris </i>L. <i>Compositae</i>",
+      "Cardìllu",
+      "Alimentazione animali da cortile (soprattutto conigli)",
+      "21",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Setaria viridis </i>(L.) Beauv. <i>Graminaceae</i>",
+      "Panecastrièddu  masculìnu",
+      "Alimentazione animale (soprattutto conigli)",
+      "22",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Sinapis </i>sp. \n<i>Cruciferae</i>",
+      "Làssana",
+      "Alimentazione umana (foglie e cime tenere cotte)",
+      "12",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Solanum tuberosum </i>L.  <i>Solanaceae</i>",
+      "Patàta",
+      "Foglie secche fumate al posto del tabacco; l'uso fu praticato soprattutto durante l’autarchia. (cfr. Vitis)",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Solanum tuberosum </i>L.  <i>Solanaceae</i>",
+      "Patàta",
+      "Tubero (in fette o grattugiato) contro le scottature",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Sonchus </i>sp. pl.\n<i>Compositae</i>",
+      "Sevòne",
+      "Foglie delle rosette basali cotte per alimentazione umana",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Sonchus </i>sp. pl.\n<i>Compositae</i>",
+      "Sevòne",
+      "Parti aeree per alimentazione animale",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Sorbus domestica </i>L.  <i>Rosaceae</i>",
+      "Suòrvu",
+      "Frutti in alimentazione umana",
+      "25",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Sorghum bicolor </i>\n(L.) Moench.\n<i>Graminaceae</i>",
+      "Mèddeca",
+      "Pannocchie private delle cariossidi per realizzare scope",
+      "22",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Sorghum bicolor </i>\n(L.) Moench.\n<i>Graminaceae</i>",
+      "Mèddeca",
+      "Parti aeree fresche per alimentazione animale",
+      "17",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Sorghum bicolor </i>\n(L.) Moench.\n<i>Graminaceae</i>",
+      "Mèddeca",
+      "Cariossidi in alimentazione umana (per ricavarne farina)",
+      "4",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Sorghum bicolor </i>\n(L.) Moench.\n<i>Graminaceae</i>",
+      "Mèddeca",
+      "Cariossidi per alimentazione animale",
+      "8",
+      "R",
+      "D"
+    ],
+    [
+      "<i>Sorghum halepense </i>(L.) Pers. <i>Graminaceae</i>",
+      "Cannògna",
+      "Alimentazione animali da cortile (soprattutto asini)",
+      "9",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Rami flessibili come legaccio",
+      "23",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fiori lanciati dalle finestre sulla strada prima del passaggio della processione del Corpus Domini e della Pentecoste",
+      "8",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fusti per confezionare scope",
+      "21",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fusti per costruire i tetti dei capanni (pagliarùli)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fusti per accendere il fuoco",
+      "8",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fusti come combustibile per il forno a legna",
+      "9",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fusti giovani secchi in lunghi cordoni - dello spessore di circa 3 cm - per realizzare i bordi rialzati di graticciati (graddicèdde) usati per seccare al sole la frutta (cfr. Arundo donax e Salix alba subsp. vitellina)",
+      "18",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Liquido essudato da rami teneri contro verruche",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Spartium junceum </i>L.  <i>Leguminosae</i>",
+      "Frèngu",
+      "Fiori pestati in impacchi su morsi di cani e serpenti",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Tamus communis </i>L.  <i>Dioscoreaceae</i>",
+      "Vetecèdda",
+      "Germogli come surrogato di asparagi, soprattutto frittate",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Teucrium \nchamaedrys </i>L.\n<i>Labiatae</i>",
+      "Cerzòdda",
+      "Parti aeree in decotto come lassativo",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Teucrium \nchamaedrys </i>L.\n<i>Labiatae</i>",
+      "Cerzòdda",
+      "Parti aeree in decotto come aperitivo",
+      "2",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Teucrium \nchamaedrys </i>L.\n<i>Labiatae</i>",
+      "Cerzòdda",
+      "Parti aeree in decotto contro la febbre d’aria (disturbo non identificato)",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Thymus longicaulis </i>Presl.   <i>Labiatae</i>",
+      "Spièziu",
+      "Aromatizzante in cucina",
+      "12",
+      "RR",
+      "D"
+    ],
+    [
+      "<i>Typha </i>sp. pl.\n<i>Typhaceae</i>",
+      "-",
+      "Foglie per impagliare le sedie",
+      "9",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Typha </i>sp. pl.\n<i>Typhaceae</i>",
+      "-",
+      "Foglie per intrecciare contenitori per il sale da cucina",
+      "1",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Trifolium </i>sp. pl. \n<i>Leguminosae</i>",
+      "Trefuògliu",
+      "Parti aeree per alimentazione animale",
+      "25",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Triticum </i>sp. pl. \n<i>Graminaceae</i>",
+      "Grànu",
+      "Cariossidi per alimentazione animale",
+      "18",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Triticum </i>sp. pl. \n<i>Graminaceae</i>",
+      "Grànu",
+      "Frutti per decorazioni durante i riti del Venerdì Santo (cfr. Cicer arietinum)",
+      "21",
+      "C",
+      "P"
+    ],
+    [
+      "<i>Triticum </i>sp. pl. \n<i>Graminaceae</i>",
+      "Grànu",
+      "Fusti e foglie per realizzare una sorta di croce, decorata con le spighe (santumartìno = San Martino) da applicare sui cumuli di covoni di grano (casàzze) a scopo apotropaico",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Triticum </i>sp. pl. \n<i>Graminaceae</i>",
+      "Grànu",
+      "Cariossidi offerte in chiesa in occasione del 2 novembre (una manciata per ogni parente defunto)",
+      "3",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Triticum </i>sp. pl. \n<i>Graminaceae</i>",
+      "Grànu",
+      "Una zuppa di grano, orzo, mais e legumi (ciccimmaretàti) era preparata il 1 maggio: il suo consumo era stimato assai utile per non essere infastiditi dai moscerini in estate",
+      "15",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Tussilago farfara </i>L.    <i>Compositae</i>",
+      "Cuculègna",
+      "Parti aeree per alimentazione animale (soprattutto conigli)",
+      "5",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ulmus </i>sp. \n<i>Ulmaceae</i>",
+      "Ùrmu",
+      "Polloni per intrecciare cesti, utilizzati anche a scopo decorativo per il colore ruggine della corteccia (cfr. Olea)",
+      "15",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Ulmus </i>sp. \n<i>Ulmaceae</i>",
+      "Ùrmu",
+      "Frascame per alimentazione animale",
+      "21",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Ulmus </i>sp. \n<i>Ulmaceae</i>",
+      "Ùrmu",
+      "Tronchi per paleria",
+      "16",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Umbilicus </i>sp. \n<i>Crassulaceae</i>",
+      "Cuculièddi",
+      "Foglie abbrustolite sulla brace in impacchi contro i geloni (ròsule)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Umbilicus </i>sp. \n<i>Crassulaceae</i>",
+      "Cuculièddi",
+      "Foglie in impacchi contro le verruche",
+      "4",
+      "RR",
+      "S"
+    ],
+    [
+      "<i>Urospermum picroides </i>(L.) Schmidt.\n<i>Compositae</i>",
+      "Ógna purcédda",
+      "Foglie cotte in alimentazione umana",
+      "12",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Urtica dioica </i>L.\n<i>Urticaceae</i>",
+      "Ardìca",
+      "Parti aeree bollite per l’alimentazione dei volatili da cortile (anche perché ritenute ricostituenti)",
+      "10",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Vicia faba </i>L. \n<i>Leguminosae</i>",
+      "Fàva",
+      "Parti aeree per alimentazione animale, soprattutto bovini",
+      "3",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Vicia faba </i>L. \n<i>Leguminosae</i>",
+      "Fàva",
+      "Una varietà a legume piccolo, favarédda, era usata fino a qualche anno fa nella pratica del sovescio detto pascòne",
+      "18",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Vicia </i>sp. pl.\n<i>Leguminosae</i>",
+      "Vèzza",
+      "Parti aeree fresche come foraggio, soprattutto per bovini",
+      "23",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Vicia </i>sp. pl.\n<i>Leguminosae</i>",
+      "Vèzza",
+      "Tutta la pianta nella pratica del sovescio",
+      "20",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Vigna unguiculata </i>(L.) Walpers\n<i>Leguminosae</i>",
+      "Fasùli menzacànna",
+      "Baccelli, semi freschi e secchi in alimentazione umana (cfr. testo)",
+      "20",
+      "R",
+      "P"
+    ],
+    [
+      "<i>Viscum album </i>L. <i>Loranthaceae</i>",
+      "Vescògna, \nvischio",
+      "Fusti e foglie per alimentazione animale (soprattutto capre)",
+      "4",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Viscum album </i>L. <i>Loranthaceae</i>",
+      "Vescògna, \nvischio",
+      "Polpa dei frutti concentrata asciugandola al sole per preparare una sorta di colla utilizzata per catturare piccoli uccelli o topi",
+      "2",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Vitis labrusca </i>L. \n<i>Vitaceae</i>",
+      "Uva fràula",
+      "Frutti in alimentazione umana",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Vitis vinifera </i>L. subsp. <i>vinifera\nVitaceae</i>",
+      "Vìta",
+      "Alimentazione animale (foglie e fusti per maiali, capre e conigli)",
+      "21",
+      "CC",
+      "D"
+    ],
+    [
+      "<i>Vitis vinifera </i>L. subsp. <i>vinifera\nVitaceae</i>",
+      "Vìta",
+      "Corteccia sbriciolata e fumata come succedaneo del tabacco, soprattutto nel periodo dell’autarchia",
+      "4",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Vitis vinifera </i>L. subsp. <i>vinifera\nVitaceae</i>",
+      "Vìta",
+      "Tralci secchi in fascine per accendere il fuoco",
+      "25",
+      "CCC",
+      "P"
+    ],
+    [
+      "<i>Vitis vinifera </i>L. subsp. <i>vinifera\nVitaceae</i>",
+      "Vìta",
+      "Mosto per preparare il vìnu cuòtto (vino cotto) da aggiungere alla neve nella subbètta (cfr. testo)",
+      "23",
+      "CC",
+      "S"
+    ],
+    [
+      "<i>Vitis vinifera </i>L. subsp. <i>vinifera\nVitaceae</i>",
+      "Vìta",
+      "Vinu cuòtto come calmante per i dolori della bocca",
+      "5",
+      "R",
+      "S"
+    ],
+    [
+      "<i>Zea mays </i>L.\n<i>Graminaceae</i>",
+      "Granurìniu",
+      "Cariossidi per alimentazione umana e animale",
+      "25",
+      "CC",
+      "P"
+    ],
+    [
+      "<i>Zea mays </i>L.\n<i>Graminaceae</i>",
+      "Granurìniu",
+      "Foglie per alimentazione animale",
+      "16",
+      "C",
+      "D"
+    ],
+    [
+      "<i>Zea mays </i>L.\n<i>Graminaceae</i>",
+      "Granurìniu",
+      "Brattee della pannocchia per riempire pagliericci e materassi",
+      "20",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Zea mays </i>L.\n<i>Graminaceae</i>",
+      "Granurìniu",
+      "Asse della pannocchia (stùcchiu) privata dei chicchi come tappo per bottiglie",
+      "12",
+      "C",
+      "S"
+    ],
+    [
+      "<i>Ziziphus jujuba </i>Miller <i>Rhamnaceae</i>",
+      "Jòjula",
+      "Frutti per alimentazione umana",
+      "12",
+      "R",
+      "P"
+    ]
+  ]
+}
